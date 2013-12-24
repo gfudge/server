@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/zel/elgf2/projects/flop/byteRegister/reg_flop.ncd
+OUTFILE=/home/zel/elgf2/projects/flop/byteRegister/reg_flop.bit
+FAMILY=Spartan6
+PART=xc6slx4-3tqg144
+WORKINGDIR=/home/zel/elgf2/projects/flop/byteRegister
+LICENSE=ISE
+USER_INFO=__174171225_174171226_174423841

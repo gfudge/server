@@ -1,0 +1,5 @@
+vhdl work "../or2.vhd"
+vhdl work "../inv.vhd"
+vhdl work "../and2.vhd"
+vhdl work "../mux2.vhd"
+vhdl work "../mx2_multibit.vhd"

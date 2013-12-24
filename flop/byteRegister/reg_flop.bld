@@ -1,0 +1,36 @@
+Release 14.2 ngdbuild P.28xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: /usr4/Xilinx/14.2/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
+-intstyle ise -dd _ngo -nt timestamp -uc reg_flop.ucf -p xc6slx4-tqg144-3
+reg_flop.ngc reg_flop.ngd
+
+Reading NGO file "/home/zel/elgf2/projects/flop/byteRegister/reg_flop.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "reg_flop.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 454192 kilobytes
+
+Writing NGD file "reg_flop.ngd" ...
+Total REAL time to NGDBUILD completion:  4 sec
+Total CPU time to NGDBUILD completion:   4 sec
+
+Writing NGDBUILD log file "reg_flop.bld"...

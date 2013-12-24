@@ -1,0 +1,14 @@
+xst -intstyle ise -ifn "/home/zel/elgf2/projects/flop/byteRegister/reg_flop.xst" -ofn "/home/zel/elgf2/projects/flop/byteRegister/reg_flop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-3 reg_flop.ngc reg_flop.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc reg_flop.ucf -p xc6slx4-tqg144-3 reg_flop.ngc reg_flop.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o reg_flop_map.ncd reg_flop.ngd reg_flop.pcf 
+par -w -intstyle ise -ol high -mt off reg_flop_map.ncd reg_flop.ncd reg_flop.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reg_flop.twx reg_flop.ncd -o reg_flop.twr reg_flop.pcf -ucf reg_flop.ucf 
+bitgen -intstyle ise -f reg_flop.ut reg_flop.ncd 
+xst -intstyle ise -ifn "/home/zel/elgf2/projects/flop/byteRegister/reg_flop.xst" -ofn "/home/zel/elgf2/projects/flop/byteRegister/reg_flop.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc reg_flop.ucf -p xc6slx4-tqg144-3 reg_flop.ngc reg_flop.ngd  
+map -intstyle ise -p xc6slx4-tqg144-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o reg_flop_map.ncd reg_flop.ngd reg_flop.pcf 
+par -w -intstyle ise -ol high -mt off reg_flop_map.ncd reg_flop.ncd reg_flop.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reg_flop.twx reg_flop.ncd -o reg_flop.twr reg_flop.pcf -ucf reg_flop.ucf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml reg_flop.twx reg_flop.ncd -o reg_flop.twr reg_flop.pcf -ucf reg_flop.ucf 
+netgen -intstyle ise -s 3  -pcf reg_flop.pcf -rpw 100 -tpw 0 -ar Structure -tm reg_flop -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim reg_flop.ncd reg_flop_timesim.vhd 

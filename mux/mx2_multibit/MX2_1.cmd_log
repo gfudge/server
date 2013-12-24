@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/MX2_1.xst" -ofn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/MX2_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc6slx4-tqg144-2 MX2_1.ngc MX2_1.ngd  
+xst -intstyle ise -ifn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/MX2_1.xst" -ofn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/MX2_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc MX2_1.ucf -p xc6slx4-tqg144-2 MX2_1.ngc MX2_1.ngd  

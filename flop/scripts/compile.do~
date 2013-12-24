@@ -1,0 +1,6 @@
+exec rm -rf mti_work
+vlib mti_work
+vmap work mti_work
+vcom rtl/dff.vhd
+vcom rtl/register_flop.vhd
+quit

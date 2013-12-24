@@ -1,0 +1,2 @@
+xst -intstyle ise -ifn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/mx2_multibit.xst" -ofn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/mx2_multibit.syr" 
+xst -intstyle ise -ifn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/mx2_multibit.xst" -ofn "/home/zel/cmjwb/projects/mux/rtl/mx2_multibut/mx2_multibit.syr" 

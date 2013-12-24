@@ -1,0 +1,82 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/zel/elgf2/projects/flop
+T_opt
+Z1 Vn]iGkEnJPmNXKjkE0l<;<2
+Z2 04 11 8 work tb_reg_flop exercise 1
+Z3 =1-003048da5ffe-527cbaf2-ddca6-838
+Z4 o-quiet -auto_acc_if_foreign -work mti_work
+Z5 OL;O;6.4a;39
+Edff
+Z6 w1383601974
+Z7 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z8 8rtl/dff.vhd
+Z9 Frtl/dff.vhd
+l0
+L4
+Z10 VNnjW7A3?jhUZ>T0LdN1021
+Z11 OL;C;6.4a;39
+Z12 tExplicit 1
+Z13 !s100 [K;IN95]GJ`@@Cn^^5@oR0
+Artl
+R7
+Z14 DEx38 /home/zel/elgf2/projects/flop/mti_work 3 dff 0 22 NnjW7A3?jhUZ>T0LdN1021
+32
+Z15 Mx1 17 __model_tech/ieee 14 std_logic_1164
+l17
+L16
+Z16 VSHX^:;akMG@PIWadfWDhh2
+R11
+R12
+Z17 !s100 zEKn20:n_<6EA9`DedoX>1
+Ereg_flop
+Z18 w1383602354
+R7
+32
+Z19 8rtl/register_flop.vhd
+Z20 Frtl/register_flop.vhd
+l0
+L4
+Z21 VhAIM4VzAgKG]0=4da5o<Q3
+R11
+R12
+Z22 !s100 4;hM^kGemR3_YON_SS>LZ2
+Astruct
+R14
+R7
+Z23 DEx38 /home/zel/elgf2/projects/flop/mti_work 8 reg_flop 0 22 hAIM4VzAgKG]0=4da5o<Q3
+32
+R15
+l25
+L16
+Z24 VzehTH5PJYPJUJmozUGhl^2
+R11
+R12
+Z25 !s100 TVTLf5GE5_i65Y<dAG:=]1
+Etb_reg_flop
+Z26 w1383746335
+R7
+32
+Z27 8rtl/tb_reg_flop.vhd
+Z28 Frtl/tb_reg_flop.vhd
+l0
+L4
+Z29 VEPiTYz0l?U<Pb:O6Y>;bz1
+R11
+R12
+Z30 !s100 HYA8clCmLE2@H@kH3zi`61
+Aexercise
+R23
+R7
+DEx38 /home/zel/elgf2/projects/flop/mti_work 11 tb_reg_flop 0 22 EPiTYz0l?U<Pb:O6Y>;bz1
+32
+R15
+l33
+L7
+Z31 ViVIa78mbCOmAIF5Z?;6_B3
+R11
+R12
+Z32 !s100 VPHSdZ0]D;lBSQi6_QVV;0

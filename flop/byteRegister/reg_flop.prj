@@ -1,0 +1,2 @@
+vhdl work "../rtl/async_reset_flop.vhd"
+vhdl work "../rtl/register_flop.vhd"

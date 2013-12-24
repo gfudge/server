@@ -1,0 +1,40 @@
+# //  ModelSim SE-64 6.4a Aug 28 2008 Linux 2.6.18-348.4.1.el5
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+project open /home/zel/elgf2/projects/flop/modelsim.ini
+# Project file /home/zel/elgf2/projects/flop/modelsim.ini.mpf was not found.
+# Unable to open project.
+log -r *
+# Active logfile is not in simulation mode
+vsim mti_work.tb_reg_flop
+# vsim mti_work.tb_reg_flop 
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading work.tb_reg_flop(exercise)#1
+# Loading work.reg_flop(struct)#1
+# Loading work.dff(rtl)#1
+run -all
+# ** Failure: SIMULATION END
+#    Time: 40 ns  Iteration: 0  Process: /tb_reg_flop/apply_inputs File: rtl/tb_reg_flop.vhd
+# Break in Process apply_inputs at rtl/tb_reg_flop.vhd line 53
+add wave sim:/tb_reg_flop/*
+log -r *
+run -all
+# ** Failure: SIMULATION END
+#    Time: 80 ns  Iteration: 0  Process: /tb_reg_flop/apply_inputs File: rtl/tb_reg_flop.vhd
+# Break in Process apply_inputs at rtl/tb_reg_flop.vhd line 53
+restart
+restart -f
+log -r *
+run -al
+# ** Failure: SIMULATION END
+#    Time: 40 ns  Iteration: 0  Process: /tb_reg_flop/apply_inputs File: rtl/tb_reg_flop.vhd
+# Break in Process apply_inputs at rtl/tb_reg_flop.vhd line 53
