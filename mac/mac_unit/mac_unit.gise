@@ -28,6 +28,10 @@
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/par/param_mac_timesim.nlf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_SDF" xil_pn:name="netgen/par/param_mac_timesim.sdf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/par/param_mac_timesim.vhd"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="param_mac.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="param_mac.cmd_log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="param_mac.lso"/>
@@ -153,6 +157,14 @@
       <outfile xil_pn:name="param_mac_pad.csv"/>
       <outfile xil_pn:name="param_mac_pad.txt"/>
       <outfile xil_pn:name="param_mac_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1399653209" xil_pn:in_ck="7418028679754232612" xil_pn:name="TRAN_postParSimModel" xil_pn:prop_ck="-3904765518319919099" xil_pn:start_ts="1399653205">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/par/param_mac_timesim.nlf"/>
+      <outfile xil_pn:name="netgen/par/param_mac_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/par/param_mac_timesim.vhd"/>
     </transform>
     <transform xil_pn:end_ts="1399652125" xil_pn:in_ck="7418028679754232612" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1399652122">
       <status xil_pn:value="SuccessfullyRun"/>

@@ -19,3 +19,4 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 param_mac.ngc
 map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o param_mac_map.ncd param_mac.ngd param_mac.pcf 
 par -w -intstyle ise -ol high -t 1 param_mac_map.ncd param_mac.ncd param_mac.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml param_mac.twx param_mac.ncd -o param_mac.twr param_mac.pcf 
+netgen -intstyle ise -s 5  -pcf param_mac.pcf -rpw 100 -tpw 0 -ar Structure -tm param_mac -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim param_mac.ncd param_mac_timesim.vhd 
