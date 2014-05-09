@@ -1,0 +1,37 @@
+# //  ModelSim SE-64 6.4a Aug 28 2008 Linux 2.6.18-371.3.1.el5
+# //
+# //  Copyright 1991-2008 Mentor Graphics Corporation
+# //              All Rights Reserved.
+# //
+# //  THIS WORK CONTAINS TRADE SECRET AND 
+# //  PROPRIETARY INFORMATION WHICH IS THE PROPERTY
+# //  OF MENTOR GRAPHICS CORPORATION OR ITS LICENSORS
+# //  AND IS SUBJECT TO LICENSE TERMS.
+# //
+vsim work.tb_param_mac
+# vsim work.tb_param_mac 
+# Loading std.standard
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading work.mac_package
+# Loading work.tb_param_mac(exercise)#1
+# Loading ieee.std_logic_signed(body)
+# Loading work.param_mac(struct)#1
+# Loading work.param_reg(rtl)#1
+# Loading work.param_reg(rtl)#2
+# Loading work.param_mult(rtl)#1
+# Loading work.param_add(rtl)#1
+log -r *
+run -all
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_param_mac/dut/i_add
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_param_mac/dut/i_add
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_param_mac/dut/i_mult
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ns  Iteration: 0  Instance: /tb_param_mac/dut/i_mult
+# ** Failure: SIMULATION END
+#    Time: 100 ns  Iteration: 0  Process: /tb_param_mac/apply_inputs File: rtl/tb_param_mac.vhd
+# Break in Process apply_inputs at rtl/tb_param_mac.vhd line 53

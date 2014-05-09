@@ -1,0 +1,29 @@
+library ieee;
+use ieee.std_logic_1162.all;
+
+entity genericReg is 
+
+	-- Generic Width for register
+	generic ( width : integer := 8 );
+
+	-- Port mapping for entity
+	port (
+		clock : in std_logic;
+		reset : in std_logic;
+		dataIn: in std_logic_vector(width - 1 downto 0);
+		dataOut : out std_logic_vector(width - 1 downto 0)
+	);
+end genericReg;
+
+-- RTL arch for register
+architecture genericReg is
+begin
+	clockProcess : process(clock, reset)
+	begin
+		if reset= '1' then 
+			dataOut <= (others => '0');
+		elsif rising_edge(clock) then
+			dataOut <= dataIn;
+		end if;
+	end process;
+end;

@@ -1,0 +1,5 @@
+vhdl work "../rtl/mac_package.vhd"
+vhdl work "../rtl/param_reg.vhd"
+vhdl work "../rtl/param_mult.vhd"
+vhdl work "../rtl/param_add.vhd"
+vhdl work "../rtl/param_mac.vhd"

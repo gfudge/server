@@ -1,0 +1,26 @@
+library ieee;
+use ieee.std_logic_1164.all;
+
+package mac_package is
+		constant W : integer := 8;
+end; -- mac package
+
+
+
+
+-- Parametric Adder
+entity param_add is
+	generic (WIDTH : integer := 8);
+	port (
+		A 	:	in std_logic_vector(WIDTH-1 downto 0);
+		B	:	in std_logic_vector(WIDTH-1 downto 0);
+		Z	:	out std_logic_vector(WIDTH-1 downto 0)
+	);
+end param_add;
+
+architecture rtl of param_add is
+begin
+	add_proc : process ( A, B )
+		Z <= A+B;
+	end process;
+end rtl;
