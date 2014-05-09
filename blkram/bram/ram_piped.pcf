@@ -1,0 +1,55 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Fri May 09 14:47:54 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "I_REG_WF/q" BEL "I_REG_OB/q_31" BEL "I_REG_OB/q_30" BEL
+        "I_REG_OB/q_29" BEL "I_REG_OB/q_28" BEL "I_REG_OB/q_27" BEL
+        "I_REG_OB/q_26" BEL "I_REG_OB/q_25" BEL "I_REG_OB/q_24" BEL
+        "I_REG_OB/q_23" BEL "I_REG_OB/q_22" BEL "I_REG_OB/q_21" BEL
+        "I_REG_OB/q_20" BEL "I_REG_OB/q_19" BEL "I_REG_OB/q_18" BEL
+        "I_REG_OB/q_17" BEL "I_REG_OB/q_16" BEL "I_REG_OB/q_15" BEL
+        "I_REG_OB/q_14" BEL "I_REG_OB/q_13" BEL "I_REG_OB/q_12" BEL
+        "I_REG_OB/q_11" BEL "I_REG_OB/q_10" BEL "I_REG_OB/q_9" BEL
+        "I_REG_OB/q_8" BEL "I_REG_OB/q_7" BEL "I_REG_OB/q_6" BEL
+        "I_REG_OB/q_5" BEL "I_REG_OB/q_4" BEL "I_REG_OB/q_3" BEL
+        "I_REG_OB/q_2" BEL "I_REG_OB/q_1" BEL "I_REG_OB/q_0" BEL
+        "I_REG_IB/q_31" BEL "I_REG_IB/q_30" BEL "I_REG_IB/q_29" BEL
+        "I_REG_IB/q_28" BEL "I_REG_IB/q_27" BEL "I_REG_IB/q_26" BEL
+        "I_REG_IB/q_25" BEL "I_REG_IB/q_24" BEL "I_REG_IB/q_23" BEL
+        "I_REG_IB/q_22" BEL "I_REG_IB/q_21" BEL "I_REG_IB/q_20" BEL
+        "I_REG_IB/q_19" BEL "I_REG_IB/q_18" BEL "I_REG_IB/q_17" BEL
+        "I_REG_IB/q_16" BEL "I_REG_IB/q_15" BEL "I_REG_IB/q_14" BEL
+        "I_REG_IB/q_13" BEL "I_REG_IB/q_12" BEL "I_REG_IB/q_11" BEL
+        "I_REG_IB/q_10" BEL "I_REG_IB/q_9" BEL "I_REG_IB/q_8" BEL
+        "I_REG_IB/q_7" BEL "I_REG_IB/q_6" BEL "I_REG_IB/q_5" BEL
+        "I_REG_IB/q_4" BEL "I_REG_IB/q_3" BEL "I_REG_IB/q_2" BEL
+        "I_REG_IB/q_1" BEL "I_REG_IB/q_0" BEL "I_REG_AB/q_9" BEL
+        "I_REG_AB/q_8" BEL "I_REG_AB/q_7" BEL "I_REG_AB/q_6" BEL
+        "I_REG_AB/q_5" BEL "I_REG_AB/q_4" BEL "I_REG_AB/q_3" BEL
+        "I_REG_AB/q_2" BEL "I_REG_AB/q_1" BEL "I_REG_AB/q_0" BEL
+        "I_BRAM/Mram_ram_ir1.A" BEL "I_BRAM/Mram_ram_ir2.A" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TIMEGRP input = BEL "WE" BEL "addr<0>" BEL "addr<1>" BEL "addr<2>" BEL
+        "addr<3>" BEL "addr<4>" BEL "addr<5>" BEL "addr<6>" BEL "addr<7>" BEL
+        "addr<8>" BEL "addr<9>" BEL "din<0>" BEL "din<10>" BEL "din<11>" BEL
+        "din<12>" BEL "din<13>" BEL "din<14>" BEL "din<15>" BEL "din<16>" BEL
+        "din<17>" BEL "din<18>" BEL "din<19>" BEL "din<1>" BEL "din<20>" BEL
+        "din<21>" BEL "din<22>" BEL "din<23>" BEL "din<24>" BEL "din<25>" BEL
+        "din<26>" BEL "din<27>" BEL "din<28>" BEL "din<29>" BEL "din<2>" BEL
+        "din<30>" BEL "din<31>" BEL "din<3>" BEL "din<4>" BEL "din<5>" BEL
+        "din<6>" BEL "din<7>" BEL "din<8>" BEL "din<9>" BEL "reset";
+TIMEGRP output = BEL "dout<0>" BEL "dout<10>" BEL "dout<11>" BEL "dout<12>"
+        BEL "dout<13>" BEL "dout<14>" BEL "dout<15>" BEL "dout<16>" BEL
+        "dout<17>" BEL "dout<18>" BEL "dout<19>" BEL "dout<1>" BEL "dout<20>"
+        BEL "dout<21>" BEL "dout<22>" BEL "dout<23>" BEL "dout<24>" BEL
+        "dout<25>" BEL "dout<26>" BEL "dout<27>" BEL "dout<28>" BEL "dout<29>"
+        BEL "dout<2>" BEL "dout<30>" BEL "dout<31>" BEL "dout<3>" BEL
+        "dout<4>" BEL "dout<5>" BEL "dout<6>" BEL "dout<7>" BEL "dout<8>" BEL
+        "dout<9>";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+SCHEMATIC END;
+

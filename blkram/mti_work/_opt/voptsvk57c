@@ -1,0 +1,194 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/zel/elgf2/projects/blkram
+T_opt
+Z1 V9B@Sb6`obMU@B<EnKD`6g2
+Z2 04 12 8 work tb_ram_piped exercise 1
+Z3 =11-003048da5f8c-535666d5-ba3cc-aec
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 OL;O;6.4a;39
+Pbram_package
+Z6 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z7 Mx1 17 __model_tech/ieee 14 std_logic_1164
+Z8 w1394623412
+Z9 8rtl/bram_package.vhd
+Z10 Frtl/bram_package.vhd
+l0
+L4
+Z11 VMQO0[Vn=FOK8iN[Q?J5o@2
+Z12 OL;C;6.4a;39
+Z13 tExplicit 1
+Z14 !s100 3YQcQYS879@KK?:8hJ=m72
+Ebram_param
+Z15 w1393926036
+Z16 DPx40 /home/zel/elgf2/projects/blkram/mti_work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+Z17 DPx17 __model_tech/ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z18 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z19 DPx17 __model_tech/ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R6
+32
+Z20 8rtl/bram_param.vhd
+Z21 Frtl/bram_param.vhd
+l0
+L7
+Z22 VoVgN_kiaX1UzPH6Xk3ULT0
+R12
+R13
+Z23 !s100 1]D9b1LgzS3QEOoOWkofY3
+Abehavioural
+R16
+R17
+R18
+R19
+R6
+Z24 DEx40 /home/zel/elgf2/projects/blkram/mti_work 10 bram_param 0 22 oVgN_kiaX1UzPH6Xk3ULT0
+32
+Mx5 17 __model_tech/ieee 14 std_logic_1164
+Mx4 17 __model_tech/ieee 18 std_logic_unsigned
+Mx3 17 __model_tech/ieee 15 std_logic_arith
+Z25 Mx2 17 __model_tech/ieee 11 numeric_std
+Z26 Mx1 40 /home/zel/elgf2/projects/blkram/mti_work 11 log_package
+l25
+L21
+Z27 V_R?L@dfdeFha?38zd[Pj?2
+R12
+R13
+Z28 !s100 PF>VYKYZH[@hASdig8>no3
+Plog_package
+R6
+32
+b1
+R7
+Z29 w1394623341
+Z30 8rtl/log_package.vhd
+Z31 Frtl/log_package.vhd
+l0
+L4
+Z32 VWRFF;nW=REUA>=5>LTJZ;3
+R12
+b1
+R13
+Z33 !s100 al<N;0cH?c?bGE?C2Gn>Y1
+Bbody
+DBx40 /home/zel/elgf2/projects/blkram/mti_work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+R6
+32
+R7
+l0
+L9
+Z34 Vf[jdmJoRehT_lc3UQdzdk2
+R12
+R13
+nbody
+Z35 !s100 P?RG7OmkYOK>:GcJ?6L1d3
+Eparam_reg
+Z36 w1394624819
+R6
+32
+Z37 8rtl/param_reg.vhd
+Z38 Frtl/param_reg.vhd
+l0
+L5
+Z39 VNj_mQkY=YLY?bjYB`fdZM3
+R12
+R13
+Z40 !s100 >V=WlPXPMI;>fSdPD4;KG0
+Artl
+32
+R6
+Z41 DEx40 /home/zel/elgf2/projects/blkram/mti_work 9 param_reg 0 22 Nj_mQkY=YLY?bjYB`fdZM3
+R7
+l16
+L15
+Z42 V;=k3OLCW9H1fjTo2fo^me0
+R12
+R13
+Z43 !s100 lba]gTceh<;726d<YJ2lj1
+Eram_piped
+Z44 w1394626314
+R16
+Z45 DPx40 /home/zel/elgf2/projects/blkram/mti_work 12 bram_package 0 22 MQO0[Vn=FOK8iN[Q?J5o@2
+R6
+32
+Z46 8rtl/ram_piped.vhd
+Z47 Frtl/ram_piped.vhd
+l0
+L7
+Z48 VoEF[9`F9;bVhzNhBVK2Z22
+R12
+R13
+Z49 !s100 [Flb;kD2i=<GMI:UzjX?j1
+Astruct
+R24
+Z50 DEx40 /home/zel/elgf2/projects/blkram/mti_work 10 reg_single 0 22 A;C=MQf=OAh`;kHz3ze[<3
+R41
+R16
+R45
+R6
+Z51 DEx40 /home/zel/elgf2/projects/blkram/mti_work 9 ram_piped 0 22 oEF[9`F9;bVhzNhBVK2Z22
+32
+Z52 Mx3 17 __model_tech/ieee 14 std_logic_1164
+Mx2 40 /home/zel/elgf2/projects/blkram/mti_work 12 bram_package
+R26
+l66
+L22
+Z53 V:lJGFaz>fY`8Gb@T`13NK3
+R12
+R13
+Z54 !s100 R>h>QZj@RhgF:HJ>8SjB82
+Ereg_single
+Z55 w1394626592
+R6
+32
+Z56 8rtl/reg_single.vhd
+Z57 Frtl/reg_single.vhd
+l0
+L5
+Z58 VA;C=MQf=OAh`;kHz3ze[<3
+R12
+R13
+Z59 !s100 h7?Ge^NeoGk^Tik9n45ID3
+Artl
+R6
+R50
+32
+R7
+l15
+L14
+Z60 V?6I8<VSml^6kbT_>Q:NX22
+R12
+R13
+Z61 !s100 ^h1=Z<OMjdhb[Lmc_i4P80
+Etb_ram_piped
+Z62 w1398171341
+R45
+R17
+R6
+32
+Z63 8rtl/tb_ram_piped.vhd
+Z64 Frtl/tb_ram_piped.vhd
+l0
+L6
+Z65 V[OhdF@BoMg5<2GanYmd0X2
+R12
+R13
+Z66 !s100 ?X?U<gKK]fgY0X=29Z`a31
+Aexercise
+R51
+R45
+R17
+R6
+DEx40 /home/zel/elgf2/projects/blkram/mti_work 12 tb_ram_piped 0 22 [OhdF@BoMg5<2GanYmd0X2
+32
+R52
+R25
+Mx1 40 /home/zel/elgf2/projects/blkram/mti_work 12 bram_package
+l37
+L9
+Z67 V`3l:QF2Wb]oj1CliGzF:J2
+R12
+R13
+Z68 !s100 O6Ia`Wo^N_cfBNP>[FS:c2

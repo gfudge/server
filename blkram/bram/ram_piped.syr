@@ -1,0 +1,455 @@
+Release 14.2 - xst P.28xd (lin64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.09 secs
+ 
+--> 
+Reading design: ram_piped.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "ram_piped.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "ram_piped"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : ram_piped
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/log_package.vhd" in Library work.
+Architecture log_package of Entity log_package is up to date.
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/bram_package.vhd" in Library work.
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd" in Library work.
+Architecture rtl of Entity param_reg is up to date.
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/reg_single.vhd" in Library work.
+Architecture rtl of Entity reg_single is up to date.
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/bram_param.vhd" in Library work.
+Architecture behavioural of Entity bram_param is up to date.
+Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/ram_piped.vhd" in Library work.
+Architecture struct of Entity ram_piped is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <ram_piped> in library <work> (architecture <struct>) with generics.
+	LOCATIONS = 1024
+	WIDTH = 32
+
+Analyzing hierarchy for entity <param_reg> in library <work> (architecture <rtl>) with generics.
+	width = 32
+
+Analyzing hierarchy for entity <param_reg> in library <work> (architecture <rtl>) with generics.
+	width = 10
+
+Analyzing hierarchy for entity <reg_single> in library <work> (architecture <rtl>).
+
+Analyzing hierarchy for entity <bram_param> in library <work> (architecture <behavioural>) with generics.
+	locations = 1024
+	width = 32
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <ram_piped> in library <work> (Architecture <struct>).
+	LOCATIONS = 1024
+	WIDTH = 32
+Entity <ram_piped> analyzed. Unit <ram_piped> generated.
+
+Analyzing generic Entity <param_reg.1> in library <work> (Architecture <rtl>).
+	width = 32
+Entity <param_reg.1> analyzed. Unit <param_reg.1> generated.
+
+Analyzing generic Entity <param_reg.2> in library <work> (Architecture <rtl>).
+	width = 10
+Entity <param_reg.2> analyzed. Unit <param_reg.2> generated.
+
+Analyzing Entity <reg_single> in library <work> (Architecture <rtl>).
+Entity <reg_single> analyzed. Unit <reg_single> generated.
+
+Analyzing generic Entity <bram_param> in library <work> (Architecture <behavioural>).
+	locations = 1024
+	width = 32
+Entity <bram_param> analyzed. Unit <bram_param> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <param_reg_1>.
+    Related source file is "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd".
+    Found 32-bit register for signal <q>.
+    Summary:
+	inferred  32 D-type flip-flop(s).
+Unit <param_reg_1> synthesized.
+
+
+Synthesizing Unit <param_reg_2>.
+    Related source file is "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd".
+    Found 10-bit register for signal <q>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <param_reg_2> synthesized.
+
+
+Synthesizing Unit <reg_single>.
+    Related source file is "/home/zel/elgf2/projects/blkram/rtl/reg_single.vhd".
+    Found 1-bit register for signal <q>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
+Unit <reg_single> synthesized.
+
+
+Synthesizing Unit <bram_param>.
+    Related source file is "/home/zel/elgf2/projects/blkram/rtl/bram_param.vhd".
+    Found 1024x32-bit single-port RAM <Mram_ram_ir> for signal <ram_ir>.
+    Found 32-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <bram_param> synthesized.
+
+
+Synthesizing Unit <ram_piped>.
+    Related source file is "/home/zel/elgf2/projects/blkram/rtl/ram_piped.vhd".
+Unit <ram_piped> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port RAM                           : 1
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 10-bit register                                       : 1
+ 32-bit register                                       : 3
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <bram_param>.
+INFO:Xst:3226 - The RAM <Mram_ram_ir> will be implemented as a BLOCK RAM, absorbing the following register(s): <dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | read-first                          |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <WE>            | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <din>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <bram_param> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port block RAM                     : 1
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <ram_piped> ...
+
+Optimizing unit <param_reg_1> ...
+
+Optimizing unit <param_reg_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block ram_piped, actual ratio is 5.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 75
+ Flip-Flops                                            : 75
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : ram_piped.ngr
+Top Level Output File Name         : ram_piped
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 77
+
+Cell Usage :
+# BELS                             : 4
+#      GND                         : 3
+#      VCC                         : 1
+# FlipFlops/Latches                : 75
+#      FDC                         : 75
+# RAMS                             : 2
+#      RAMB16                      : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 76
+#      IBUF                        : 44
+#      OBUF                        : 32
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                       25  out of    768     3%  
+ Number of Slice Flip Flops:             42  out of   1536     2%  
+ Number of IOs:                          77
+ Number of bonded IOBs:                  77  out of    124    62%  
+    IOB Flip Flops:                      33
+ Number of BRAMs:                         2  out of      4    50%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 77    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 75    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 1.728ns (Maximum Frequency: 578.754MHz)
+   Minimum input arrival time before clock: 1.572ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 1.728ns (frequency: 578.754MHz)
+  Total number of paths / destination ports: 52 / 52
+-------------------------------------------------------------------------
+Delay:               1.728ns (Levels of Logic = 1)
+  Source:            I_REG_IB/q_15 (FF)
+  Destination:       I_BRAM/Mram_ram_ir1/I_BRAM/Mram_ram_ir1 (RAM)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: I_REG_IB/q_15 to I_BRAM/Mram_ram_ir1/I_BRAM/Mram_ram_ir1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.626   0.681  I_REG_IB/q_15 (din_i<15>)
+     begin scope: 'I_BRAM/Mram_ram_ir1'
+     RAMB16:DIA15              0.421          I_BRAM/Mram_ram_ir1
+    ----------------------------------------
+    Total                      1.728ns (1.047ns logic, 0.681ns route)
+                                       (60.6% logic, 39.4% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 43 / 43
+-------------------------------------------------------------------------
+Offset:              1.572ns (Levels of Logic = 1)
+  Source:            WE (PAD)
+  Destination:       I_REG_WF/q (FF)
+  Destination Clock: clk rising
+
+  Data Path: WE to I_REG_WF/q
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  WE_IBUF (WE_IBUF)
+     FDC:D                     0.176          I_REG_WF/q
+    ----------------------------------------
+    Total                      1.572ns (0.891ns logic, 0.681ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 32 / 32
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            I_REG_OB/q_31 (FF)
+  Destination:       dout<31> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: I_REG_OB/q_31 to dout<31>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              1   0.626   0.681  I_REG_OB/q_31 (I_REG_OB/q_31)
+     OBUF:I->O                 4.909          dout_31_OBUF (dout<31>)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 6.74 secs
+ 
+--> 
+
+
+Total memory usage is 568024 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    1 (   0 filtered)
+
