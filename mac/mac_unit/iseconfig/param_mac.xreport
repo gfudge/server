@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-05-08T23:57:09</DateModified>
+  <DateModified>2014-05-09T17:11:45</DateModified>
   <ModuleName>param_mac</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
-  <SavedFilePath>/home/zel/elgf2/projects/mac/mac_unit/iseconfig/param_mac.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/zel/elgf2/projects/mac/mac_unit</ImplementationReportsDirectory>
+  <SavedFilePath>/home/gfudge/fpga/server/mac/mac_unit/iseconfig/param_mac.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/gfudge/fpga/server/mac/mac_unit/</ImplementationReportsDirectory>
   <DateInitialized>2014-05-08T23:57:01</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

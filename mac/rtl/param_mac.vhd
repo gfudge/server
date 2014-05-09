@@ -42,11 +42,11 @@ architecture struct of param_mac is
 	end component;	
 
 	component param_add
-	generic (WIDTH : integer := 8);
+	generic (WIDTH : integer := 16);
 	port (
-		A		:	in std_logic_vector (2 * WIDTH-1 downto 0);
-		B		:	in std_logic_vector (2 * WIDTH-1 downto 0);
-		Z		:	out std_logic_vector (2 * WIDTH-1 downto 0)
+		A		:	in std_logic_vector (WIDTH-1 downto 0);
+		B		:	in std_logic_vector (WIDTH-1 downto 0);
+		Z		:	out std_logic_vector (WIDTH-1 downto 0)
 	);
 	end component;
 

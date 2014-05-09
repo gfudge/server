@@ -1,18 +1,18 @@
-Release 14.2 - xst P.28xd (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.05 secs
  
 --> 
 Reading design: param_mac.prj
@@ -71,7 +71,7 @@ Automatic Register Balancing       : No
 
 ---- Target Options
 Add IO Buffers                     : YES
-Global Maximum Fanout              : 500
+Global Maximum Fanout              : 100000
 Add Generic Clock Buffer(BUFG)     : 8
 Register Duplication               : YES
 Slice Packing                      : YES
@@ -107,34 +107,331 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/zel/elgf2/projects/mac/rtl/mac_package.vhd" in Library work.
-Compiling vhdl file "/home/zel/elgf2/projects/mac/rtl/param_reg.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/mac/rtl/mac_package.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/mac/rtl/param_reg.vhd" in Library work.
 Architecture rtl of Entity param_reg is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/mac/rtl/param_mult.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/mac/rtl/param_mult.vhd" in Library work.
 Architecture rtl of Entity param_mult is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/mac/rtl/param_add.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/mac/rtl/param_add.vhd" in Library work.
 Architecture rtl of Entity param_add is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/mac/rtl/param_mac.vhd" in Library work.
-Architecture struct of Entity param_mac is up to date.
+Compiling vhdl file "/home/gfudge/fpga/server/mac/rtl/param_mac.vhd" in Library work.
+Entity <param_mac> compiled.
+Entity <param_mac> (Architecture <struct>) compiled.
 
 =========================================================================
 *                     Design Hierarchy Analysis                         *
 =========================================================================
 Analyzing hierarchy for entity <param_mac> in library <work> (architecture <struct>) with generics.
 	WIDTH = 8
-"/home/zel/elgf2/projects/mac/rtl/param_mac.vhd" line 104: In entity <param_mac> with generics
-  WIDTH: from generic/parameter on entity : integer (-2147483648 to 2147483647) := 8
-ERROR:Xst:2587 - Port <A> of instance <I_ADD> has different type in definition <param_add>.
-ERROR:Xst:2587 - Port <B> of instance <I_ADD> has different type in definition <param_add>.
-ERROR:Xst:2587 - Port <Z> of instance <I_ADD> has different type in definition <param_add>.
-component <param_add> with generics:
-  WIDTH: from generic/parameter on instance : integer (-2147483648 to 2147483647) := 16
+
+Analyzing hierarchy for entity <param_reg> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 8
+
+Analyzing hierarchy for entity <param_reg> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 16
+
+Analyzing hierarchy for entity <param_mult> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 8
+
+Analyzing hierarchy for entity <param_add> in library <work> (architecture <rtl>) with generics.
+	WIDTH = 16
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <param_mac> in library <work> (Architecture <struct>).
+	WIDTH = 8
+Entity <param_mac> analyzed. Unit <param_mac> generated.
+
+Analyzing generic Entity <param_reg.1> in library <work> (Architecture <rtl>).
+	WIDTH = 8
+Entity <param_reg.1> analyzed. Unit <param_reg.1> generated.
+
+Analyzing generic Entity <param_reg.2> in library <work> (Architecture <rtl>).
+	WIDTH = 16
+Entity <param_reg.2> analyzed. Unit <param_reg.2> generated.
+
+Analyzing generic Entity <param_mult> in library <work> (Architecture <rtl>).
+	WIDTH = 8
+Entity <param_mult> analyzed. Unit <param_mult> generated.
+
+Analyzing generic Entity <param_add> in library <work> (Architecture <rtl>).
+	WIDTH = 16
+Entity <param_add> analyzed. Unit <param_add> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <param_reg_1>.
+    Related source file is "/home/gfudge/fpga/server/mac/rtl/param_reg.vhd".
+    Found 8-bit register for signal <q>.
+    Summary:
+	inferred   8 D-type flip-flop(s).
+Unit <param_reg_1> synthesized.
+
+
+Synthesizing Unit <param_reg_2>.
+    Related source file is "/home/gfudge/fpga/server/mac/rtl/param_reg.vhd".
+    Found 16-bit register for signal <q>.
+    Summary:
+	inferred  16 D-type flip-flop(s).
+Unit <param_reg_2> synthesized.
+
+
+Synthesizing Unit <param_mult>.
+    Related source file is "/home/gfudge/fpga/server/mac/rtl/param_mult.vhd".
+    Found 8x8-bit multiplier for signal <Z>.
+    Summary:
+	inferred   1 Multiplier(s).
+Unit <param_mult> synthesized.
+
+
+Synthesizing Unit <param_add>.
+    Related source file is "/home/gfudge/fpga/server/mac/rtl/param_add.vhd".
+    Found 16-bit adder for signal <Z>.
+    Summary:
+	inferred   1 Adder/Subtractor(s).
+Unit <param_add> synthesized.
+
+
+Synthesizing Unit <param_mac>.
+    Related source file is "/home/gfudge/fpga/server/mac/rtl/param_mac.vhd".
+Unit <param_mac> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Registers                                            : 4
+ 16-bit register                                       : 2
+ 8-bit register                                        : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Multipliers                                          : 1
+ 8x8-bit multiplier                                    : 1
+# Adders/Subtractors                                   : 1
+ 16-bit adder                                          : 1
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <param_mac> ...
+
+Optimizing unit <param_reg_1> ...
+
+Optimizing unit <param_reg_2> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block param_mac, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : param_mac.ngr
+Top Level Output File Name         : param_mac
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 34
+
+Cell Usage :
+# BELS                             : 48
+#      GND                         : 1
+#      LUT2                        : 16
+#      MUXCY                       : 15
+#      XORCY                       : 16
+# FlipFlops/Latches                : 48
+#      FDC                         : 48
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 17
+#      OBUF                        : 16
+# MULTs                            : 1
+#      MULT18X18                   : 1
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                       26  out of    768     3%  
+ Number of Slice Flip Flops:             48  out of   1536     3%  
+ Number of 4 input LUTs:                 16  out of   1536     1%  
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    124    27%  
+ Number of MULT18X18s:                    1  out of      4    25%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 48    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 48    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.601ns (Maximum Frequency: 178.532MHz)
+   Minimum input arrival time before clock: 1.572ns
+   Maximum output required time after clock: 6.280ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.601ns (frequency: 178.532MHz)
+  Total number of paths / destination ports: 664 / 32
+-------------------------------------------------------------------------
+Delay:               5.601ns (Levels of Logic = 1)
+  Source:            I_REG1/q_7 (FF)
+  Destination:       I_REG3/q_15 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: I_REG1/q_7 to I_REG3/q_15
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q             11   0.626   0.972  I_REG1/q_7 (I_REG1/q_7)
+     MULT18X18:A7->P15     1   3.146   0.681  I_MULT/Mmult_Z (MRES_I<15>)
+     FDC:D                     0.176          I_REG3/q_15
+    ----------------------------------------
+    Total                      5.601ns (3.948ns logic, 1.653ns route)
+                                       (70.5% logic, 29.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              1.572ns (Levels of Logic = 1)
+  Source:            B<7> (PAD)
+  Destination:       I_REG2/q_7 (FF)
+  Destination Clock: clk rising
+
+  Data Path: B<7> to I_REG2/q_7
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.715   0.681  B_7_IBUF (B_7_IBUF)
+     FDC:D                     0.176          I_REG2/q_7
+    ----------------------------------------
+    Total                      1.572ns (0.891ns logic, 0.681ns route)
+                                       (56.7% logic, 43.3% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 16 / 16
+-------------------------------------------------------------------------
+Offset:              6.280ns (Levels of Logic = 1)
+  Source:            I_REG4/q_15 (FF)
+  Destination:       Accr_r<15> (PAD)
+  Source Clock:      clk rising
+
+  Data Path: I_REG4/q_15 to Accr_r<15>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              2   0.626   0.745  I_REG4/q_15 (I_REG4/q_15)
+     OBUF:I->O                 4.909          Accr_r_15_OBUF (Accr_r<15>)
+    ----------------------------------------
+    Total                      6.280ns (5.535ns logic, 0.745ns route)
+                                       (88.1% logic, 11.9% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.82 secs
+ 
 --> 
 
 
-Total memory usage is 556564 kilobytes
+Total memory usage is 513224 kilobytes
 
-Number of errors   :    3 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 
