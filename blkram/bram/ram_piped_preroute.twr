@@ -1,0 +1,991 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml ram_piped_preroute.twx ram_piped_map.ncd -o
+ram_piped_preroute.twr ram_piped.pcf -ucf ram_piped.ucf
+
+Design file:              ram_piped_map.ncd
+Physical constraint file: ram_piped.pcf
+Device,package,speed:     xc3s50,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3284 - This timing report was generated using estimated delay 
+   information.  For accurate numbers, please refer to the post Place and Route 
+   timing report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 86 paths analyzed, 86 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   2.833ns.
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_OB/q_3 (IOB.O1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     7.167ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_BRAM/Mram_ram_ir1.A (RAM)
+  Destination:          I_REG_OB/q_3 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.833ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: I_BRAM/Mram_ram_ir1.A to I_REG_OB/q_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16.DOA3          Tbcko                 2.082   I_BRAM/Mram_ram_ir1
+                                                       I_BRAM/Mram_ram_ir1.A
+    IOB.O1               net (fanout=1)     e  0.100   dout_i<3>
+    IOB.OTCLK1           Tioock                0.651   dout<3>
+                                                       I_REG_OB/q_3
+    -------------------------------------------------  ---------------------------
+    Total                                      2.833ns (2.733ns logic, 0.100ns route)
+                                                       (96.5% logic, 3.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_OB/q_4 (IOB.O1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     7.167ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_BRAM/Mram_ram_ir1.A (RAM)
+  Destination:          I_REG_OB/q_4 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.833ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: I_BRAM/Mram_ram_ir1.A to I_REG_OB/q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16.DOA4          Tbcko                 2.082   I_BRAM/Mram_ram_ir1
+                                                       I_BRAM/Mram_ram_ir1.A
+    IOB.O1               net (fanout=1)     e  0.100   dout_i<4>
+    IOB.OTCLK1           Tioock                0.651   dout<4>
+                                                       I_REG_OB/q_4
+    -------------------------------------------------  ---------------------------
+    Total                                      2.833ns (2.733ns logic, 0.100ns route)
+                                                       (96.5% logic, 3.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_OB/q_5 (IOB.O1), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     7.167ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               I_BRAM/Mram_ram_ir1.A (RAM)
+  Destination:          I_REG_OB/q_5 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      2.833ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: I_BRAM/Mram_ram_ir1.A to I_REG_OB/q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16.DOA5          Tbcko                 2.082   I_BRAM/Mram_ram_ir1
+                                                       I_BRAM/Mram_ram_ir1.A
+    IOB.O1               net (fanout=1)     e  0.100   dout_i<5>
+    IOB.OTCLK1           Tioock                0.651   dout<5>
+                                                       I_REG_OB/q_5
+    -------------------------------------------------  ---------------------------
+    Total                                      2.833ns (2.733ns logic, 0.100ns route)
+                                                       (96.5% logic, 3.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point I_BRAM/Mram_ram_ir1.A (RAMB16.WEA), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.281ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_REG_WF/q (FF)
+  Destination:          I_BRAM/Mram_ram_ir1.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.281ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: I_REG_WF/q to I_BRAM/Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.IQ1              Tiockiq               0.180   WE
+                                                       I_REG_WF/q
+    RAMB16.WEA           net (fanout=2)     e  0.100   WE_i
+    RAMB16.CLKA          Tbckw       (-Th)    -0.001   I_BRAM/Mram_ram_ir1
+                                                       I_BRAM/Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.281ns (0.181ns logic, 0.100ns route)
+                                                       (64.4% logic, 35.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_BRAM/Mram_ram_ir2.A (RAMB16.WEA), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.281ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_REG_WF/q (FF)
+  Destination:          I_BRAM/Mram_ram_ir2.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.281ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: I_REG_WF/q to I_BRAM/Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.IQ1              Tiockiq               0.180   WE
+                                                       I_REG_WF/q
+    RAMB16.WEA           net (fanout=2)     e  0.100   WE_i
+    RAMB16.CLKA          Tbckw       (-Th)    -0.001   I_BRAM/Mram_ram_ir2
+                                                       I_BRAM/Mram_ram_ir2.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.281ns (0.181ns logic, 0.100ns route)
+                                                       (64.4% logic, 35.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_BRAM/Mram_ram_ir1.A (RAMB16.ADDRA10), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.601ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               I_REG_AB/q_6 (FF)
+  Destination:          I_BRAM/Mram_ram_ir1.A (RAM)
+  Requirement:          0.000ns
+  Data Path Delay:      0.601ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: I_REG_AB/q_6 to I_BRAM/Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICEL.YQ            Tcko                  0.501   addr_i<7>
+                                                       I_REG_AB/q_6
+    RAMB16.ADDRA10       net (fanout=2)     e  0.100   addr_i<6>
+    RAMB16.CLKA          Tbcka       (-Th)     0.000   I_BRAM/Mram_ram_ir1
+                                                       I_BRAM/Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      0.601ns (0.501ns logic, 0.100ns route)
+                                                       (83.4% logic, 16.6% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.188ns (Tbpwl)
+  Physical resource: I_BRAM/Mram_ram_ir1/CLKA
+  Logical resource: I_BRAM/Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.188ns (Tbpwh)
+  Physical resource: I_BRAM/Mram_ram_ir1/CLKA
+  Logical resource: I_BRAM/Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.376ns (420.875MHz) (Tbp)
+  Physical resource: I_BRAM/Mram_ram_ir1/CLKA
+  Logical resource: I_BRAM/Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP 
+"clk" "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 43 paths analyzed, 43 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   3.317ns.
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_WF/q (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.683ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               WE (PAD)
+  Destination:          I_REG_WF/q (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      4.381ns (Levels of Logic = 0)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: WE to I_REG_WF/q
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.ICLK1            Tiopickd              4.381   WE
+                                                       WE
+                                                       WE_IBUF
+                                                       WE.DELAY
+                                                       I_REG_WF/q
+    -------------------------------------------------  ---------------------------
+    Total                                      4.381ns (4.381ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+  Minimum Clock Path: clk to I_REG_WF/q
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.ICLK1            net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_IB/q_10 (SLICEL.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     5.015ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               din<10> (PAD)
+  Destination:          I_REG_IB/q_10 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      1.049ns (Levels of Logic = 1)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: din<10> to I_REG_IB/q_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   din<10>
+                                                       din<10>
+                                                       din_10_IBUF
+    SLICEL.BY            net (fanout=1)     e  0.100   din_10_IBUF
+    SLICEL.CLK           Tdick                 0.227   din_i<11>
+                                                       I_REG_IB/q_10
+    -------------------------------------------------  ---------------------------
+    Total                                      1.049ns (0.949ns logic, 0.100ns route)
+                                                       (90.5% logic, 9.5% route)
+
+  Minimum Clock Path: clk to I_REG_IB/q_10
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICEL.CLK           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_IB/q_12 (SLICEL.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     5.015ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               din<12> (PAD)
+  Destination:          I_REG_IB/q_12 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      1.049ns (Levels of Logic = 1)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: din<12> to I_REG_IB/q_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   din<12>
+                                                       din<12>
+                                                       din_12_IBUF
+    SLICEL.BY            net (fanout=1)     e  0.100   din_12_IBUF
+    SLICEL.CLK           Tdick                 0.227   din_i<13>
+                                                       I_REG_IB/q_12
+    -------------------------------------------------  ---------------------------
+    Total                                      1.049ns (0.949ns logic, 0.100ns route)
+                                                       (90.5% logic, 9.5% route)
+
+  Minimum Clock Path: clk to I_REG_IB/q_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICEL.CLK           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_IB/q_11 (SLICEL.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.153ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<11> (PAD)
+  Destination:          I_REG_IB/q_11 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      0.432ns (Levels of Logic = 1)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<11> to I_REG_IB/q_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   din<11>
+                                                       din<11>
+                                                       din_11_IBUF
+    SLICEL.BX            net (fanout=1)     e  0.100   din_11_IBUF
+    SLICEL.CLK           Tckdi       (-Th)     0.246   din_i<11>
+                                                       I_REG_IB/q_11
+    -------------------------------------------------  ---------------------------
+    Total                                      0.432ns (0.332ns logic, 0.100ns route)
+                                                       (76.9% logic, 23.1% route)
+
+  Maximum Clock Path: clk to I_REG_IB/q_11
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICEL.CLK           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_IB/q_13 (SLICEL.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.153ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<13> (PAD)
+  Destination:          I_REG_IB/q_13 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      0.432ns (Levels of Logic = 1)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<13> to I_REG_IB/q_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   din<13>
+                                                       din<13>
+                                                       din_13_IBUF
+    SLICEL.BX            net (fanout=1)     e  0.100   din_13_IBUF
+    SLICEL.CLK           Tckdi       (-Th)     0.246   din_i<13>
+                                                       I_REG_IB/q_13
+    -------------------------------------------------  ---------------------------
+    Total                                      0.432ns (0.332ns logic, 0.100ns route)
+                                                       (76.9% logic, 23.1% route)
+
+  Maximum Clock Path: clk to I_REG_IB/q_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICEL.CLK           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point I_REG_IB/q_21 (SLICEL.BX), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.153ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<21> (PAD)
+  Destination:          I_REG_IB/q_21 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      0.432ns (Levels of Logic = 1)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<21> to I_REG_IB/q_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   din<21>
+                                                       din<21>
+                                                       din_21_IBUF
+    SLICEL.BX            net (fanout=1)     e  0.100   din_21_IBUF
+    SLICEL.CLK           Tckdi       (-Th)     0.246   din_i<21>
+                                                       I_REG_IB/q_21
+    -------------------------------------------------  ---------------------------
+    Total                                      0.432ns (0.332ns logic, 0.100ns route)
+                                                       (76.9% logic, 23.1% route)
+
+  Maximum Clock Path: clk to I_REG_IB/q_21
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICEL.CLK           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 32 paths analyzed, 32 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   5.748ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dout<3> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.252ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               I_REG_OB/q_3 (FF)
+  Destination:          dout<3> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      4.469ns (Levels of Logic = 0)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to I_REG_OB/q_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+  Maximum Data Path: I_REG_OB/q_3 to dout<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.469   dout<3>
+                                                       I_REG_OB/q_3
+                                                       dout_3_OBUF
+                                                       dout<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.469ns (4.469ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<4> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.252ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               I_REG_OB/q_4 (FF)
+  Destination:          dout<4> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      4.469ns (Levels of Logic = 0)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to I_REG_OB/q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+  Maximum Data Path: I_REG_OB/q_4 to dout<4>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.469   dout<4>
+                                                       I_REG_OB/q_4
+                                                       dout_4_OBUF
+                                                       dout<4>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.469ns (4.469ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<5> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  2.252ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               I_REG_OB/q_5 (FF)
+  Destination:          dout<5> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      4.469ns (Levels of Logic = 0)
+  Clock Path Delay:     1.279ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to I_REG_OB/q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.279ns (1.079ns logic, 0.200ns route)
+                                                       (84.4% logic, 15.6% route)
+
+  Maximum Data Path: I_REG_OB/q_5 to dout<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.469   dout<5>
+                                                       I_REG_OB/q_5
+                                                       dout_5_OBUF
+                                                       dout<5>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.469ns (4.469ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+--------------------------------------------------------------------------------
+
+Paths for end point dout<3> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.144ns (clock arrival + clock path + data path - uncertainty)
+  Source:               I_REG_OB/q_3 (FF)
+  Destination:          dout<3> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.080ns (Levels of Logic = 0)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to I_REG_OB/q_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+  Minimum Data Path: I_REG_OB/q_3 to dout<3>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.080   dout<3>
+                                                       I_REG_OB/q_3
+                                                       dout_3_OBUF
+                                                       dout<3>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.080ns (4.080ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<4> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.144ns (clock arrival + clock path + data path - uncertainty)
+  Source:               I_REG_OB/q_4 (FF)
+  Destination:          dout<4> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.080ns (Levels of Logic = 0)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to I_REG_OB/q_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+  Minimum Data Path: I_REG_OB/q_4 to dout<4>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.080   dout<4>
+                                                       I_REG_OB/q_4
+                                                       dout_4_OBUF
+                                                       dout<4>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.080ns (4.080ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<5> (IOB.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  5.144ns (clock arrival + clock path + data path - uncertainty)
+  Source:               I_REG_OB/q_5 (FF)
+  Destination:          dout<5> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.080ns (Levels of Logic = 0)
+  Clock Path Delay:     1.064ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to I_REG_OB/q_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX.I0           net (fanout=1)     e  0.100   clk_BUFGP/IBUFG
+    BUFGMUX.O            Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    IOB.OTCLK1           net (fanout=56)    e  0.100   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.064ns (0.864ns logic, 0.200ns route)
+                                                       (81.2% logic, 18.8% route)
+
+  Minimum Data Path: I_REG_OB/q_5 to dout<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    IOB.PAD              Tiockp                4.080   dout<5>
+                                                       I_REG_OB/q_5
+                                                       dout_5_OBUF
+                                                       dout<5>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.080ns (4.080ns logic, 0.000ns route)
+                                                       (100.0% logic, 0.0% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+WE          |    3.317(R)|   -1.463(R)|clk_BUFGP         |   0.000|
+addr<0>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+addr<1>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+addr<2>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+addr<3>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+addr<4>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+addr<5>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+addr<6>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+addr<7>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+addr<8>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+addr<9>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<0>      |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<1>      |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<2>      |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<3>      |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<4>      |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<5>      |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<6>      |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<7>      |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<8>      |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<9>      |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<10>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<11>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<12>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<13>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<14>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<15>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<16>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<17>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<18>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<19>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<20>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<21>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<22>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<23>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<24>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<25>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<26>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<27>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<28>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<29>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+din<30>     |   -0.015(R)|    0.806(R)|clk_BUFGP         |   0.000|
+din<31>     |   -0.066(R)|    0.847(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+dout<0>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<1>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<2>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<3>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<4>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<5>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<6>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<7>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<8>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<9>     |    5.748(R)|clk_BUFGP         |   0.000|
+dout<10>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<11>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<12>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<13>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<14>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<15>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<16>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<17>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<18>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<19>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<20>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<21>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<22>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<23>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<24>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<25>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<26>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<27>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<28>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<29>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<30>    |    5.748(R)|clk_BUFGP         |   0.000|
+dout<31>    |    5.748(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    2.833|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+Worst Case Data Window 4.164; Ideal Clock Offset To Actual Clock 1.235; 
+------------------+------------+------------+---------+---------+-------------+
+                  |            |            |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |    Hold    |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+---------+---------+-------------+
+WE                |    3.317(R)|   -1.463(R)|    1.683|    6.463|       -2.390|
+addr<0>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+addr<1>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+addr<2>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+addr<3>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+addr<4>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+addr<5>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+addr<6>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+addr<7>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+addr<8>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+addr<9>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<0>            |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<1>            |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<2>            |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<3>            |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<4>            |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<5>            |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<6>            |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<7>            |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<8>            |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<9>            |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<10>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<11>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<12>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<13>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<14>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<15>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<16>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<17>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<18>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<19>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<20>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<21>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<22>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<23>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<24>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<25>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<26>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<27>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<28>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<29>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+din<30>           |   -0.015(R)|    0.806(R)|    5.015|    4.194|        0.410|
+din<31>           |   -0.066(R)|    0.847(R)|    5.066|    4.153|        0.457|
+------------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       3.317|       0.847|    1.683|    4.153|             |
+------------------+------------+------------+---------+---------+-------------+
+
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+Bus Skew: 0.000 ns; 
+-----------------------------------------------+-------------+--------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+--------------+
+dout<0>                                        |        5.748|         0.000|
+dout<1>                                        |        5.748|         0.000|
+dout<2>                                        |        5.748|         0.000|
+dout<3>                                        |        5.748|         0.000|
+dout<4>                                        |        5.748|         0.000|
+dout<5>                                        |        5.748|         0.000|
+dout<6>                                        |        5.748|         0.000|
+dout<7>                                        |        5.748|         0.000|
+dout<8>                                        |        5.748|         0.000|
+dout<9>                                        |        5.748|         0.000|
+dout<10>                                       |        5.748|         0.000|
+dout<11>                                       |        5.748|         0.000|
+dout<12>                                       |        5.748|         0.000|
+dout<13>                                       |        5.748|         0.000|
+dout<14>                                       |        5.748|         0.000|
+dout<15>                                       |        5.748|         0.000|
+dout<16>                                       |        5.748|         0.000|
+dout<17>                                       |        5.748|         0.000|
+dout<18>                                       |        5.748|         0.000|
+dout<19>                                       |        5.748|         0.000|
+dout<20>                                       |        5.748|         0.000|
+dout<21>                                       |        5.748|         0.000|
+dout<22>                                       |        5.748|         0.000|
+dout<23>                                       |        5.748|         0.000|
+dout<24>                                       |        5.748|         0.000|
+dout<25>                                       |        5.748|         0.000|
+dout<26>                                       |        5.748|         0.000|
+dout<27>                                       |        5.748|         0.000|
+dout<28>                                       |        5.748|         0.000|
+dout<29>                                       |        5.748|         0.000|
+dout<30>                                       |        5.748|         0.000|
+dout<31>                                       |        5.748|         0.000|
+-----------------------------------------------+-------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 161 paths, 0 nets, and 185 connections
+
+Design statistics:
+   Minimum period:   2.833ns{1}   (Maximum frequency: 352.983MHz)
+   Minimum input required time before clock:   3.317ns
+   Minimum output required time after clock:   5.748ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Sat May 10 17:37:06 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 323 MB
+
+
+

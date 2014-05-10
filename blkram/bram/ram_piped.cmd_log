@@ -12,3 +12,26 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-
 map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o ram_piped_map.ncd ram_piped.ngd ram_piped.pcf 
 par -w -intstyle ise -ol high -t 1 ram_piped_map.ncd ram_piped.ncd ram_piped.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf -ucf ram_piped.ucf 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/blkram/bram/ram_piped.xst" -ofn "/home/gfudge/fpga/server/blkram/bram/ram_piped.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-5 ram_piped.ngc ram_piped.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o ram_piped_map.ncd ram_piped.ngd ram_piped.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped_preroute.twx ram_piped_map.ncd -o ram_piped_preroute.twr ram_piped.pcf -ucf ram_piped.ucf 
+netgen -intstyle ise -s 5  -pcf ram_piped.pcf -rpw 100 -tpw 0 -ar Structure -tm ram_piped -w -dir netgen/map -ofmt vhdl -sim ram_piped_map.ncd ram_piped_map.vhd 
+par -w -intstyle ise -ol high -t 1 ram_piped_map.ncd ram_piped.ncd ram_piped.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf -ucf ram_piped.ucf 
+bitgen -intstyle ise -f ram_piped.ut ram_piped.ncd 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/blkram/bram/ram_piped.xst" -ofn "/home/gfudge/fpga/server/blkram/bram/ram_piped.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-5 ram_piped.ngc ram_piped.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o ram_piped_map.ncd ram_piped.ngd ram_piped.pcf 
+par -w -intstyle ise -ol high -t 1 ram_piped_map.ncd ram_piped.ncd ram_piped.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf -ucf ram_piped.ucf 
+netgen -intstyle ise -s 5  -pcf ram_piped.pcf -rpw 100 -tpw 0 -ar Structure -tm ram_piped -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim ram_piped.ncd ram_piped_timesim.vhd 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/blkram/bram/ram_piped.xst" -ofn "/home/gfudge/fpga/server/blkram/bram/ram_piped.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-5 ram_piped.ngc ram_piped.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o ram_piped_map.ncd ram_piped.ngd ram_piped.pcf 
+par -w -intstyle ise -ol high -t 1 ram_piped_map.ncd ram_piped.ncd ram_piped.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf -ucf ram_piped.ucf 
+bitgen -intstyle ise -f ram_piped.ut ram_piped.ncd 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml ram_piped_preroute.twx ram_piped_map.ncd -o ram_piped_preroute.twr ram_piped.pcf -ucf ram_piped.ucf 
+netgen -intstyle ise -s 5  -pcf ram_piped.pcf -rpw 100 -tpw 0 -ar Structure -tm ram_piped -w -dir netgen/map -ofmt vhdl -sim ram_piped_map.ncd ram_piped_map.vhd 
+netgen -intstyle ise -s 5  -pcf ram_piped.pcf -rpw 100 -tpw 0 -ar Structure -tm ram_piped -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim ram_piped.ncd ram_piped_timesim.vhd 

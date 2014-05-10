@@ -1,11 +1,11 @@
-Release 14.2 ngdbuild P.28xd (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 ngdbuild P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-Command Line: /usr4/Xilinx/14.2/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild
--intstyle ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-5
-ram_piped.ngc ram_piped.ngd
+Command Line: /opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/ngdbuild -intstyle
+ise -dd _ngo -nt timestamp -uc ram_piped.ucf -p xc3s50-pq208-5 ram_piped.ngc
+ram_piped.ngd
 
-Reading NGO file "/home/zel/elgf2/projects/blkram/bram/ram_piped.ngc" ...
+Reading NGO file "/home/gfudge/fpga/server/blkram/bram/ram_piped.ngc" ...
 Gathering constraint information from source properties...
 Done.
 
@@ -27,10 +27,10 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:   0
 
-Total memory usage is 442124 kilobytes
+Total memory usage is 390484 kilobytes
 
 Writing NGD file "ram_piped.ngd" ...
-Total REAL time to NGDBUILD completion:  5 sec
-Total CPU time to NGDBUILD completion:   4 sec
+Total REAL time to NGDBUILD completion:  3 sec
+Total CPU time to NGDBUILD completion:   3 sec
 
 Writing NGDBUILD log file "ram_piped.bld"...

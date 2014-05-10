@@ -1,14 +1,14 @@
 --------------------------------------------------------------------------------
-Release 14.2 Trace  (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/usr4/Xilinx/14.2/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5
--n 3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml ram_piped.twx ram_piped.ncd -o ram_piped.twr ram_piped.pcf
 -ucf ram_piped.ucf
 
 Design file:              ram_piped.ncd
 Physical constraint file: ram_piped.pcf
-Device,package,speed:     xc3s50,pq208,-5 (PRODUCTION 1.39 2012-07-09)
+Device,package,speed:     xc3s50,pq208,-5 (PRODUCTION 1.39 2013-10-13)
 Report level:             verbose report
 
 Environment Variable      Effect 
@@ -975,14 +975,14 @@ Design statistics:
 ------------------------------------Footnotes-----------------------------------
 1)  The minimum period statistic assumes all single cycle delays.
 
-Analysis completed Fri May  9 14:48:07 2014 
+Analysis completed Sat May 10 17:36:03 2014 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 322 MB
+Peak Memory Usage: 323 MB
 
 
 

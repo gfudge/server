@@ -1,18 +1,18 @@
-Release 14.2 - xst P.28xd (lin64)
-Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> 
 Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.09 secs
+Total CPU time to Xst completion: 0.06 secs
  
 --> 
 Reading design: ram_piped.prj
@@ -107,16 +107,16 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/log_package.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/log_package.vhd" in Library work.
 Architecture log_package of Entity log_package is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/bram_package.vhd" in Library work.
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/bram_package.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/param_reg.vhd" in Library work.
 Architecture rtl of Entity param_reg is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/reg_single.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/reg_single.vhd" in Library work.
 Architecture rtl of Entity reg_single is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/bram_param.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/bram_param.vhd" in Library work.
 Architecture behavioural of Entity bram_param is up to date.
-Compiling vhdl file "/home/zel/elgf2/projects/blkram/rtl/ram_piped.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/blkram/rtl/ram_piped.vhd" in Library work.
 Architecture struct of Entity ram_piped is up to date.
 
 =========================================================================
@@ -171,7 +171,7 @@ Entity <bram_param> analyzed. Unit <bram_param> generated.
 Performing bidirectional port resolution...
 
 Synthesizing Unit <param_reg_1>.
-    Related source file is "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd".
+    Related source file is "/home/gfudge/fpga/server/blkram/rtl/param_reg.vhd".
     Found 32-bit register for signal <q>.
     Summary:
 	inferred  32 D-type flip-flop(s).
@@ -179,7 +179,7 @@ Unit <param_reg_1> synthesized.
 
 
 Synthesizing Unit <param_reg_2>.
-    Related source file is "/home/zel/elgf2/projects/blkram/rtl/param_reg.vhd".
+    Related source file is "/home/gfudge/fpga/server/blkram/rtl/param_reg.vhd".
     Found 10-bit register for signal <q>.
     Summary:
 	inferred  10 D-type flip-flop(s).
@@ -187,7 +187,7 @@ Unit <param_reg_2> synthesized.
 
 
 Synthesizing Unit <reg_single>.
-    Related source file is "/home/zel/elgf2/projects/blkram/rtl/reg_single.vhd".
+    Related source file is "/home/gfudge/fpga/server/blkram/rtl/reg_single.vhd".
     Found 1-bit register for signal <q>.
     Summary:
 	inferred   1 D-type flip-flop(s).
@@ -195,7 +195,7 @@ Unit <reg_single> synthesized.
 
 
 Synthesizing Unit <bram_param>.
-    Related source file is "/home/zel/elgf2/projects/blkram/rtl/bram_param.vhd".
+    Related source file is "/home/gfudge/fpga/server/blkram/rtl/bram_param.vhd".
     Found 1024x32-bit single-port RAM <Mram_ram_ir> for signal <ram_ir>.
     Found 32-bit register for signal <dout>.
     Summary:
@@ -205,7 +205,7 @@ Unit <bram_param> synthesized.
 
 
 Synthesizing Unit <ram_piped>.
-    Related source file is "/home/zel/elgf2/projects/blkram/rtl/ram_piped.vhd".
+    Related source file is "/home/gfudge/fpga/server/blkram/rtl/ram_piped.vhd".
 Unit <ram_piped> synthesized.
 
 
@@ -441,13 +441,13 @@ Offset:              6.216ns (Levels of Logic = 1)
 =========================================================================
 
 
-Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 6.74 secs
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 5.03 secs
  
 --> 
 
 
-Total memory usage is 568024 kilobytes
+Total memory usage is 514008 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    0 (   0 filtered)
