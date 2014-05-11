@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-gfudge-desktop::  Sun May 11 18:48:33 2014
+gfudge-desktop::  Sun May 11 19:09:10 2014
 
 par -w -intstyle ise -ol high -t 1 memctrl_map.ncd memctrl.ncd memctrl.pcf 
 

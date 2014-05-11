@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-05-11T18:38:54</DateModified>
+  <DateModified>2014-05-11T19:03:55</DateModified>
   <ModuleName>memctrl</ModuleName>
   <SummaryTimeStamp>2014-05-11T18:38:11</SummaryTimeStamp>
   <SavedFilePath>/home/gfudge/fpga/server/fsm/fsm/iseconfig/memctrl.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/gfudge/fpga/server/fsm/fsm</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/gfudge/fpga/server/fsm/fsm/</ImplementationReportsDirectory>
   <DateInitialized>2014-05-11T17:33:35</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

@@ -70,3 +70,17 @@ ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memctrl.ucf -p xc3s50-pq208-5 
 map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o memctrl_map.ncd memctrl.ngd memctrl.pcf 
 par -w -intstyle ise -ol high -t 1 memctrl_map.ncd memctrl.ncd memctrl.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml memctrl.twx memctrl.ncd -o memctrl.twr memctrl.pcf -ucf memctrl.ucf 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm/memctrl.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm/memctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memctrl.ucf -p xc3s50-pq208-5 memctrl.ngc memctrl.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o memctrl_map.ncd memctrl.ngd memctrl.pcf 
+par -w -intstyle ise -ol high -t 1 memctrl_map.ncd memctrl.ncd memctrl.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml memctrl.twx memctrl.ncd -o memctrl.twr memctrl.pcf -ucf memctrl.ucf 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm/memctrl.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm/memctrl.syr" 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm/memctrl.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm/memctrl.syr" 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm/memctrl.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm/memctrl.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc memctrl.ucf -p xc3s50-pq208-5 memctrl.ngc memctrl.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o memctrl_map.ncd memctrl.ngd memctrl.pcf 
+par -w -intstyle ise -ol high -t 1 memctrl_map.ncd memctrl.ncd memctrl.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml memctrl.twx memctrl.ncd -o memctrl.twr memctrl.pcf -ucf memctrl.ucf 
+bitgen -intstyle ise -f memctrl.ut memctrl.ncd 
+netgen -intstyle ise -s 5  -pcf memctrl.pcf -rpw 100 -tpw 0 -ar Structure -tm memctrl -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim memctrl.ncd memctrl_timesim.vhd 

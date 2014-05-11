@@ -52,12 +52,14 @@
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="memctrl.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="memctrl.xst"/>
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="memctrl_envsettings.html"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="memctrl_fpga_editor.log"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="memctrl_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="memctrl_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="memctrl_map.mrp" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="memctrl_map.ncd" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="memctrl_map.ngm" xil_pn:subbranch="Map"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="memctrl_map.xrpt"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="memctrl_map_fpga_editor.log"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="memctrl_ngdbuild.xrpt"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="memctrl_pad.csv" xil_pn:subbranch="Par"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="memctrl_pad.txt" xil_pn:subbranch="Par"/>
@@ -65,44 +67,52 @@
     <file xil_pn:fileType="FILE_HTML" xil_pn:name="memctrl_summary.html"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="memctrl_summary.xml"/>
     <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="memctrl_usage.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="memctrl_vhdl.prj"/>
     <file xil_pn:fileType="FILE_XRPT" xil_pn:name="memctrl_xst.xrpt"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="netgen"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_NETGEN_REPORT" xil_pn:name="netgen/par/memctrl_timesim.nlf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_SDF" xil_pn:name="netgen/par/memctrl_timesim.sdf"/>
+    <file xil_pn:branch="PostRouteSimulation" xil_pn:fileType="FILE_VHDL" xil_pn:name="netgen/par/memctrl_timesim.vhd"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1399827722">
-      <status xil_pn:value="SuccessfullyRun"/>
-    </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7185363869559671113" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-2078554716385253241" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-7185363869559671113" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-2078554716385253241" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7704202805118354687" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="4779560239316253549" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="7704202805118354687" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399827722" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4593994629274196719" xil_pn:start_ts="1399827722">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="4779560239316253549" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399830043" xil_pn:in_ck="-2188933143683550606" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-3817550099532144219" xil_pn:start_ts="1399830034">
+    <transform xil_pn:end_ts="1399831625" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="-4593994629274196719" xil_pn:start_ts="1399831625">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1399831634" xil_pn:in_ck="-2188933143683550606" xil_pn:name="TRANEXT_xstsynthesize_spartan3" xil_pn:prop_ck="-7770089563585159183" xil_pn:start_ts="1399831625">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="memctrl.lso"/>
       <outfile xil_pn:name="memctrl.ngc"/>
@@ -119,21 +129,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1399830014" xil_pn:in_ck="-8928491850885204870" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2256591701050896207" xil_pn:start_ts="1399830008">
+    <transform xil_pn:end_ts="1399831742" xil_pn:in_ck="-8928491850885204870" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="2256591701050896207" xil_pn:start_ts="1399831736">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="memctrl.bld"/>
       <outfile xil_pn:name="memctrl.ngd"/>
       <outfile xil_pn:name="memctrl_ngdbuild.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1399830019" xil_pn:in_ck="-8877949744371478053" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7868858794111860816" xil_pn:start_ts="1399830014">
+    <transform xil_pn:end_ts="1399831748" xil_pn:in_ck="-8877949744371478053" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7868858794111860816" xil_pn:start_ts="1399831742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="memctrl.pcf"/>
       <outfile xil_pn:name="memctrl_map.map"/>
@@ -144,10 +151,9 @@
       <outfile xil_pn:name="memctrl_summary.xml"/>
       <outfile xil_pn:name="memctrl_usage.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1399830029" xil_pn:in_ck="-2923217124874874540" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3266239339701135281" xil_pn:start_ts="1399830019">
+    <transform xil_pn:end_ts="1399831757" xil_pn:in_ck="-2923217124874874540" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="3266239339701135281" xil_pn:start_ts="1399831748">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
       <outfile xil_pn:name="memctrl.ncd"/>
       <outfile xil_pn:name="memctrl.pad"/>
@@ -159,25 +165,27 @@
       <outfile xil_pn:name="memctrl_pad.txt"/>
       <outfile xil_pn:name="memctrl_par.xrpt"/>
     </transform>
-    <transform xil_pn:end_ts="1399829965" xil_pn:in_ck="171787341485240119" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="4026351017656627060" xil_pn:start_ts="1399829962">
+    <transform xil_pn:end_ts="1399831760" xil_pn:in_ck="171787341485240119" xil_pn:name="TRANEXT_bitFile_spartan3" xil_pn:prop_ck="-2672950586390118423" xil_pn:start_ts="1399831757">
       <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
       <outfile xil_pn:name="memctrl.bgn"/>
       <outfile xil_pn:name="memctrl.drc"/>
       <outfile xil_pn:name="memctrl.ut"/>
       <outfile xil_pn:name="webtalk_pn.xml"/>
     </transform>
-    <transform xil_pn:end_ts="1399830029" xil_pn:in_ck="2897236269526133719" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1399830025">
+    <transform xil_pn:end_ts="1399831791" xil_pn:in_ck="171787341485240119" xil_pn:name="TRAN_postParSimModel" xil_pn:prop_ck="5499615540265815627" xil_pn:start_ts="1399831786">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="netgen"/>
+      <outfile xil_pn:name="netgen/par/memctrl_timesim.nlf"/>
+      <outfile xil_pn:name="netgen/par/memctrl_timesim.sdf"/>
+      <outfile xil_pn:name="netgen/par/memctrl_timesim.vhd"/>
+    </transform>
+    <transform xil_pn:end_ts="1399831757" xil_pn:in_ck="2897236269526133719" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1399831754">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
       <outfile xil_pn:name="memctrl.twr"/>
       <outfile xil_pn:name="memctrl.twx"/>
@@ -186,7 +194,6 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="InputChanged"/>
     </transform>
   </transforms>

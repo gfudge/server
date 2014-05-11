@@ -5,93 +5,93 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/memctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">19</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/memctrl.vhd</arg>&quot; line <arg fmt="%d" index="2">19</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd</arg>&quot; line <arg fmt="%d" index="2">30</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd</arg>&quot; line <arg fmt="%d" index="2">30</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="1607" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">ram_ir</arg>&gt; may be accessed with an index that does not cover the full array size.
+<msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">ram_ir</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="790" delta="old" >&quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd</arg>&quot; line <arg fmt="%d" index="2">32</arg>: Index value(s) does not match array range, simulation mismatch.
+<msg type="warning" file="Xst" num="790" delta="new" >&quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd</arg>&quot; line <arg fmt="%d" index="2">32</arg>: Index value(s) does not match array range, simulation mismatch.
 </msg>
 
-<msg type="info" file="Xst" num="1607" delta="old" >Contents of array &lt;<arg fmt="%s" index="1">ram_ir</arg>&gt; may be accessed with an index that does not cover the full array size.
+<msg type="info" file="Xst" num="1607" delta="new" >Contents of array &lt;<arg fmt="%s" index="1">ram_ir</arg>&gt; may be accessed with an index that does not cover the full array size.
 </msg>
 
-<msg type="warning" file="Xst" num="647" delta="old" >Input &lt;<arg fmt="%s" index="1">addr&lt;31:10&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+<msg type="warning" file="Xst" num="647" delta="new" >Input &lt;<arg fmt="%s" index="1">addr&lt;31:10&gt;</arg>&gt; is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
 </msg>
 
-<msg type="info" file="Xst" num="3038" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_ram_ir</arg>&gt; appears to be read-only. If that was not your intent please check the write enable description.
+<msg type="info" file="Xst" num="3038" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_ram_ir</arg>&gt; appears to be read-only. If that was not your intent please check the write enable description.
 </msg>
 
-<msg type="info" file="Xst" num="3226" delta="old" >The RAM &lt;<arg fmt="%s" index="1">Mram_ram_ir</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
+<msg type="info" file="Xst" num="3226" delta="new" >The RAM &lt;<arg fmt="%s" index="1">Mram_ram_ir</arg>&gt; will be implemented as a BLOCK RAM, absorbing the following register(s):</msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_31</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_30</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_29</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_28</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_27</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_26</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_25</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_24</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_23</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_20</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_19</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_18</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_17</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_16</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_15</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_14</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_13</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_12</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_11</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
-<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
+<msg type="warning" file="Xst" num="2677" delta="new" >Node &lt;<arg fmt="%s" index="1">I_FSM/maddr_10</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">memctrl</arg>&gt;.
 </msg>
 
 </messages>
