@@ -1,0 +1,42 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Sun May 11 18:48:30 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clock_BUFGP/IBUFG" BEL "clock_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clock = BEL "I_FSM/cnt_ir_3" BEL "I_FSM/cnt_ir_2" BEL "I_FSM/cnt_ir_1"
+        BEL "I_FSM/cnt_ir_0" BEL "I_FSM/maddr_9" BEL "I_FSM/maddr_8" BEL
+        "I_FSM/maddr_7" BEL "I_FSM/maddr_6" BEL "I_FSM/maddr_5" BEL
+        "I_FSM/maddr_4" BEL "I_FSM/maddr_3" BEL "I_FSM/maddr_2" BEL
+        "I_FSM/maddr_1" BEL "I_FSM/maddr_0" BEL "I_FSM/dout_31" BEL
+        "I_FSM/dout_30" BEL "I_FSM/dout_29" BEL "I_FSM/dout_28" BEL
+        "I_FSM/dout_27" BEL "I_FSM/dout_26" BEL "I_FSM/dout_25" BEL
+        "I_FSM/dout_24" BEL "I_FSM/dout_23" BEL "I_FSM/dout_22" BEL
+        "I_FSM/dout_21" BEL "I_FSM/dout_20" BEL "I_FSM/dout_19" BEL
+        "I_FSM/dout_18" BEL "I_FSM/dout_17" BEL "I_FSM/dout_16" BEL
+        "I_FSM/dout_15" BEL "I_FSM/dout_14" BEL "I_FSM/dout_13" BEL
+        "I_FSM/dout_12" BEL "I_FSM/dout_11" BEL "I_FSM/dout_10" BEL
+        "I_FSM/dout_9" BEL "I_FSM/dout_8" BEL "I_FSM/dout_7" BEL
+        "I_FSM/dout_6" BEL "I_FSM/dout_5" BEL "I_FSM/dout_4" BEL
+        "I_FSM/dout_3" BEL "I_FSM/dout_2" BEL "I_FSM/dout_1" BEL
+        "I_FSM/dout_0" BEL "I_FSM/rdy" BEL "I_FSM/state_ir_0" BEL
+        "I_BRAM/Mram_ram_ir2.A" BEL "I_BRAM/Mram_ram_ir1.A" BEL
+        "clock_BUFGP/BUFG.GCLKMUX" BEL "clock_BUFGP/BUFG";
+TIMEGRP input = BEL "address<0>" BEL "address<1>" BEL "address<2>" BEL
+        "address<3>" BEL "address<4>" BEL "address<5>" BEL "address<6>" BEL
+        "address<7>" BEL "address<8>" BEL "address<9>" BEL "burst<0>" BEL
+        "burst<1>" BEL "burst<2>" BEL "burst<3>" BEL "request" BEL "reset";
+TIMEGRP output = BEL "dataout<0>" BEL "dataout<10>" BEL "dataout<11>" BEL
+        "dataout<12>" BEL "dataout<13>" BEL "dataout<14>" BEL "dataout<15>"
+        BEL "dataout<16>" BEL "dataout<17>" BEL "dataout<18>" BEL
+        "dataout<19>" BEL "dataout<1>" BEL "dataout<20>" BEL "dataout<21>" BEL
+        "dataout<22>" BEL "dataout<23>" BEL "dataout<24>" BEL "dataout<25>"
+        BEL "dataout<26>" BEL "dataout<27>" BEL "dataout<28>" BEL
+        "dataout<29>" BEL "dataout<2>" BEL "dataout<30>" BEL "dataout<31>" BEL
+        "dataout<3>" BEL "dataout<4>" BEL "dataout<5>" BEL "dataout<6>" BEL
+        "dataout<7>" BEL "dataout<8>" BEL "dataout<9>" BEL "ready";
+TS_clock = PERIOD TIMEGRP "clock" 10 ns HIGH 50%;
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clock" "RISING";
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clock";
+SCHEMATIC END;
+

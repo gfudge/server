@@ -1,0 +1,57 @@
+
+#Created by Constraints Editor (xc3s50-pq208-5) - 2014/05/11
+NET "clock" TNM_NET = clock;
+TIMESPEC TS_clock = PERIOD "clock" 10 ns HIGH 50%;
+#Created by Constraints Editor (xc3s50-pq208-5) - 2014/05/11
+INST "address<0>" TNM = input;
+INST "address<1>" TNM = input;
+INST "address<2>" TNM = input;
+INST "address<3>" TNM = input;
+INST "address<4>" TNM = input;
+INST "address<5>" TNM = input;
+INST "address<6>" TNM = input;
+INST "address<7>" TNM = input;
+INST "address<8>" TNM = input;
+INST "address<9>" TNM = input;
+INST "burst<0>" TNM = input;
+INST "burst<1>" TNM = input;
+INST "burst<2>" TNM = input;
+INST "burst<3>" TNM = input;
+INST "request" TNM = input;
+INST "reset" TNM = input;
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE "clock" RISING;
+#Created by Constraints Editor (xc3s50-pq208-5) - 2014/05/11
+INST "dataout<0>" TNM = output;
+INST "dataout<1>" TNM = output;
+INST "dataout<2>" TNM = output;
+INST "dataout<3>" TNM = output;
+INST "dataout<4>" TNM = output;
+INST "dataout<5>" TNM = output;
+INST "dataout<6>" TNM = output;
+INST "dataout<7>" TNM = output;
+INST "dataout<8>" TNM = output;
+INST "dataout<9>" TNM = output;
+INST "dataout<10>" TNM = output;
+INST "dataout<11>" TNM = output;
+INST "dataout<12>" TNM = output;
+INST "dataout<13>" TNM = output;
+INST "dataout<14>" TNM = output;
+INST "dataout<15>" TNM = output;
+INST "dataout<16>" TNM = output;
+INST "dataout<17>" TNM = output;
+INST "dataout<18>" TNM = output;
+INST "dataout<19>" TNM = output;
+INST "dataout<20>" TNM = output;
+INST "dataout<21>" TNM = output;
+INST "dataout<22>" TNM = output;
+INST "dataout<23>" TNM = output;
+INST "dataout<24>" TNM = output;
+INST "dataout<25>" TNM = output;
+INST "dataout<26>" TNM = output;
+INST "dataout<27>" TNM = output;
+INST "dataout<28>" TNM = output;
+INST "dataout<29>" TNM = output;
+INST "dataout<30>" TNM = output;
+INST "dataout<31>" TNM = output;
+INST "ready" TNM = output;
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER "clock";

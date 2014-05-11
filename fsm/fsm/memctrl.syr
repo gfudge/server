@@ -1,0 +1,482 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.06 secs
+ 
+--> 
+Reading design: memctrl.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "memctrl.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "memctrl"
+Output Format                      : NGC
+Target Device                      : xc3s50-5-pq208
+
+---- Source Options
+Top Module Name                    : memctrl
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 500
+Add Generic Clock Buffer(BUFG)     : 8
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "/home/gfudge/fpga/server/fsm/rtl/log_package.vhd" in Library work.
+Architecture log_package of Entity log_package is up to date.
+Compiling vhdl file "/home/gfudge/fpga/server/fsm/rtl/bram_package.vhd" in Library work.
+Compiling vhdl file "/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd" in Library work.
+Architecture behavioural of Entity bram_param is up to date.
+Compiling vhdl file "/home/gfudge/fpga/server/fsm/rtl/fsm.vhd" in Library work.
+Architecture rtl of Entity fsm is up to date.
+Compiling vhdl file "/home/gfudge/fpga/server/fsm/rtl/memctrl.vhd" in Library work.
+Architecture struct of Entity memctrl is up to date.
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for entity <memctrl> in library <work> (architecture <struct>) with generics.
+	BURSTWIDTH = 4
+	LOCATIONS = 1024
+	WIDTH = 32
+
+Analyzing hierarchy for entity <bram_param> in library <work> (architecture <behavioural>) with generics.
+	locations = 1024
+	width = 32
+
+Analyzing hierarchy for entity <fsm> in library <work> (architecture <rtl>).
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing generic Entity <memctrl> in library <work> (Architecture <struct>).
+	BURSTWIDTH = 4
+	LOCATIONS = 1024
+	WIDTH = 32
+INFO:Xst:1739 - HDL ADVISOR - "/home/gfudge/fpga/server/fsm/rtl/memctrl.vhd" line 19: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+Entity <memctrl> analyzed. Unit <memctrl> generated.
+
+Analyzing generic Entity <bram_param> in library <work> (Architecture <behavioural>).
+	locations = 1024
+	width = 32
+WARNING:Xst:790 - "/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd" line 30: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <ram_ir> may be accessed with an index that does not cover the full array size.
+WARNING:Xst:790 - "/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd" line 32: Index value(s) does not match array range, simulation mismatch.
+INFO:Xst:1607 - Contents of array <ram_ir> may be accessed with an index that does not cover the full array size.
+Entity <bram_param> analyzed. Unit <bram_param> generated.
+
+Analyzing Entity <fsm> in library <work> (Architecture <rtl>).
+Entity <fsm> analyzed. Unit <fsm> generated.
+
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <bram_param>.
+    Related source file is "/home/gfudge/fpga/server/fsm/rtl/bram_param.vhd".
+WARNING:Xst:647 - Input <addr<31:10>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+    Found 1024x32-bit single-port RAM <Mram_ram_ir> for signal <ram_ir>.
+    Found 32-bit register for signal <dout>.
+    Summary:
+	inferred   1 RAM(s).
+	inferred  32 D-type flip-flop(s).
+Unit <bram_param> synthesized.
+
+
+Synthesizing Unit <fsm>.
+    Related source file is "/home/gfudge/fpga/server/fsm/rtl/fsm.vhd".
+    Found 32-bit up counter for signal <maddr>.
+    Found 1-bit register for signal <rdy>.
+    Found 32-bit register for signal <dout>.
+    Found 4-bit down counter for signal <cnt_ir>.
+    Found 1-bit register for signal <state_ir<0>>.
+    Summary:
+	inferred   2 Counter(s).
+	inferred  34 D-type flip-flop(s).
+Unit <fsm> synthesized.
+
+
+Synthesizing Unit <memctrl>.
+    Related source file is "/home/gfudge/fpga/server/fsm/rtl/memctrl.vhd".
+Unit <memctrl> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port RAM                           : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 32-bit register                                       : 2
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <bram_param>.
+INFO:Xst:3038 - The RAM <Mram_ram_ir> appears to be read-only. If that was not your intent please check the write enable description.
+INFO:Xst:3226 - The RAM <Mram_ram_ir> will be implemented as a BLOCK RAM, absorbing the following register(s): <dout>
+    -----------------------------------------------------------------------
+    | ram_type           | Block                               |          |
+    -----------------------------------------------------------------------
+    | Port A                                                              |
+    |     aspect ratio   | 1024-word x 32-bit                  |          |
+    |     mode           | write-first                         |          |
+    |     clkA           | connected to signal <clk>           | rise     |
+    |     weA            | connected to signal <GND>           | high     |
+    |     addrA          | connected to signal <addr>          |          |
+    |     diA            | connected to signal <GND>           |          |
+    |     doA            | connected to signal <dout>          |          |
+    -----------------------------------------------------------------------
+    | optimization       | speed                               |          |
+    -----------------------------------------------------------------------
+Unit <bram_param> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# RAMs                                                 : 1
+ 1024x32-bit single-port block RAM                     : 1
+# Counters                                             : 2
+ 32-bit up counter                                     : 1
+ 4-bit down counter                                    : 1
+# Registers                                            : 34
+ Flip-Flops                                            : 34
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <memctrl> ...
+
+Optimizing unit <fsm> ...
+WARNING:Xst:2677 - Node <I_FSM/maddr_31> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_30> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_29> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_28> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_27> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_26> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_25> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_24> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_23> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_22> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_21> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_20> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_19> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_18> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_17> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_16> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_15> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_14> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_13> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_12> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_11> of sequential type is unconnected in block <memctrl>.
+WARNING:Xst:2677 - Node <I_FSM/maddr_10> of sequential type is unconnected in block <memctrl>.
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block memctrl, actual ratio is 3.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 48
+ Flip-Flops                                            : 48
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : memctrl.ngr
+Top Level Output File Name         : memctrl
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 72
+
+Cell Usage :
+# BELS                             : 44
+#      GND                         : 3
+#      INV                         : 1
+#      LUT2                        : 1
+#      LUT2_L                      : 1
+#      LUT3                        : 11
+#      LUT3_D                      : 1
+#      LUT4                        : 6
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 48
+#      FDCE                        : 47
+#      FDE                         : 1
+# RAMS                             : 2
+#      RAMB16                      : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 49
+#      IBUF                        : 16
+#      OBUF                        : 33
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s50pq208-5 
+
+ Number of Slices:                       28  out of    768     3%  
+ Number of Slice Flip Flops:             48  out of   1536     3%  
+ Number of 4 input LUTs:                 21  out of   1536     1%  
+ Number of IOs:                          72
+ Number of bonded IOBs:                  50  out of    124    40%  
+ Number of BRAMs:                         2  out of      4    50%  
+ Number of GCLKs:                         1  out of      8    12%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clock                              | BUFGP                  | 50    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+-----------------------------------+------------------------+-------+
+Control Signal                     | Buffer(FF name)        | Load  |
+-----------------------------------+------------------------+-------+
+reset                              | IBUF                   | 47    |
+-----------------------------------+------------------------+-------+
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 4.673ns (Maximum Frequency: 214.011MHz)
+   Minimum input arrival time before clock: 4.347ns
+   Maximum output required time after clock: 6.216ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clock'
+  Clock period: 4.673ns (frequency: 214.011MHz)
+  Total number of paths / destination ports: 267 / 84
+-------------------------------------------------------------------------
+Delay:               4.673ns (Levels of Logic = 11)
+  Source:            I_FSM/state_ir_0 (FF)
+  Destination:       I_FSM/maddr_9 (FF)
+  Source Clock:      clock rising
+  Destination Clock: clock rising
+
+  Data Path: I_FSM/state_ir_0 to I_FSM/maddr_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q            51   0.626   1.727  I_FSM/state_ir_0 (I_FSM/state_ir_0)
+     LUT3:I2->O            1   0.479   0.000  I_FSM/Mcount_maddr_lut<0> (I_FSM/Mcount_maddr_lut<0>)
+     MUXCY:S->O            1   0.435   0.000  I_FSM/Mcount_maddr_cy<0> (I_FSM/Mcount_maddr_cy<0>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<1> (I_FSM/Mcount_maddr_cy<1>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<2> (I_FSM/Mcount_maddr_cy<2>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<3> (I_FSM/Mcount_maddr_cy<3>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<4> (I_FSM/Mcount_maddr_cy<4>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<5> (I_FSM/Mcount_maddr_cy<5>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<6> (I_FSM/Mcount_maddr_cy<6>)
+     MUXCY:CI->O           1   0.056   0.000  I_FSM/Mcount_maddr_cy<7> (I_FSM/Mcount_maddr_cy<7>)
+     MUXCY:CI->O           0   0.056   0.000  I_FSM/Mcount_maddr_cy<8> (I_FSM/Mcount_maddr_cy<8>)
+     XORCY:CI->O           1   0.786   0.000  I_FSM/Mcount_maddr_xor<9> (I_FSM/Mcount_maddr9)
+     FDCE:D                    0.176          I_FSM/maddr_9
+    ----------------------------------------
+    Total                      4.673ns (2.946ns logic, 1.727ns route)
+                                       (63.0% logic, 37.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clock'
+  Total number of paths / destination ports: 75 / 30
+-------------------------------------------------------------------------
+Offset:              4.347ns (Levels of Logic = 2)
+  Source:            reset (PAD)
+  Destination:       I_FSM/rdy (FF)
+  Destination Clock: clock rising
+
+  Data Path: reset to I_FSM/rdy
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O            48   0.715   1.948  reset_IBUF (reset_IBUF)
+     LUT2:I0->O            1   0.479   0.681  I_FSM/rdy_and00001 (I_FSM/rdy_and0000)
+     FDE:CE                    0.524          I_FSM/rdy
+    ----------------------------------------
+    Total                      4.347ns (1.718ns logic, 2.629ns route)
+                                       (39.5% logic, 60.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clock'
+  Total number of paths / destination ports: 33 / 33
+-------------------------------------------------------------------------
+Offset:              6.216ns (Levels of Logic = 1)
+  Source:            I_FSM/rdy (FF)
+  Destination:       ready (PAD)
+  Source Clock:      clock rising
+
+  Data Path: I_FSM/rdy to ready
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              1   0.626   0.681  I_FSM/rdy (I_FSM/rdy)
+     OBUF:I->O                 4.909          ready_OBUF (ready)
+    ----------------------------------------
+    Total                      6.216ns (5.535ns logic, 0.681ns route)
+                                       (89.0% logic, 11.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 6.00 secs
+Total CPU time to Xst completion: 5.55 secs
+ 
+--> 
+
+
+Total memory usage is 516816 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :   25 (   0 filtered)
+Number of infos    :    5 (   0 filtered)
+
