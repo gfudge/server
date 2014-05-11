@@ -4,186 +4,197 @@ K3
 cModel Technology
 Z0 d/home/zel/elgf2/projects/blkram
 T_opt
-V9B@Sb6`obMU@B<EnKD`6g2
+VU2:n5cC5Nm>agKAPY9o8b2
 04 12 8 work tb_ram_piped exercise 1
-Z1 =11-003048da5f8c-535666d5-ba3cc-aec
-Z2 o-quiet -auto_acc_if_foreign -work work
-Z3 OL;O;6.4a;39
+=1-003048da5f7a-536e5c26-ba771-454b
+o-quiet -auto_acc_if_foreign -work work -sdfmax /DUT=bram/netgen/par/ram_piped_timesim.sdf -suppress 1948
+OL;O;6.4a;39
 Pbram_package
-Z4 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z5 w1394623412
-Z6 8rtl/bram_package.vhd
-Z7 Frtl/bram_package.vhd
+Z1 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z2 w1394623412
+Z3 8rtl/bram_package.vhd
+Z4 Frtl/bram_package.vhd
 l0
 L4
-Z8 VMQO0[Vn=FOK8iN[Q?J5o@2
-Z9 OL;C;6.4a;39
+Z5 VMQO0[Vn=FOK8iN[Q?J5o@2
+Z6 OL;C;6.4a;39
 32
-Z10 Mx1 4 ieee 14 std_logic_1164
-Z11 tExplicit 1
-Z12 !s100 3YQcQYS879@KK?:8hJ=m72
+Z7 Mx1 4 ieee 14 std_logic_1164
+Z8 tExplicit 1
+Z9 !s100 3YQcQYS879@KK?:8hJ=m72
 Ebram_param
-Z13 w1393926036
-Z14 DPx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
-Z15 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
-Z16 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
-Z17 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
-R4
-Z18 8rtl/bram_param.vhd
-Z19 Frtl/bram_param.vhd
+Z10 w1393926036
+Z11 DPx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+Z12 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z13 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z14 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R1
+Z15 8rtl/bram_param.vhd
+Z16 Frtl/bram_param.vhd
 l0
 L7
-Z20 VoVgN_kiaX1UzPH6Xk3ULT0
-R9
+Z17 VoVgN_kiaX1UzPH6Xk3ULT0
+R6
 32
-R11
-Z21 !s100 1]D9b1LgzS3QEOoOWkofY3
+R8
+Z18 !s100 1]D9b1LgzS3QEOoOWkofY3
 Abehavioural
+R11
+R12
+R13
 R14
-R15
-R16
-R17
-R4
-Z22 DEx4 work 10 bram_param 0 22 oVgN_kiaX1UzPH6Xk3ULT0
+R1
+Z19 DEx4 work 10 bram_param 0 22 oVgN_kiaX1UzPH6Xk3ULT0
 l25
 L21
-Z23 V_R?L@dfdeFha?38zd[Pj?2
-R9
+Z20 V_R?L@dfdeFha?38zd[Pj?2
+R6
 32
-Z24 Mx5 4 ieee 14 std_logic_1164
-Z25 Mx4 4 ieee 18 std_logic_unsigned
-Z26 Mx3 4 ieee 15 std_logic_arith
-Z27 Mx2 4 ieee 11 numeric_std
-Z28 Mx1 4 work 11 log_package
-R11
-Z29 !s100 PF>VYKYZH[@hASdig8>no3
+Z21 Mx5 4 ieee 14 std_logic_1164
+Z22 Mx4 4 ieee 18 std_logic_unsigned
+Z23 Mx3 4 ieee 15 std_logic_arith
+Z24 Mx2 4 ieee 11 numeric_std
+Z25 Mx1 4 work 11 log_package
+R8
+Z26 !s100 PF>VYKYZH[@hASdig8>no3
 Plog_package
-R4
-Z30 w1394623341
-Z31 8rtl/log_package.vhd
-Z32 Frtl/log_package.vhd
+R1
+Z27 w1394623341
+Z28 8rtl/log_package.vhd
+Z29 Frtl/log_package.vhd
 l0
 L4
-Z33 VWRFF;nW=REUA>=5>LTJZ;3
-R9
+Z30 VWRFF;nW=REUA>=5>LTJZ;3
+R6
 32
 b1
-R10
-R11
-Z34 !s100 al<N;0cH?c?bGE?C2Gn>Y1
+R7
+R8
+Z31 !s100 al<N;0cH?c?bGE?C2Gn>Y1
 Bbody
-Z35 DBx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
-R4
+Z32 DBx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+R1
 l0
 L9
-Z36 Vf[jdmJoRehT_lc3UQdzdk2
-R9
+Z33 Vf[jdmJoRehT_lc3UQdzdk2
+R6
 32
-R10
-R11
+R7
+R8
 nbody
-Z37 !s100 P?RG7OmkYOK>:GcJ?6L1d3
+Z34 !s100 P?RG7OmkYOK>:GcJ?6L1d3
 Eparam_reg
-Z38 w1394624819
-R4
-Z39 8rtl/param_reg.vhd
-Z40 Frtl/param_reg.vhd
+Z35 w1394624819
+R1
+Z36 8rtl/param_reg.vhd
+Z37 Frtl/param_reg.vhd
 l0
 L5
-Z41 VNj_mQkY=YLY?bjYB`fdZM3
-R9
+Z38 VNj_mQkY=YLY?bjYB`fdZM3
+R6
 32
-R11
-Z42 !s100 >V=WlPXPMI;>fSdPD4;KG0
+R8
+Z39 !s100 >V=WlPXPMI;>fSdPD4;KG0
 Artl
-R4
-Z43 DEx4 work 9 param_reg 0 22 Nj_mQkY=YLY?bjYB`fdZM3
+R1
+Z40 DEx4 work 9 param_reg 0 22 Nj_mQkY=YLY?bjYB`fdZM3
 l16
 L15
-Z44 V;=k3OLCW9H1fjTo2fo^me0
-R9
+Z41 V;=k3OLCW9H1fjTo2fo^me0
+R6
 32
-R10
-R11
-Z45 !s100 lba]gTceh<;726d<YJ2lj1
+R7
+R8
+Z42 !s100 lba]gTceh<;726d<YJ2lj1
 Eram_piped
-Z46 w1394626314
-R14
-Z47 DPx4 work 12 bram_package 0 22 MQO0[Vn=FOK8iN[Q?J5o@2
-R4
-Z48 8rtl/ram_piped.vhd
-Z49 Frtl/ram_piped.vhd
+Z43 w1394626314
+R11
+Z44 DPx4 work 12 bram_package 0 22 MQO0[Vn=FOK8iN[Q?J5o@2
+R1
+Z45 8rtl/ram_piped.vhd
+Z46 Frtl/ram_piped.vhd
 l0
 L7
-Z50 VoEF[9`F9;bVhzNhBVK2Z22
-R9
+Z47 VoEF[9`F9;bVhzNhBVK2Z22
+R6
 32
-R11
-Z51 !s100 [Flb;kD2i=<GMI:UzjX?j1
+R8
+Z48 !s100 [Flb;kD2i=<GMI:UzjX?j1
 Astruct
-R14
-R47
-R4
-Z52 DEx4 work 9 ram_piped 0 22 oEF[9`F9;bVhzNhBVK2Z22
+R11
+R44
+R1
+Z49 DEx4 work 9 ram_piped 0 22 oEF[9`F9;bVhzNhBVK2Z22
 l66
 L22
-Z53 V:lJGFaz>fY`8Gb@T`13NK3
-R9
+Z50 V:lJGFaz>fY`8Gb@T`13NK3
+R6
 32
-Z54 Mx3 4 ieee 14 std_logic_1164
-Z55 Mx2 4 work 12 bram_package
-R28
-R11
-Z56 !s100 R>h>QZj@RhgF:HJ>8SjB82
+Z51 Mx3 4 ieee 14 std_logic_1164
+Z52 Mx2 4 work 12 bram_package
+R25
+R8
+Z53 !s100 R>h>QZj@RhgF:HJ>8SjB82
 Ereg_single
-Z57 w1394626592
-R4
-Z58 8rtl/reg_single.vhd
-Z59 Frtl/reg_single.vhd
+Z54 w1394626592
+R1
+Z55 8rtl/reg_single.vhd
+Z56 Frtl/reg_single.vhd
 l0
 L5
-Z60 VA;C=MQf=OAh`;kHz3ze[<3
-R9
+Z57 VA;C=MQf=OAh`;kHz3ze[<3
+R6
 32
-R11
-Z61 !s100 h7?Ge^NeoGk^Tik9n45ID3
+R8
+Z58 !s100 h7?Ge^NeoGk^Tik9n45ID3
 Artl
-R4
-Z62 DEx4 work 10 reg_single 0 22 A;C=MQf=OAh`;kHz3ze[<3
+R1
+Z59 DEx4 work 10 reg_single 0 22 A;C=MQf=OAh`;kHz3ze[<3
 l15
 L14
-Z63 V?6I8<VSml^6kbT_>Q:NX22
-R9
+Z60 V?6I8<VSml^6kbT_>Q:NX22
+R6
 32
-R10
-R11
-Z64 !s100 ^h1=Z<OMjdhb[Lmc_i4P80
+R7
+R8
+Z61 !s100 ^h1=Z<OMjdhb[Lmc_i4P80
 Etb_ram_piped
-Z65 w1398171341
-R47
-R15
-R4
-Z66 8rtl/tb_ram_piped.vhd
-Z67 Frtl/tb_ram_piped.vhd
+Z62 w1399740992
+R44
+R12
+R1
+Z63 8rtl/tb_ram_piped.vhd
+Z64 Frtl/tb_ram_piped.vhd
 l0
-L6
-Z68 V[OhdF@BoMg5<2GanYmd0X2
-R9
+L7
+Z65 VIHMce4K<oL^MLV<[NjN>f2
+R6
 32
-R11
-Z69 !s100 ?X?U<gKK]fgY0X=29Z`a31
+R8
+Z66 !s100 iZo61FDGK>l^SSdfBhDMO0
 Aexercise
-R47
-R15
-R4
-Z70 DEx4 work 12 tb_ram_piped 0 22 [OhdF@BoMg5<2GanYmd0X2
-l37
-L9
-Z71 V`3l:QF2Wb]oj1CliGzF:J2
-R9
+Z67 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z68 DPx9 vital2000 16 vital_primitives 0 22 P<o@__YgakiANKimF[boN3
+Z69 DPx7 simprim 8 vpackage 0 22 fVEB9m=QlTCGHNLP]9fAA0
+Z70 DPx9 vital2000 12 vital_timing 0 22 S^n>oJ2GS[H5aTKMo9OkE0
+Z71 DPx7 simprim 11 vcomponents 0 22 ^<96U5?^7zWm`X7LOJ2Fh1
+DEx6 xgates 9 ram_piped 0 22 4E<k9zK[S`NeZOEcCi[Gz0
+R44
+R12
+R1
+DEx4 work 12 tb_ram_piped 0 22 IHMce4K<oL^MLV<[NjN>f2
+l40
+L10
+Z72 VdL<nG^``>SU`EGQ7Dnm5O3
+R6
 32
-R54
-R27
-Z72 Mx1 4 work 12 bram_package
-R11
-Z73 !s100 O6Ia`Wo^N_cfBNP>[FS:c2
+Z73 Mx8 4 ieee 14 std_logic_1164
+Mx7 4 ieee 11 numeric_std
+Mx6 4 work 12 bram_package
+Mx5 7 simprim 11 vcomponents
+Z74 Mx4 9 vital2000 12 vital_timing
+Z75 Mx3 7 simprim 8 vpackage
+Z76 Mx2 9 vital2000 16 vital_primitives
+Z77 Mx1 3 std 6 textio
+R8
+Z78 !s100 JgOTVaUhb8jocaoSCmI1N1

@@ -1,4 +1,5 @@
 library ieee;
+library xgates;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.bram_package.all;
@@ -25,6 +26,8 @@ architecture exercise of tb_ram_piped is
 	);
 	end component;
 
+for all:ram_piped use entity xgates.ram_piped;
+
 	signal tb_data_in	:	std_logic_vector( 31 downto 0 );
 	signal tb_data_out	:	std_logic_vector( 31 downto 0 );
 	signal tb_address	:	std_logic_vector( 9 downto 0 );
@@ -47,6 +50,7 @@ architecture exercise of tb_ram_piped is
 
 		apply_inputs : process
 		begin
+			wait for 200 ns;
 			tb_we <= '0';
 			wait for 40 ns;
 			--for j in input_address'RANGE LOOP
@@ -89,7 +93,7 @@ architecture exercise of tb_ram_piped is
 
 		reset : process
 		begin
-			
+			wait for 200 ns;
 			tb_reset <= '1';
 			wait for 20 ns;
 			tb_reset <= '0';

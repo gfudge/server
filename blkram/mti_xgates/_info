@@ -1,0 +1,45 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/zel/elgf2/projects/blkram
+Eram_piped
+Z1 w1399740193
+Z2 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
+Z3 DPx9 vital2000 16 vital_primitives 0 22 P<o@__YgakiANKimF[boN3
+Z4 DPx7 simprim 8 vpackage 0 22 fVEB9m=QlTCGHNLP]9fAA0
+Z5 DPx9 vital2000 12 vital_timing 0 22 S^n>oJ2GS[H5aTKMo9OkE0
+Z6 DPx7 simprim 11 vcomponents 0 22 ^<96U5?^7zWm`X7LOJ2Fh1
+Z7 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z8 8bram/netgen/par/ram_piped_timesim.vhd
+Z9 Fbram/netgen/par/ram_piped_timesim.vhd
+l0
+L41
+V4E<k9zK[S`NeZOEcCi[Gz0
+!s100 7`JBn2bF2^LQ^58Zi2Ukk0
+Z10 OL;C;6.4a;39
+32
+Z11 o-work xgates
+Z12 tExplicit 1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+Z13 DEx4 work 9 ram_piped 0 22 4E<k9zK[S`NeZOEcCi[Gz0
+l341
+L52
+Z14 VnX:A[fWe6:Mez8H>@O9j`1
+Z15 !s100 DRCC3?X]aRG>0PJK[6Y<01
+R10
+32
+Z16 Mx6 4 ieee 14 std_logic_1164
+Z17 Mx5 7 simprim 11 vcomponents
+Z18 Mx4 9 vital2000 12 vital_timing
+Z19 Mx3 7 simprim 8 vpackage
+Z20 Mx2 9 vital2000 16 vital_primitives
+Z21 Mx1 3 std 6 textio
+R11
+R12
