@@ -1,0 +1,828 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml bram_param.twx bram_param.ncd -o bram_param.twr
+bram_param.pcf -ucf bram_param.ucf
+
+Design file:              bram_param.ncd
+Physical constraint file: bram_param.pcf
+Device,package,speed:     xc3s50,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 0 paths analyzed, 0 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 component switching limit errors)
+ Minimum period is   2.376ns.
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 1.188ns (Tbpwl)
+  Physical resource: Mram_ram_ir1/CLKA
+  Logical resource: Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 1.188ns (Tbpwh)
+  Physical resource: Mram_ram_ir1/CLKA
+  Logical resource: Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+Slack: 7.624ns (period - min period limit)
+  Period: 10.000ns
+  Min period limit: 2.376ns (420.875MHz) (Tbp)
+  Physical resource: Mram_ram_ir1/CLKA
+  Logical resource: Mram_ram_ir1.A/CLKA
+  Location pin: RAMB16_X0Y0.CLKA
+  Clock network: clk_BUFGP
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP 
+"clk" "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 54 paths analyzed, 54 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   3.487ns.
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir2.A (RAMB16_X0Y3.ADDRA7), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.513ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr<3> (PAD)
+  Destination:          Mram_ram_ir2.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      4.847ns (Levels of Logic = 1)
+  Clock Path Delay:     1.360ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr<3> to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P76.I                Tiopi                 0.722   addr<3>
+                                                       addr<3>
+                                                       addr_3_IBUF
+    RAMB16_X0Y3.ADDRA7   net (fanout=2)        3.821   addr_3_IBUF
+    RAMB16_X0Y3.CLKA     Tback                 0.304   Mram_ram_ir2
+                                                       Mram_ram_ir2.A
+    -------------------------------------------------  ---------------------------
+    Total                                      4.847ns (1.026ns logic, 3.821ns route)
+                                                       (21.2% logic, 78.8% route)
+
+  Minimum Clock Path: clk to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y3.CLKA     net (fanout=2)        0.495   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.360ns (0.864ns logic, 0.496ns route)
+                                                       (63.5% logic, 36.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir2.A (RAMB16_X0Y3.ADDRA6), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.568ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr<2> (PAD)
+  Destination:          Mram_ram_ir2.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      4.792ns (Levels of Logic = 1)
+  Clock Path Delay:     1.360ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr<2> to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P80.I                Tiopi                 0.722   addr<2>
+                                                       addr<2>
+                                                       addr_2_IBUF
+    RAMB16_X0Y3.ADDRA6   net (fanout=2)        3.766   addr_2_IBUF
+    RAMB16_X0Y3.CLKA     Tback                 0.304   Mram_ram_ir2
+                                                       Mram_ram_ir2.A
+    -------------------------------------------------  ---------------------------
+    Total                                      4.792ns (1.026ns logic, 3.766ns route)
+                                                       (21.4% logic, 78.6% route)
+
+  Minimum Clock Path: clk to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y3.CLKA     net (fanout=2)        0.495   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.360ns (0.864ns logic, 0.496ns route)
+                                                       (63.5% logic, 36.5% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir1.A (RAMB16_X0Y0.ADDRA4), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.881ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               addr<0> (PAD)
+  Destination:          Mram_ram_ir1.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      4.501ns (Levels of Logic = 1)
+  Clock Path Delay:     1.382ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: addr<0> to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P10.I                Tiopi                 0.722   addr<0>
+                                                       addr<0>
+                                                       addr_0_IBUF
+    RAMB16_X0Y0.ADDRA4   net (fanout=2)        3.475   addr_0_IBUF
+    RAMB16_X0Y0.CLKA     Tback                 0.304   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      4.501ns (1.026ns logic, 3.475ns route)
+                                                       (22.8% logic, 77.2% route)
+
+  Minimum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.517   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.382ns (0.864ns logic, 0.518ns route)
+                                                       (62.5% logic, 37.5% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir1.A (RAMB16_X0Y0.DIA1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.362ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<1> (PAD)
+  Destination:          Mram_ram_ir1.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      1.050ns (Levels of Logic = 1)
+  Clock Path Delay:     1.688ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<1> to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P58.I                Tiopi                 0.578   din<1>
+                                                       din<1>
+                                                       din_1_IBUF
+    RAMB16_X0Y0.DIA1     net (fanout=1)        0.472   din_1_IBUF
+    RAMB16_X0Y0.CLKA     Tbckd       (-Th)     0.000   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.050ns (0.578ns logic, 0.472ns route)
+                                                       (55.0% logic, 45.0% route)
+
+  Maximum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.608   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.688ns (1.079ns logic, 0.609ns route)
+                                                       (63.9% logic, 36.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir1.A (RAMB16_X0Y0.DIA0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.386ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<0> (PAD)
+  Destination:          Mram_ram_ir1.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      1.074ns (Levels of Logic = 1)
+  Clock Path Delay:     1.688ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<0> to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P68.I                Tiopi                 0.578   din<0>
+                                                       din<0>
+                                                       din_0_IBUF
+    RAMB16_X0Y0.DIA0     net (fanout=1)        0.496   din_0_IBUF
+    RAMB16_X0Y0.CLKA     Tbckd       (-Th)     0.000   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.074ns (0.578ns logic, 0.496ns route)
+                                                       (53.8% logic, 46.2% route)
+
+  Maximum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.608   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.688ns (1.079ns logic, 0.609ns route)
+                                                       (63.9% logic, 36.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point Mram_ram_ir1.A (RAMB16_X0Y0.DIPA0), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      4.386ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               din<16> (PAD)
+  Destination:          Mram_ram_ir1.A (RAM)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          5.000ns
+  Data Path Delay:      1.074ns (Levels of Logic = 1)
+  Clock Path Delay:     1.688ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: din<16> to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P67.I                Tiopi                 0.578   din<16>
+                                                       din<16>
+                                                       din_16_IBUF
+    RAMB16_X0Y0.DIPA0    net (fanout=1)        0.496   din_16_IBUF
+    RAMB16_X0Y0.CLKA     Tbckd       (-Th)     0.000   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    -------------------------------------------------  ---------------------------
+    Total                                      1.074ns (0.578ns logic, 0.496ns route)
+                                                       (53.8% logic, 46.2% route)
+
+  Maximum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.608   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.688ns (1.079ns logic, 0.609ns route)
+                                                       (63.9% logic, 36.1% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 32 paths analyzed, 32 endpoints analyzed, 32 failing endpoints
+ 32 timing errors detected.
+ Minimum allowable offset is   9.445ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dout<17> (P39.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  -1.445ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               Mram_ram_ir1.A (RAM)
+  Destination:          dout<17> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      7.757ns (Levels of Logic = 1)
+  Clock Path Delay:     1.688ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.608   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.688ns (1.079ns logic, 0.609ns route)
+                                                       (63.9% logic, 36.1% route)
+
+  Maximum Data Path: Mram_ram_ir1.A to dout<17>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOPA1    Tbcko                 2.082   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    P39.O1               net (fanout=1)        1.212   dout_17_OBUF
+    P39.PAD              Tioop                 4.463   dout<17>
+                                                       dout_17_OBUF
+                                                       dout<17>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.757ns (6.545ns logic, 1.212ns route)
+                                                       (84.4% logic, 15.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<14> (P29.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  -1.368ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               Mram_ram_ir1.A (RAM)
+  Destination:          dout<14> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      7.680ns (Levels of Logic = 1)
+  Clock Path Delay:     1.688ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.608   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.688ns (1.079ns logic, 0.609ns route)
+                                                       (63.9% logic, 36.1% route)
+
+  Maximum Data Path: Mram_ram_ir1.A to dout<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOA14    Tbcko                 2.082   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    P29.O1               net (fanout=1)        1.135   dout_14_OBUF
+    P29.PAD              Tioop                 4.463   dout<14>
+                                                       dout_14_OBUF
+                                                       dout<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.680ns (6.545ns logic, 1.135ns route)
+                                                       (85.2% logic, 14.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<21> (P35.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  -1.288ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               Mram_ram_ir2.A (RAM)
+  Destination:          dout<21> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          8.000ns
+  Data Path Delay:      7.625ns (Levels of Logic = 1)
+  Clock Path Delay:     1.663ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.722   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.357   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y3.CLKA     net (fanout=2)        0.583   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.663ns (1.079ns logic, 0.584ns route)
+                                                       (64.9% logic, 35.1% route)
+
+  Maximum Data Path: Mram_ram_ir2.A to dout<21>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA3     Tbcko                 2.082   Mram_ram_ir2
+                                                       Mram_ram_ir2.A
+    P35.O1               net (fanout=1)        1.080   dout_21_OBUF
+    P35.PAD              Tioop                 4.463   dout<21>
+                                                       dout_21_OBUF
+                                                       dout<21>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.625ns (6.545ns logic, 1.080ns route)
+                                                       (85.8% logic, 14.2% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+--------------------------------------------------------------------------------
+
+Paths for end point dout<0> (P63.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  7.354ns (clock arrival + clock path + data path - uncertainty)
+  Source:               Mram_ram_ir1.A (RAM)
+  Destination:          dout<0> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      5.972ns (Levels of Logic = 1)
+  Clock Path Delay:     1.382ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.517   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.382ns (0.864ns logic, 0.518ns route)
+                                                       (62.5% logic, 37.5% route)
+
+  Minimum Data Path: Mram_ram_ir1.A to dout<0>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOA0     Tbcko                 1.666   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    P63.O1               net (fanout=1)        0.231   dout_0_OBUF
+    P63.PAD              Tioop                 4.075   dout<0>
+                                                       dout_0_OBUF
+                                                       dout<0>
+    -------------------------------------------------  ---------------------------
+    Total                                      5.972ns (5.741ns logic, 0.231ns route)
+                                                       (96.1% logic, 3.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<30> (P198.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  7.595ns (clock arrival + clock path + data path - uncertainty)
+  Source:               Mram_ram_ir2.A (RAM)
+  Destination:          dout<30> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      6.235ns (Levels of Logic = 1)
+  Clock Path Delay:     1.360ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to Mram_ram_ir2.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y3.CLKA     net (fanout=2)        0.495   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.360ns (0.864ns logic, 0.496ns route)
+                                                       (63.5% logic, 36.5% route)
+
+  Minimum Data Path: Mram_ram_ir2.A to dout<30>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y3.DOA12    Tbcko                 1.666   Mram_ram_ir2
+                                                       Mram_ram_ir2.A
+    P198.O1              net (fanout=1)        0.494   dout_30_OBUF
+    P198.PAD             Tioop                 4.075   dout<30>
+                                                       dout_30_OBUF
+                                                       dout<30>
+    -------------------------------------------------  ---------------------------
+    Total                                      6.235ns (5.741ns logic, 0.494ns route)
+                                                       (92.1% logic, 7.9% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<2> (P62.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  7.609ns (clock arrival + clock path + data path - uncertainty)
+  Source:               Mram_ram_ir1.A (RAM)
+  Destination:          dout<2> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      6.227ns (Levels of Logic = 1)
+  Clock Path Delay:     1.382ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to Mram_ram_ir1.A
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 0.578   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.286   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    RAMB16_X0Y0.CLKA     net (fanout=2)        0.517   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      1.382ns (0.864ns logic, 0.518ns route)
+                                                       (62.5% logic, 37.5% route)
+
+  Minimum Data Path: Mram_ram_ir1.A to dout<2>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    RAMB16_X0Y0.DOA2     Tbcko                 1.666   Mram_ram_ir1
+                                                       Mram_ram_ir1.A
+    P62.O1               net (fanout=1)        0.486   dout_2_OBUF
+    P62.PAD              Tioop                 4.075   dout<2>
+                                                       dout_2_OBUF
+                                                       dout<2>
+    -------------------------------------------------  ---------------------------
+    Total                                      6.227ns (5.741ns logic, 0.486ns route)
+                                                       (92.2% logic, 7.8% route)
+
+--------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+WE          |    3.111(R)|   -0.598(R)|clk_BUFGP         |   0.000|
+addr<0>     |    3.119(R)|   -0.641(R)|clk_BUFGP         |   0.000|
+addr<1>     |    1.822(R)|   -0.549(R)|clk_BUFGP         |   0.000|
+addr<2>     |    3.432(R)|   -0.472(R)|clk_BUFGP         |   0.000|
+addr<3>     |    3.487(R)|   -0.516(R)|clk_BUFGP         |   0.000|
+addr<4>     |    2.925(R)|   -0.499(R)|clk_BUFGP         |   0.000|
+addr<5>     |    2.456(R)|   -0.442(R)|clk_BUFGP         |   0.000|
+addr<6>     |    2.524(R)|   -0.567(R)|clk_BUFGP         |   0.000|
+addr<7>     |    2.557(R)|   -0.325(R)|clk_BUFGP         |   0.000|
+addr<8>     |    2.562(R)|   -0.132(R)|clk_BUFGP         |   0.000|
+addr<9>     |    2.255(R)|   -0.565(R)|clk_BUFGP         |   0.000|
+din<0>      |    0.381(R)|    0.614(R)|clk_BUFGP         |   0.000|
+din<1>      |    0.351(R)|    0.638(R)|clk_BUFGP         |   0.000|
+din<2>      |    0.709(R)|    0.352(R)|clk_BUFGP         |   0.000|
+din<3>      |    0.694(R)|    0.363(R)|clk_BUFGP         |   0.000|
+din<4>      |    0.715(R)|    0.347(R)|clk_BUFGP         |   0.000|
+din<5>      |    0.691(R)|    0.366(R)|clk_BUFGP         |   0.000|
+din<6>      |    0.705(R)|    0.355(R)|clk_BUFGP         |   0.000|
+din<7>      |    1.458(R)|   -0.248(R)|clk_BUFGP         |   0.000|
+din<8>      |    1.656(R)|   -0.406(R)|clk_BUFGP         |   0.000|
+din<9>      |    1.944(R)|   -0.636(R)|clk_BUFGP         |   0.000|
+din<10>     |    1.613(R)|   -0.371(R)|clk_BUFGP         |   0.000|
+din<11>     |    1.458(R)|   -0.248(R)|clk_BUFGP         |   0.000|
+din<12>     |    1.656(R)|   -0.406(R)|clk_BUFGP         |   0.000|
+din<13>     |    0.428(R)|    0.577(R)|clk_BUFGP         |   0.000|
+din<14>     |    0.781(R)|    0.294(R)|clk_BUFGP         |   0.000|
+din<15>     |    1.105(R)|    0.035(R)|clk_BUFGP         |   0.000|
+din<16>     |    0.381(R)|    0.614(R)|clk_BUFGP         |   0.000|
+din<17>     |    1.753(R)|   -0.484(R)|clk_BUFGP         |   0.000|
+din<18>     |    0.844(R)|    0.236(R)|clk_BUFGP         |   0.000|
+din<19>     |    0.519(R)|    0.496(R)|clk_BUFGP         |   0.000|
+din<20>     |    0.820(R)|    0.256(R)|clk_BUFGP         |   0.000|
+din<21>     |    0.956(R)|    0.147(R)|clk_BUFGP         |   0.000|
+din<22>     |    0.780(R)|    0.288(R)|clk_BUFGP         |   0.000|
+din<23>     |    0.516(R)|    0.499(R)|clk_BUFGP         |   0.000|
+din<24>     |    0.731(R)|    0.327(R)|clk_BUFGP         |   0.000|
+din<25>     |    0.749(R)|    0.312(R)|clk_BUFGP         |   0.000|
+din<26>     |    0.377(R)|    0.610(R)|clk_BUFGP         |   0.000|
+din<27>     |    0.489(R)|    0.520(R)|clk_BUFGP         |   0.000|
+din<28>     |    0.490(R)|    0.519(R)|clk_BUFGP         |   0.000|
+din<29>     |    0.779(R)|    0.288(R)|clk_BUFGP         |   0.000|
+din<30>     |    0.379(R)|    0.608(R)|clk_BUFGP         |   0.000|
+din<31>     |    0.720(R)|    0.336(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+dout<0>     |    8.522(R)|clk_BUFGP         |   0.000|
+dout<1>     |    9.190(R)|clk_BUFGP         |   0.000|
+dout<2>     |    8.840(R)|clk_BUFGP         |   0.000|
+dout<3>     |    8.841(R)|clk_BUFGP         |   0.000|
+dout<4>     |    9.240(R)|clk_BUFGP         |   0.000|
+dout<5>     |    8.869(R)|clk_BUFGP         |   0.000|
+dout<6>     |    9.248(R)|clk_BUFGP         |   0.000|
+dout<7>     |    8.910(R)|clk_BUFGP         |   0.000|
+dout<8>     |    9.171(R)|clk_BUFGP         |   0.000|
+dout<9>     |    9.208(R)|clk_BUFGP         |   0.000|
+dout<10>    |    9.169(R)|clk_BUFGP         |   0.000|
+dout<11>    |    9.200(R)|clk_BUFGP         |   0.000|
+dout<12>    |    9.257(R)|clk_BUFGP         |   0.000|
+dout<13>    |    9.169(R)|clk_BUFGP         |   0.000|
+dout<14>    |    9.368(R)|clk_BUFGP         |   0.000|
+dout<15>    |    8.907(R)|clk_BUFGP         |   0.000|
+dout<16>    |    9.171(R)|clk_BUFGP         |   0.000|
+dout<17>    |    9.445(R)|clk_BUFGP         |   0.000|
+dout<18>    |    9.215(R)|clk_BUFGP         |   0.000|
+dout<19>    |    9.156(R)|clk_BUFGP         |   0.000|
+dout<20>    |    8.882(R)|clk_BUFGP         |   0.000|
+dout<21>    |    9.288(R)|clk_BUFGP         |   0.000|
+dout<22>    |    9.193(R)|clk_BUFGP         |   0.000|
+dout<23>    |    9.175(R)|clk_BUFGP         |   0.000|
+dout<24>    |    9.211(R)|clk_BUFGP         |   0.000|
+dout<25>    |    8.885(R)|clk_BUFGP         |   0.000|
+dout<26>    |    9.167(R)|clk_BUFGP         |   0.000|
+dout<27>    |    8.958(R)|clk_BUFGP         |   0.000|
+dout<28>    |    9.153(R)|clk_BUFGP         |   0.000|
+dout<29>    |    8.857(R)|clk_BUFGP         |   0.000|
+dout<30>    |    8.826(R)|clk_BUFGP         |   0.000|
+dout<31>    |    8.918(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+Worst Case Data Window 4.125; Ideal Clock Offset To Actual Clock 1.425; 
+------------------+------------+------------+---------+---------+-------------+
+                  |            |            |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |    Hold    |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+---------+---------+-------------+
+WE                |    3.111(R)|   -0.598(R)|    1.889|    5.598|       -1.854|
+addr<0>           |    3.119(R)|   -0.641(R)|    1.881|    5.641|       -1.880|
+addr<1>           |    1.822(R)|   -0.549(R)|    3.178|    5.549|       -1.186|
+addr<2>           |    3.432(R)|   -0.472(R)|    1.568|    5.472|       -1.952|
+addr<3>           |    3.487(R)|   -0.516(R)|    1.513|    5.516|       -2.002|
+addr<4>           |    2.925(R)|   -0.499(R)|    2.075|    5.499|       -1.712|
+addr<5>           |    2.456(R)|   -0.442(R)|    2.544|    5.442|       -1.449|
+addr<6>           |    2.524(R)|   -0.567(R)|    2.476|    5.567|       -1.546|
+addr<7>           |    2.557(R)|   -0.325(R)|    2.443|    5.325|       -1.441|
+addr<8>           |    2.562(R)|   -0.132(R)|    2.438|    5.132|       -1.347|
+addr<9>           |    2.255(R)|   -0.565(R)|    2.745|    5.565|       -1.410|
+din<0>            |    0.381(R)|    0.614(R)|    4.619|    4.386|        0.116|
+din<1>            |    0.351(R)|    0.638(R)|    4.649|    4.362|        0.143|
+din<2>            |    0.709(R)|    0.352(R)|    4.291|    4.648|       -0.178|
+din<3>            |    0.694(R)|    0.363(R)|    4.306|    4.637|       -0.165|
+din<4>            |    0.715(R)|    0.347(R)|    4.285|    4.653|       -0.184|
+din<5>            |    0.691(R)|    0.366(R)|    4.309|    4.634|       -0.163|
+din<6>            |    0.705(R)|    0.355(R)|    4.295|    4.645|       -0.175|
+din<7>            |    1.458(R)|   -0.248(R)|    3.542|    5.248|       -0.853|
+din<8>            |    1.656(R)|   -0.406(R)|    3.344|    5.406|       -1.031|
+din<9>            |    1.944(R)|   -0.636(R)|    3.056|    5.636|       -1.290|
+din<10>           |    1.613(R)|   -0.371(R)|    3.387|    5.371|       -0.992|
+din<11>           |    1.458(R)|   -0.248(R)|    3.542|    5.248|       -0.853|
+din<12>           |    1.656(R)|   -0.406(R)|    3.344|    5.406|       -1.031|
+din<13>           |    0.428(R)|    0.577(R)|    4.572|    4.423|        0.075|
+din<14>           |    0.781(R)|    0.294(R)|    4.219|    4.706|       -0.244|
+din<15>           |    1.105(R)|    0.035(R)|    3.895|    4.965|       -0.535|
+din<16>           |    0.381(R)|    0.614(R)|    4.619|    4.386|        0.116|
+din<17>           |    1.753(R)|   -0.484(R)|    3.247|    5.484|       -1.119|
+din<18>           |    0.844(R)|    0.236(R)|    4.156|    4.764|       -0.304|
+din<19>           |    0.519(R)|    0.496(R)|    4.481|    4.504|       -0.011|
+din<20>           |    0.820(R)|    0.256(R)|    4.180|    4.744|       -0.282|
+din<21>           |    0.956(R)|    0.147(R)|    4.044|    4.853|       -0.405|
+din<22>           |    0.780(R)|    0.288(R)|    4.220|    4.712|       -0.246|
+din<23>           |    0.516(R)|    0.499(R)|    4.484|    4.501|       -0.009|
+din<24>           |    0.731(R)|    0.327(R)|    4.269|    4.673|       -0.202|
+din<25>           |    0.749(R)|    0.312(R)|    4.251|    4.688|       -0.218|
+din<26>           |    0.377(R)|    0.610(R)|    4.623|    4.390|        0.117|
+din<27>           |    0.489(R)|    0.520(R)|    4.511|    4.480|        0.015|
+din<28>           |    0.490(R)|    0.519(R)|    4.510|    4.481|        0.014|
+din<29>           |    0.779(R)|    0.288(R)|    4.221|    4.712|       -0.245|
+din<30>           |    0.379(R)|    0.608(R)|    4.621|    4.392|        0.115|
+din<31>           |    0.720(R)|    0.336(R)|    4.280|    4.664|       -0.192|
+------------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       3.487|       0.638|    1.513|    4.362|             |
+------------------+------------+------------+---------+---------+-------------+
+
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+Bus Skew: 0.923 ns; 
+-----------------------------------------------+-------------+--------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+--------------+
+dout<0>                                        |        8.522|         0.000|
+dout<1>                                        |        9.190|         0.668|
+dout<2>                                        |        8.840|         0.318|
+dout<3>                                        |        8.841|         0.319|
+dout<4>                                        |        9.240|         0.718|
+dout<5>                                        |        8.869|         0.347|
+dout<6>                                        |        9.248|         0.726|
+dout<7>                                        |        8.910|         0.388|
+dout<8>                                        |        9.171|         0.649|
+dout<9>                                        |        9.208|         0.686|
+dout<10>                                       |        9.169|         0.647|
+dout<11>                                       |        9.200|         0.678|
+dout<12>                                       |        9.257|         0.735|
+dout<13>                                       |        9.169|         0.647|
+dout<14>                                       |        9.368|         0.846|
+dout<15>                                       |        8.907|         0.385|
+dout<16>                                       |        9.171|         0.649|
+dout<17>                                       |        9.445|         0.923|
+dout<18>                                       |        9.215|         0.693|
+dout<19>                                       |        9.156|         0.634|
+dout<20>                                       |        8.882|         0.360|
+dout<21>                                       |        9.288|         0.766|
+dout<22>                                       |        9.193|         0.671|
+dout<23>                                       |        9.175|         0.653|
+dout<24>                                       |        9.211|         0.689|
+dout<25>                                       |        8.885|         0.363|
+dout<26>                                       |        9.167|         0.645|
+dout<27>                                       |        8.958|         0.436|
+dout<28>                                       |        9.153|         0.631|
+dout<29>                                       |        8.857|         0.335|
+dout<30>                                       |        8.826|         0.304|
+dout<31>                                       |        8.918|         0.396|
+-----------------------------------------------+-------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 32  Score: 34609  (Setup/Max: 34609, Hold: 0)
+
+Constraints cover 86 paths, 0 nets, and 89 connections
+
+Design statistics:
+   Minimum period:   2.376ns{1}   (Maximum frequency: 420.875MHz)
+   Minimum input required time before clock:   3.487ns
+   Minimum output required time after clock:   9.445ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue May 13 16:23:07 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 322 MB
+
+
+

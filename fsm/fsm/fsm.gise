@@ -141,6 +141,8 @@
     <transform xil_pn:end_ts="1399831748" xil_pn:in_ck="-8877949744371478053" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-7868858794111860816" xil_pn:start_ts="1399831742">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
       <outfile xil_pn:name="memctrl.pcf"/>
       <outfile xil_pn:name="memctrl_map.map"/>

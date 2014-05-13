@@ -1,0 +1,11 @@
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm2/bram_param.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm2/bram_param.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 bram_param.ngc bram_param.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o bram_param_map.ncd bram_param.ngd bram_param.pcf 
+par -w -intstyle ise -ol high -t 1 bram_param_map.ncd bram_param.ncd bram_param.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml bram_param.twx bram_param.ncd -o bram_param.twr bram_param.pcf 
+xst -intstyle ise -ifn "/home/gfudge/fpga/server/fsm/fsm2/bram_param.xst" -ofn "/home/gfudge/fpga/server/fsm/fsm2/bram_param.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s50-pq208-5 bram_param.ngc bram_param.ngd  
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc bram_param.ucf -p xc3s50-pq208-5 bram_param.ngc bram_param.ngd  
+map -intstyle ise -p xc3s50-pq208-5 -cm area -ir off -pr off -c 100 -o bram_param_map.ncd bram_param.ngd bram_param.pcf 
+par -w -intstyle ise -ol high -t 1 bram_param_map.ncd bram_param.ncd bram_param.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml bram_param.twx bram_param.ncd -o bram_param.twr bram_param.pcf -ucf bram_param.ucf 

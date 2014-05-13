@@ -1,0 +1,202 @@
+Release 14.7 par P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+gfudge-desktop::  Tue May 13 16:23:00 2014
+
+par -w -intstyle ise -ol high -t 1 bram_param_map.ncd bram_param.ncd
+bram_param.pcf 
+
+
+Constraints file: bram_param.pcf.
+Loading device for application Rf_Device from file '3s50.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+   "bram_param" is an NCD, version 3.2, device xc3s50, package pq208, speed -5
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.39 2013-10-13".
+
+
+Device Utilization Summary:
+
+   Number of BUFGMUXs                        1 out of 8      12%
+   Number of External IOBs                  76 out of 124    61%
+      Number of LOCed IOBs                   0 out of 76      0%
+
+   Number of RAMB16s                         2 out of 4      50%
+
+
+Overall effort level (-ol):   High 
+Placer effort level (-pl):    High 
+Placer cost table entry (-t): 1
+Router effort level (-rl):    High 
+
+Starting initial Timing Analysis.  REAL time: 0 secs 
+Finished initial Timing Analysis.  REAL time: 0 secs 
+
+
+Starting Placer
+Total REAL time at the beginning of Placer: 0 secs 
+Total CPU  time at the beginning of Placer: 0 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:c0e) REAL time: 1 secs 
+
+Phase 2.7  Design Feasibility Check
+Phase 2.7  Design Feasibility Check (Checksum:c0e) REAL time: 1 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:c0e) REAL time: 1 secs 
+
+Phase 4.2  Initial Clock and IO Placement
+....
+Phase 4.2  Initial Clock and IO Placement (Checksum:380034e) REAL time: 1 secs 
+
+Phase 5.36  Local Placement Optimization
+Phase 5.36  Local Placement Optimization (Checksum:380034e) REAL time: 1 secs 
+
+Phase 6.3  Local Placement Optimization
+...
+Phase 6.3  Local Placement Optimization (Checksum:310d8328) REAL time: 1 secs 
+
+Phase 7.5  Local Placement Optimization
+Phase 7.5  Local Placement Optimization (Checksum:310d8328) REAL time: 1 secs 
+
+Phase 8.8  Global Placement
+..
+..
+Phase 8.8  Global Placement (Checksum:32386b62) REAL time: 2 secs 
+
+Phase 9.5  Local Placement Optimization
+Phase 9.5  Local Placement Optimization (Checksum:32386b62) REAL time: 2 secs 
+
+Phase 10.18  Placement Optimization
+Phase 10.18  Placement Optimization (Checksum:2dcf593d) REAL time: 2 secs 
+
+Phase 11.5  Local Placement Optimization
+Phase 11.5  Local Placement Optimization (Checksum:2dcf593d) REAL time: 2 secs 
+
+Total REAL time to Placer completion: 2 secs 
+Total CPU  time to Placer completion: 2 secs 
+Writing design to file bram_param.ncd
+
+
+
+Starting Router
+
+
+Phase  1  : 98 unrouted;      REAL time: 2 secs 
+
+Phase  2  : 93 unrouted;      REAL time: 2 secs 
+
+Phase  3  : 7 unrouted;      REAL time: 2 secs 
+
+Phase  4  : 13 unrouted; (Setup:34165, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
+
+Phase  5  : 0 unrouted; (Setup:34853, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
+
+Updating file: bram_param.ncd with current fully routed design.
+
+Phase  6  : 0 unrouted; (Setup:34853, Hold:0, Component Switching Limit:0)     REAL time: 2 secs 
+
+Phase  7  : 0 unrouted; (Setup:34609, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Phase  8  : 0 unrouted; (Setup:34609, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Phase  9  : 0 unrouted; (Setup:34609, Hold:0, Component Switching Limit:0)     REAL time: 3 secs 
+
+Total REAL time to Router completion: 3 secs 
+Total CPU time to Router completion: 3 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|           clk_BUFGP |      BUFGMUX0| No   |    2 |  0.025     |  0.608      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 34609 (Setup: 34609, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in
+   your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to
+   ensure the best options are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 1
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TIMEGRP "output" OFFSET = OUT 8 ns AFTER  | MAXDELAY    |    -1.445ns|     9.445ns|      32|       34609
+  COMP "clk"                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TIMEGRP "input" OFFSET = IN 5 ns VALID 10 | SETUP       |     1.513ns|     3.487ns|       0|           0
+   ns BEFORE COMP "clk" "RISING"            | HOLD        |     4.362ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH  | MINPERIOD   |     7.624ns|     2.376ns|       0|           0
+  50%                                       |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+1 constraint not met.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+Total REAL time to PAR completion: 3 secs 
+Total CPU time to PAR completion: 3 secs 
+
+Peak Memory Usage:  511 MB
+
+Placement: Completed - No errors found.
+Routing: Completed - No errors found.
+Timing: Completed - 32 errors found.
+
+Number of error messages: 0
+Number of warning messages: 1
+Number of info messages: 0
+
+Writing design to file bram_param.ncd
+
+
+
+PAR done!

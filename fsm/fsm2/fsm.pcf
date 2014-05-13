@@ -1,0 +1,58 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue May 13 16:38:31 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "state_ir_0" BEL "rdy" BEL "dout_0" BEL "dout_1" BEL
+        "dout_2" BEL "dout_3" BEL "dout_4" BEL "dout_5" BEL "dout_6" BEL
+        "dout_7" BEL "dout_8" BEL "dout_9" BEL "dout_10" BEL "dout_11" BEL
+        "dout_12" BEL "dout_13" BEL "dout_14" BEL "dout_15" BEL "dout_16" BEL
+        "dout_17" BEL "dout_18" BEL "dout_19" BEL "dout_20" BEL "dout_21" BEL
+        "dout_22" BEL "dout_23" BEL "dout_24" BEL "dout_25" BEL "dout_26" BEL
+        "dout_27" BEL "dout_28" BEL "dout_29" BEL "dout_30" BEL "dout_31" BEL
+        "maddr_0" BEL "maddr_1" BEL "maddr_2" BEL "maddr_3" BEL "maddr_4" BEL
+        "maddr_5" BEL "maddr_6" BEL "maddr_7" BEL "maddr_8" BEL "maddr_9" BEL
+        "maddr_10" BEL "maddr_11" BEL "maddr_12" BEL "maddr_13" BEL "maddr_14"
+        BEL "maddr_15" BEL "maddr_16" BEL "maddr_17" BEL "maddr_18" BEL
+        "maddr_19" BEL "maddr_20" BEL "maddr_21" BEL "maddr_22" BEL "maddr_23"
+        BEL "maddr_24" BEL "maddr_25" BEL "maddr_26" BEL "maddr_27" BEL
+        "maddr_28" BEL "maddr_29" BEL "maddr_30" BEL "maddr_31" BEL "cnt_ir_0"
+        BEL "cnt_ir_1" BEL "cnt_ir_2" BEL "cnt_ir_3" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TIMEGRP output = BEL "rdy" BEL "dout<0>" BEL "dout<10>" BEL "dout<11>" BEL
+        "dout<12>" BEL "dout<13>" BEL "dout<14>" BEL "dout<15>" BEL "dout<16>"
+        BEL "dout<17>" BEL "dout<18>" BEL "dout<19>" BEL "dout<1>" BEL
+        "dout<20>" BEL "dout<21>" BEL "dout<22>" BEL "dout<23>" BEL "dout<24>"
+        BEL "dout<25>" BEL "dout<26>" BEL "dout<27>" BEL "dout<28>" BEL
+        "dout<29>" BEL "dout<2>" BEL "dout<30>" BEL "dout<31>" BEL "dout<3>"
+        BEL "dout<4>" BEL "dout<5>" BEL "dout<6>" BEL "dout<7>" BEL "dout<8>"
+        BEL "dout<9>" BEL "maddr<0>" BEL "maddr<10>" BEL "maddr<11>" BEL
+        "maddr<12>" BEL "maddr<13>" BEL "maddr<14>" BEL "maddr<15>" BEL
+        "maddr<16>" BEL "maddr<17>" BEL "maddr<18>" BEL "maddr<19>" BEL
+        "maddr<1>" BEL "maddr<20>" BEL "maddr<21>" BEL "maddr<22>" BEL
+        "maddr<23>" BEL "maddr<24>" BEL "maddr<25>" BEL "maddr<26>" BEL
+        "maddr<27>" BEL "maddr<28>" BEL "maddr<29>" BEL "maddr<2>" BEL
+        "maddr<30>" BEL "maddr<31>" BEL "maddr<3>" BEL "maddr<4>" BEL
+        "maddr<5>" BEL "maddr<6>" BEL "maddr<7>" BEL "maddr<8>" BEL
+        "maddr<9>";
+TIMEGRP input = BEL "addr<0>" BEL "addr<10>" BEL "addr<11>" BEL "addr<12>" BEL
+        "addr<13>" BEL "addr<14>" BEL "addr<15>" BEL "addr<16>" BEL "addr<17>"
+        BEL "addr<18>" BEL "addr<19>" BEL "addr<1>" BEL "addr<20>" BEL
+        "addr<21>" BEL "addr<22>" BEL "addr<23>" BEL "addr<24>" BEL "addr<25>"
+        BEL "addr<26>" BEL "addr<27>" BEL "addr<28>" BEL "addr<29>" BEL
+        "addr<2>" BEL "addr<30>" BEL "addr<31>" BEL "addr<3>" BEL "addr<4>"
+        BEL "addr<5>" BEL "addr<6>" BEL "addr<7>" BEL "addr<8>" BEL "addr<9>"
+        BEL "burst<0>" BEL "burst<1>" BEL "burst<2>" BEL "burst<3>" BEL
+        "din<0>" BEL "din<10>" BEL "din<11>" BEL "din<12>" BEL "din<13>" BEL
+        "din<14>" BEL "din<15>" BEL "din<16>" BEL "din<17>" BEL "din<18>" BEL
+        "din<19>" BEL "din<1>" BEL "din<20>" BEL "din<21>" BEL "din<22>" BEL
+        "din<23>" BEL "din<24>" BEL "din<25>" BEL "din<26>" BEL "din<27>" BEL
+        "din<28>" BEL "din<29>" BEL "din<2>" BEL "din<30>" BEL "din<31>" BEL
+        "din<3>" BEL "din<4>" BEL "din<5>" BEL "din<6>" BEL "din<7>" BEL
+        "din<8>" BEL "din<9>" BEL "req" BEL "reset";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+TIMEGRP "input" OFFSET = IN 10 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+TIMEGRP "output" OFFSET = OUT 10 ns AFTER COMP "clk";
+SCHEMATIC END;
+

@@ -1,0 +1,1823 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml fsm.twx fsm.ncd -o fsm.twr fsm.pcf -ucf fsm.ucf
+
+Design file:              fsm.ncd
+Physical constraint file: fsm.pcf
+Device,package,speed:     xc3s200,pq208,-5 (PRODUCTION 1.39 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+================================================================================
+Timing constraint: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+For more information, see Period Analysis in the Timing Closure User Guide (UG612).
+
+ 1325 paths analyzed, 215 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors, 0 component switching limit errors)
+ Minimum period is   6.941ns.
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_31 (SLICE_X2Y47.CIN), 61 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.059ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.941ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.BX       net (fanout=57)       3.249   state_ir<0>
+    SLICE_X2Y32.COUT     Tbxcy                 0.736   maddr_0
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.874   maddr_30
+                                                       Mcount_maddr_cy<30>
+                                                       Mcount_maddr_xor<31>
+                                                       maddr_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.941ns (3.692ns logic, 3.249ns route)
+                                                       (53.2% logic, 46.8% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.098ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.902ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.F4       net (fanout=57)       3.002   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyf                0.944   maddr_0
+                                                       Mcount_maddr_lut<0>
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.874   maddr_30
+                                                       Mcount_maddr_cy<30>
+                                                       Mcount_maddr_xor<31>
+                                                       maddr_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.902ns (3.900ns logic, 3.002ns route)
+                                                       (56.5% logic, 43.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.788ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_31 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.212ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_31
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.G2       net (fanout=57)       2.302   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyg                0.954   maddr_0
+                                                       Mcount_maddr_lut<1>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.874   maddr_30
+                                                       Mcount_maddr_cy<30>
+                                                       Mcount_maddr_xor<31>
+                                                       maddr_31
+    -------------------------------------------------  ---------------------------
+    Total                                      6.212ns (3.910ns logic, 2.302ns route)
+                                                       (62.9% logic, 37.1% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_30 (SLICE_X2Y47.CIN), 61 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.076ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.924ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.BX       net (fanout=57)       3.249   state_ir<0>
+    SLICE_X2Y32.COUT     Tbxcy                 0.736   maddr_0
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.857   maddr_30
+                                                       Mcount_maddr_xor<30>
+                                                       maddr_30
+    -------------------------------------------------  ---------------------------
+    Total                                      6.924ns (3.675ns logic, 3.249ns route)
+                                                       (53.1% logic, 46.9% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.115ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.885ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.F4       net (fanout=57)       3.002   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyf                0.944   maddr_0
+                                                       Mcount_maddr_lut<0>
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.857   maddr_30
+                                                       Mcount_maddr_xor<30>
+                                                       maddr_30
+    -------------------------------------------------  ---------------------------
+    Total                                      6.885ns (3.883ns logic, 3.002ns route)
+                                                       (56.4% logic, 43.6% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.805ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_30 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.195ns (Levels of Logic = 16)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.G2       net (fanout=57)       2.302   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyg                0.954   maddr_0
+                                                       Mcount_maddr_lut<1>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.COUT     Tbyp                  0.104   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_cy<29>
+    SLICE_X2Y47.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<29>
+    SLICE_X2Y47.CLK      Tcinck                0.857   maddr_30
+                                                       Mcount_maddr_xor<30>
+                                                       maddr_30
+    -------------------------------------------------  ---------------------------
+    Total                                      6.195ns (3.893ns logic, 2.302ns route)
+                                                       (62.8% logic, 37.2% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_29 (SLICE_X2Y46.CIN), 57 paths
+--------------------------------------------------------------------------------
+Slack (setup path):     3.163ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.837ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.BX       net (fanout=57)       3.249   state_ir<0>
+    SLICE_X2Y32.COUT     Tbxcy                 0.736   maddr_0
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.CLK      Tcinck                0.874   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_xor<29>
+                                                       maddr_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.837ns (3.588ns logic, 3.249ns route)
+                                                       (52.5% logic, 47.5% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.202ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.798ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.F4       net (fanout=57)       3.002   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyf                0.944   maddr_0
+                                                       Mcount_maddr_lut<0>
+                                                       Mcount_maddr_cy<0>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.CLK      Tcinck                0.874   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_xor<29>
+                                                       maddr_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.798ns (3.796ns logic, 3.002ns route)
+                                                       (55.8% logic, 44.2% route)
+
+--------------------------------------------------------------------------------
+Slack (setup path):     3.892ns (requirement - (data path - clock path skew + uncertainty))
+  Source:               state_ir_0 (FF)
+  Destination:          maddr_29 (FF)
+  Requirement:          10.000ns
+  Data Path Delay:      6.108ns (Levels of Logic = 15)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: state_ir_0 to maddr_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.626   state_ir<0>
+                                                       state_ir_0
+    SLICE_X2Y32.G2       net (fanout=57)       2.302   state_ir<0>
+    SLICE_X2Y32.COUT     Topcyg                0.954   maddr_0
+                                                       Mcount_maddr_lut<1>
+                                                       Mcount_maddr_cy<1>
+    SLICE_X2Y33.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<1>
+    SLICE_X2Y33.COUT     Tbyp                  0.104   maddr_2
+                                                       Mcount_maddr_cy<2>
+                                                       Mcount_maddr_cy<3>
+    SLICE_X2Y34.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<3>
+    SLICE_X2Y34.COUT     Tbyp                  0.104   maddr_4
+                                                       Mcount_maddr_cy<4>
+                                                       Mcount_maddr_cy<5>
+    SLICE_X2Y35.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<5>
+    SLICE_X2Y35.COUT     Tbyp                  0.104   maddr_6
+                                                       Mcount_maddr_cy<6>
+                                                       Mcount_maddr_cy<7>
+    SLICE_X2Y36.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<7>
+    SLICE_X2Y36.COUT     Tbyp                  0.104   maddr_8
+                                                       Mcount_maddr_cy<8>
+                                                       Mcount_maddr_cy<9>
+    SLICE_X2Y37.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<9>
+    SLICE_X2Y37.COUT     Tbyp                  0.104   maddr_10
+                                                       Mcount_maddr_cy<10>
+                                                       Mcount_maddr_cy<11>
+    SLICE_X2Y38.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<11>
+    SLICE_X2Y38.COUT     Tbyp                  0.104   maddr_12
+                                                       Mcount_maddr_cy<12>
+                                                       Mcount_maddr_cy<13>
+    SLICE_X2Y39.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<13>
+    SLICE_X2Y39.COUT     Tbyp                  0.104   maddr_14
+                                                       Mcount_maddr_cy<14>
+                                                       Mcount_maddr_cy<15>
+    SLICE_X2Y40.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<15>
+    SLICE_X2Y40.COUT     Tbyp                  0.104   maddr_16
+                                                       Mcount_maddr_cy<16>
+                                                       Mcount_maddr_cy<17>
+    SLICE_X2Y41.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<17>
+    SLICE_X2Y41.COUT     Tbyp                  0.104   maddr_18
+                                                       Mcount_maddr_cy<18>
+                                                       Mcount_maddr_cy<19>
+    SLICE_X2Y42.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<19>
+    SLICE_X2Y42.COUT     Tbyp                  0.104   maddr_20
+                                                       Mcount_maddr_cy<20>
+                                                       Mcount_maddr_cy<21>
+    SLICE_X2Y43.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<21>
+    SLICE_X2Y43.COUT     Tbyp                  0.104   maddr_22
+                                                       Mcount_maddr_cy<22>
+                                                       Mcount_maddr_cy<23>
+    SLICE_X2Y44.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<23>
+    SLICE_X2Y44.COUT     Tbyp                  0.104   maddr_24
+                                                       Mcount_maddr_cy<24>
+                                                       Mcount_maddr_cy<25>
+    SLICE_X2Y45.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<25>
+    SLICE_X2Y45.COUT     Tbyp                  0.104   maddr_26
+                                                       Mcount_maddr_cy<26>
+                                                       Mcount_maddr_cy<27>
+    SLICE_X2Y46.CIN      net (fanout=1)        0.000   Mcount_maddr_cy<27>
+    SLICE_X2Y46.CLK      Tcinck                0.874   maddr_28
+                                                       Mcount_maddr_cy<28>
+                                                       Mcount_maddr_xor<29>
+                                                       maddr_29
+    -------------------------------------------------  ---------------------------
+    Total                                      6.108ns (3.806ns logic, 2.302ns route)
+                                                       (62.3% logic, 37.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+
+Paths for end point state_ir_0 (SLICE_X31Y34.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.836ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               state_ir_0 (FF)
+  Destination:          state_ir_0 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.836ns (Levels of Logic = 0)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: state_ir_0 to state_ir_0
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X31Y34.YQ      Tcko                  0.501   state_ir<0>
+                                                       state_ir_0
+    SLICE_X31Y34.BY      net (fanout=57)       0.540   state_ir<0>
+    SLICE_X31Y34.CLK     Tckdi       (-Th)     0.205   state_ir<0>
+                                                       state_ir_0
+    -------------------------------------------------  ---------------------------
+    Total                                      0.836ns (0.296ns logic, 0.540ns route)
+                                                       (35.4% logic, 64.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cnt_ir_1 (SLICE_X33Y37.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.876ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cnt_ir_1 (FF)
+  Destination:          cnt_ir_1 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.876ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: cnt_ir_1 to cnt_ir_1
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y37.XQ      Tcko                  0.501   cnt_ir<1>
+                                                       cnt_ir_1
+    SLICE_X33Y37.F4      net (fanout=4)        0.322   cnt_ir<1>
+    SLICE_X33Y37.CLK     Tckf        (-Th)    -0.053   cnt_ir<1>
+                                                       Mcount_cnt_ir_xor<1>11
+                                                       cnt_ir_1
+    -------------------------------------------------  ---------------------------
+    Total                                      0.876ns (0.554ns logic, 0.322ns route)
+                                                       (63.2% logic, 36.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point cnt_ir_3 (SLICE_X33Y34.G3), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.905ns (requirement - (clock path skew + uncertainty - data path))
+  Source:               cnt_ir_3 (FF)
+  Destination:          cnt_ir_3 (FF)
+  Requirement:          0.000ns
+  Data Path Delay:      0.905ns (Levels of Logic = 1)
+  Clock Path Skew:      0.000ns
+  Source Clock:         clk_BUFGP rising at 10.000ns
+  Destination Clock:    clk_BUFGP rising at 10.000ns
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: cnt_ir_3 to cnt_ir_3
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X33Y34.YQ      Tcko                  0.501   cnt_ir<3>
+                                                       cnt_ir_3
+    SLICE_X33Y34.G3      net (fanout=4)        0.351   cnt_ir<3>
+    SLICE_X33Y34.CLK     Tckg        (-Th)    -0.053   cnt_ir<3>
+                                                       Mcount_cnt_ir_xor<3>12
+                                                       cnt_ir_3
+    -------------------------------------------------  ---------------------------
+    Total                                      0.905ns (0.554ns logic, 0.351ns route)
+                                                       (61.2% logic, 38.8% route)
+
+--------------------------------------------------------------------------------
+
+Component Switching Limit Checks: TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+--------------------------------------------------------------------------------
+Slack: 8.498ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.751ns (Trpw)
+  Physical resource: cnt_ir<2>/SR
+  Logical resource: cnt_ir_2/SR
+  Location pin: SLICE_X32Y35.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 8.498ns (period - (min high pulse limit / (high pulse / period)))
+  Period: 10.000ns
+  High pulse: 5.000ns
+  High pulse limit: 0.751ns (Trpw)
+  Physical resource: cnt_ir<2>/SR
+  Logical resource: cnt_ir_2/SR
+  Location pin: SLICE_X32Y35.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+Slack: 8.498ns (period - (min low pulse limit / (low pulse / period)))
+  Period: 10.000ns
+  Low pulse: 5.000ns
+  Low pulse limit: 0.751ns (Trpw)
+  Physical resource: cnt_ir<1>/SR
+  Logical resource: cnt_ir_1/SR
+  Location pin: SLICE_X33Y37.SR
+  Clock network: reset_IBUF
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "input" OFFSET = IN 10 ns VALID 10 ns BEFORE COMP 
+"clk" "RISING";
+For more information, see Offset In Analysis in the Timing Closure User Guide (UG612).
+
+ 602 paths analyzed, 152 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected. (0 setup errors, 0 hold errors)
+ Minimum allowable offset is   8.891ns.
+--------------------------------------------------------------------------------
+
+Paths for end point dout_4 (SLICE_X24Y0.BY), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     1.109ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               din<4> (PAD)
+  Destination:          dout_4 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      10.990ns (Levels of Logic = 1)
+  Clock Path Delay:     2.099ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: din<4> to dout_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P87.I                Tiopi                 1.686   din<4>
+                                                       din<4>
+                                                       din_4_IBUF
+    SLICE_X24Y0.BY       net (fanout=1)        9.077   din_4_IBUF
+    SLICE_X24Y0.CLK      Tdick                 0.227   dout_5
+                                                       dout_4
+    -------------------------------------------------  ---------------------------
+    Total                                     10.990ns (1.913ns logic, 9.077ns route)
+                                                       (17.4% logic, 82.6% route)
+
+  Minimum Clock Path: clk to dout_4
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X24Y0.CLK      net (fanout=37)       0.748   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_28 (SLICE_X2Y46.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.193ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               req (PAD)
+  Destination:          maddr_28 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      8.907ns (Levels of Logic = 2)
+  Clock Path Delay:     2.100ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: req to maddr_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P44.I                Tiopi                 1.686   req
+                                                       req
+                                                       req_IBUF
+    SLICE_X33Y35.F1      net (fanout=2)        2.763   req_IBUF
+    SLICE_X33Y35.X       Tilo                  0.479   maddr_not0002
+                                                       maddr_not00021
+    SLICE_X2Y46.CE       net (fanout=19)       3.455   maddr_not0002
+    SLICE_X2Y46.CLK      Tceck                 0.524   maddr_28
+                                                       maddr_28
+    -------------------------------------------------  ---------------------------
+    Total                                      8.907ns (2.689ns logic, 6.218ns route)
+                                                       (30.2% logic, 69.8% route)
+
+  Minimum Clock Path: clk to maddr_28
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y46.CLK      net (fanout=37)       0.749   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.100ns (1.350ns logic, 0.750ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_29 (SLICE_X2Y46.CE), 1 path
+--------------------------------------------------------------------------------
+Slack (setup path):     3.193ns (requirement - (data path - clock path - clock arrival + uncertainty))
+  Source:               req (PAD)
+  Destination:          maddr_29 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      8.907ns (Levels of Logic = 2)
+  Clock Path Delay:     2.100ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Data Path: req to maddr_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P44.I                Tiopi                 1.686   req
+                                                       req
+                                                       req_IBUF
+    SLICE_X33Y35.F1      net (fanout=2)        2.763   req_IBUF
+    SLICE_X33Y35.X       Tilo                  0.479   maddr_not0002
+                                                       maddr_not00021
+    SLICE_X2Y46.CE       net (fanout=19)       3.455   maddr_not0002
+    SLICE_X2Y46.CLK      Tceck                 0.524   maddr_28
+                                                       maddr_29
+    -------------------------------------------------  ---------------------------
+    Total                                      8.907ns (2.689ns logic, 6.218ns route)
+                                                       (30.2% logic, 69.8% route)
+
+  Minimum Clock Path: clk to maddr_29
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y46.CLK      net (fanout=37)       0.749   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.100ns (1.350ns logic, 0.750ns route)
+                                                       (64.3% logic, 35.7% route)
+
+--------------------------------------------------------------------------------
+
+Hold Paths: TIMEGRP "input" OFFSET = IN 10 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_17 (SLICE_X2Y40.G2), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.037ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               addr<17> (PAD)
+  Destination:          maddr_17 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          0.000ns
+  Data Path Delay:      2.606ns (Levels of Logic = 2)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr<17> to maddr_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P3.I                 Tiopi                 1.349   addr<17>
+                                                       addr<17>
+                                                       addr_17_IBUF
+    SLICE_X2Y40.G2       net (fanout=1)        0.731   addr_17_IBUF
+    SLICE_X2Y40.CLK      Tckg        (-Th)    -0.526   maddr_16
+                                                       Mcount_maddr_lut<17>
+                                                       Mcount_maddr_xor<17>
+                                                       maddr_17
+    -------------------------------------------------  ---------------------------
+    Total                                      2.606ns (1.875ns logic, 0.731ns route)
+                                                       (71.9% logic, 28.1% route)
+
+  Maximum Clock Path: clk to maddr_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y40.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_16 (SLICE_X2Y40.F4), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.069ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               addr<16> (PAD)
+  Destination:          maddr_16 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          0.000ns
+  Data Path Delay:      2.638ns (Levels of Logic = 2)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr<16> to maddr_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P200.I               Tiopi                 1.349   addr<16>
+                                                       addr<16>
+                                                       addr_16_IBUF
+    SLICE_X2Y40.F4       net (fanout=1)        0.907   addr_16_IBUF
+    SLICE_X2Y40.CLK      Tckf        (-Th)    -0.382   maddr_16
+                                                       Mcount_maddr_lut<16>
+                                                       Mcount_maddr_xor<16>
+                                                       maddr_16
+    -------------------------------------------------  ---------------------------
+    Total                                      2.638ns (1.731ns logic, 0.907ns route)
+                                                       (65.6% logic, 34.4% route)
+
+  Maximum Clock Path: clk to maddr_16
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y40.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr_30 (SLICE_X2Y47.F1), 1 path
+--------------------------------------------------------------------------------
+Slack (hold path):      0.073ns (requirement - (clock path + clock arrival + uncertainty - data path))
+  Source:               addr<30> (PAD)
+  Destination:          maddr_30 (FF)
+  Destination Clock:    clk_BUFGP rising at 0.000ns
+  Requirement:          0.000ns
+  Data Path Delay:      2.642ns (Levels of Logic = 2)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Data Path: addr<30> to maddr_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P197.I               Tiopi                 1.349   addr<30>
+                                                       addr<30>
+                                                       addr_30_IBUF
+    SLICE_X2Y47.F1       net (fanout=1)        0.911   addr_30_IBUF
+    SLICE_X2Y47.CLK      Tckf        (-Th)    -0.382   maddr_30
+                                                       Mcount_maddr_lut<30>
+                                                       Mcount_maddr_xor<30>
+                                                       maddr_30
+    -------------------------------------------------  ---------------------------
+    Total                                      2.642ns (1.731ns logic, 0.911ns route)
+                                                       (65.5% logic, 34.5% route)
+
+  Maximum Clock Path: clk to maddr_30
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y47.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+--------------------------------------------------------------------------------
+
+================================================================================
+Timing constraint: TIMEGRP "output" OFFSET = OUT 10 ns AFTER COMP "clk";
+For more information, see Offset Out Analysis in the Timing Closure User Guide (UG612).
+
+ 64 paths analyzed, 64 endpoints analyzed, 0 failing endpoints
+ 0 timing errors detected.
+ Minimum allowable offset is   9.734ns.
+--------------------------------------------------------------------------------
+
+Paths for end point maddr<17> (P162.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.266ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               maddr_17 (FF)
+  Destination:          maddr<17> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      7.165ns (Levels of Logic = 1)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to maddr_17
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y40.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+  Maximum Data Path: maddr_17 to maddr<17>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y40.YQ       Tcko                  0.626   maddr_16
+                                                       maddr_17
+    P162.O1              net (fanout=2)        2.745   maddr_17
+    P162.PAD             Tioop                 3.794   maddr<17>
+                                                       maddr_17_OBUF
+                                                       maddr<17>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.165ns (4.420ns logic, 2.745ns route)
+                                                       (61.7% logic, 38.3% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr<18> (P165.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.321ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               maddr_18 (FF)
+  Destination:          maddr<18> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      7.110ns (Levels of Logic = 1)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to maddr_18
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y41.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+  Maximum Data Path: maddr_18 to maddr<18>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y41.XQ       Tcko                  0.626   maddr_18
+                                                       maddr_18
+    P165.O1              net (fanout=2)        2.690   maddr_18
+    P165.PAD             Tioop                 3.794   maddr<18>
+                                                       maddr_18_OBUF
+                                                       maddr<18>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.110ns (4.420ns logic, 2.690ns route)
+                                                       (62.2% logic, 37.8% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point maddr<5> (P64.PAD), 1 path
+--------------------------------------------------------------------------------
+Slack (slowest paths):  0.390ns (requirement - (clock arrival + clock path + data path + uncertainty))
+  Source:               maddr_5 (FF)
+  Destination:          maddr<5> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Requirement:          10.000ns
+  Data Path Delay:      7.041ns (Levels of Logic = 1)
+  Clock Path Delay:     2.569ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Maximum Clock Path: clk to maddr_5
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.686   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X2Y34.CLK      net (fanout=37)       0.881   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.569ns (1.687ns logic, 0.882ns route)
+                                                       (65.7% logic, 34.3% route)
+
+  Maximum Data Path: maddr_5 to maddr<5>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X2Y34.YQ       Tcko                  0.626   maddr_4
+                                                       maddr_5
+    P64.O1               net (fanout=2)        2.621   maddr_5
+    P64.PAD              Tioop                 3.794   maddr<5>
+                                                       maddr_5_OBUF
+                                                       maddr<5>
+    -------------------------------------------------  ---------------------------
+    Total                                      7.041ns (4.420ns logic, 2.621ns route)
+                                                       (62.8% logic, 37.2% route)
+
+--------------------------------------------------------------------------------
+
+Fastest Paths: TIMEGRP "output" OFFSET = OUT 10 ns AFTER COMP "clk";
+--------------------------------------------------------------------------------
+
+Paths for end point dout<12> (P111.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  6.380ns (clock arrival + clock path + data path - uncertainty)
+  Source:               dout_12 (FF)
+  Destination:          dout<12> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.281ns (Levels of Logic = 1)
+  Clock Path Delay:     2.099ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to dout_12
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X39Y6.CLK      net (fanout=37)       0.748   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+  Minimum Data Path: dout_12 to dout<12>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y6.YQ       Tcko                  0.501   dout_13
+                                                       dout_12
+    P111.O1              net (fanout=1)        0.241   dout_12
+    P111.PAD             Tioop                 3.539   dout<12>
+                                                       dout_12_OBUF
+                                                       dout<12>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.281ns (4.040ns logic, 0.241ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<13> (P113.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  6.380ns (clock arrival + clock path + data path - uncertainty)
+  Source:               dout_13 (FF)
+  Destination:          dout<13> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.281ns (Levels of Logic = 1)
+  Clock Path Delay:     2.099ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to dout_13
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X39Y6.CLK      net (fanout=37)       0.748   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+  Minimum Data Path: dout_13 to dout<13>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X39Y6.XQ       Tcko                  0.501   dout_13
+                                                       dout_13
+    P113.O1              net (fanout=1)        0.241   dout_13
+    P113.PAD             Tioop                 3.539   dout<13>
+                                                       dout_13_OBUF
+                                                       dout<13>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.281ns (4.040ns logic, 0.241ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+Paths for end point dout<14> (P114.PAD), 1 path
+--------------------------------------------------------------------------------
+Delay (fastest paths):  6.380ns (clock arrival + clock path + data path - uncertainty)
+  Source:               dout_14 (FF)
+  Destination:          dout<14> (PAD)
+  Source Clock:         clk_BUFGP rising at 0.000ns
+  Data Path Delay:      4.281ns (Levels of Logic = 1)
+  Clock Path Delay:     2.099ns (Levels of Logic = 2)
+  Clock Uncertainty:    0.000ns
+
+  Minimum Clock Path: clk to dout_14
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    P79.I                Tiopi                 1.349   clk
+                                                       clk
+                                                       clk_BUFGP/IBUFG
+    BUFGMUX0.I0          net (fanout=1)        0.001   clk_BUFGP/IBUFG
+    BUFGMUX0.O           Tgi0o                 0.001   clk_BUFGP/BUFG
+                                                       clk_BUFGP/BUFG.GCLKMUX
+                                                       clk_BUFGP/BUFG
+    SLICE_X38Y8.CLK      net (fanout=37)       0.748   clk_BUFGP
+    -------------------------------------------------  ---------------------------
+    Total                                      2.099ns (1.350ns logic, 0.749ns route)
+                                                       (64.3% logic, 35.7% route)
+
+  Minimum Data Path: dout_14 to dout<14>
+    Location             Delay type         Delay(ns)  Physical Resource
+                                                       Logical Resource(s)
+    -------------------------------------------------  -------------------
+    SLICE_X38Y8.YQ       Tcko                  0.501   dout_15
+                                                       dout_14
+    P114.O1              net (fanout=1)        0.241   dout_14
+    P114.PAD             Tioop                 3.539   dout<14>
+                                                       dout_14_OBUF
+                                                       dout<14>
+    -------------------------------------------------  ---------------------------
+    Total                                      4.281ns (4.040ns logic, 0.241ns route)
+                                                       (94.4% logic, 5.6% route)
+
+--------------------------------------------------------------------------------
+
+
+All constraints were met.
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+addr<0>     |    4.746(R)|   -0.671(R)|clk_BUFGP         |   0.000|
+addr<1>     |    5.973(R)|   -1.789(R)|clk_BUFGP         |   0.000|
+addr<2>     |    4.103(R)|   -0.239(R)|clk_BUFGP         |   0.000|
+addr<3>     |    4.146(R)|   -0.410(R)|clk_BUFGP         |   0.000|
+addr<4>     |    3.987(R)|   -0.230(R)|clk_BUFGP         |   0.000|
+addr<5>     |    4.529(R)|   -0.800(R)|clk_BUFGP         |   0.000|
+addr<6>     |    4.043(R)|   -0.358(R)|clk_BUFGP         |   0.000|
+addr<7>     |    4.172(R)|   -0.597(R)|clk_BUFGP         |   0.000|
+addr<8>     |    3.869(R)|   -0.302(R)|clk_BUFGP         |   0.000|
+addr<9>     |    4.015(R)|   -0.554(R)|clk_BUFGP         |   0.000|
+addr<10>    |    5.184(R)|   -1.437(R)|clk_BUFGP         |   0.000|
+addr<11>    |    3.312(R)|   -0.076(R)|clk_BUFGP         |   0.000|
+addr<12>    |    3.636(R)|   -0.282(R)|clk_BUFGP         |   0.000|
+addr<13>    |    3.716(R)|   -0.482(R)|clk_BUFGP         |   0.000|
+addr<14>    |    4.262(R)|   -0.866(R)|clk_BUFGP         |   0.000|
+addr<15>    |    4.043(R)|   -0.827(R)|clk_BUFGP         |   0.000|
+addr<16>    |    3.161(R)|   -0.069(R)|clk_BUFGP         |   0.000|
+addr<17>    |    2.951(R)|   -0.037(R)|clk_BUFGP         |   0.000|
+addr<18>    |    3.357(R)|   -0.308(R)|clk_BUFGP         |   0.000|
+addr<19>    |    3.818(R)|   -0.813(R)|clk_BUFGP         |   0.000|
+addr<20>    |    3.229(R)|   -0.290(R)|clk_BUFGP         |   0.000|
+addr<21>    |    3.236(R)|   -0.431(R)|clk_BUFGP         |   0.000|
+addr<22>    |    4.892(R)|   -1.703(R)|clk_BUFGP         |   0.000|
+addr<23>    |    4.169(R)|   -1.260(R)|clk_BUFGP         |   0.000|
+addr<24>    |    3.704(R)|   -0.835(R)|clk_BUFGP         |   0.000|
+addr<25>    |    5.149(R)|   -2.128(R)|clk_BUFGP         |   0.000|
+addr<26>    |    3.083(R)|   -0.422(R)|clk_BUFGP         |   0.000|
+addr<27>    |    3.486(R)|   -0.880(R)|clk_BUFGP         |   0.000|
+addr<28>    |    3.967(R)|   -1.212(R)|clk_BUFGP         |   0.000|
+addr<29>    |    2.556(R)|   -0.220(R)|clk_BUFGP         |   0.000|
+addr<30>    |    2.242(R)|   -0.073(R)|clk_BUFGP         |   0.000|
+addr<31>    |    2.299(R)|   -0.564(R)|clk_BUFGP         |   0.000|
+burst<0>    |    2.552(R)|   -0.765(R)|clk_BUFGP         |   0.000|
+burst<1>    |    6.409(R)|   -3.850(R)|clk_BUFGP         |   0.000|
+burst<2>    |    1.973(R)|   -0.302(R)|clk_BUFGP         |   0.000|
+burst<3>    |    2.802(R)|   -0.966(R)|clk_BUFGP         |   0.000|
+din<0>      |    2.968(R)|   -1.099(R)|clk_BUFGP         |   0.000|
+din<1>      |    2.378(R)|   -0.627(R)|clk_BUFGP         |   0.000|
+din<2>      |    3.376(R)|   -1.425(R)|clk_BUFGP         |   0.000|
+din<3>      |    6.800(R)|   -4.165(R)|clk_BUFGP         |   0.000|
+din<4>      |    8.891(R)|   -5.837(R)|clk_BUFGP         |   0.000|
+din<5>      |    2.717(R)|   -0.898(R)|clk_BUFGP         |   0.000|
+din<6>      |    6.492(R)|   -3.918(R)|clk_BUFGP         |   0.000|
+din<7>      |    5.008(R)|   -2.731(R)|clk_BUFGP         |   0.000|
+din<8>      |    2.843(R)|   -0.999(R)|clk_BUFGP         |   0.000|
+din<9>      |    5.477(R)|   -3.106(R)|clk_BUFGP         |   0.000|
+din<10>     |    3.124(R)|   -1.224(R)|clk_BUFGP         |   0.000|
+din<11>     |    1.854(R)|   -0.208(R)|clk_BUFGP         |   0.000|
+din<12>     |    2.835(R)|   -0.993(R)|clk_BUFGP         |   0.000|
+din<13>     |    5.457(R)|   -3.090(R)|clk_BUFGP         |   0.000|
+din<14>     |    3.126(R)|   -1.226(R)|clk_BUFGP         |   0.000|
+din<15>     |    4.439(R)|   -2.276(R)|clk_BUFGP         |   0.000|
+din<16>     |    5.570(R)|   -3.180(R)|clk_BUFGP         |   0.000|
+din<17>     |    3.056(R)|   -1.169(R)|clk_BUFGP         |   0.000|
+din<18>     |    4.070(R)|   -1.981(R)|clk_BUFGP         |   0.000|
+din<19>     |    2.353(R)|   -0.607(R)|clk_BUFGP         |   0.000|
+din<20>     |    2.423(R)|   -0.664(R)|clk_BUFGP         |   0.000|
+din<21>     |    2.334(R)|   -0.592(R)|clk_BUFGP         |   0.000|
+din<22>     |    4.787(R)|   -2.554(R)|clk_BUFGP         |   0.000|
+din<23>     |    1.807(R)|   -0.170(R)|clk_BUFGP         |   0.000|
+din<24>     |    1.896(R)|   -0.241(R)|clk_BUFGP         |   0.000|
+din<25>     |    1.929(R)|   -0.267(R)|clk_BUFGP         |   0.000|
+din<26>     |    1.882(R)|   -0.231(R)|clk_BUFGP         |   0.000|
+din<27>     |    1.923(R)|   -0.263(R)|clk_BUFGP         |   0.000|
+din<28>     |    2.536(R)|   -0.753(R)|clk_BUFGP         |   0.000|
+din<29>     |    3.019(R)|   -1.140(R)|clk_BUFGP         |   0.000|
+din<30>     |    2.731(R)|   -0.909(R)|clk_BUFGP         |   0.000|
+din<31>     |    3.189(R)|   -1.276(R)|clk_BUFGP         |   0.000|
+req         |    6.807(R)|   -1.849(R)|clk_BUFGP         |   0.000|
+reset       |    4.666(R)|   -2.425(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+------------+------------+------------------+--------+
+            | clk (edge) |                  | Clock  |
+Destination |   to PAD   |Internal Clock(s) | Phase  |
+------------+------------+------------------+--------+
+dout<0>     |    8.979(R)|clk_BUFGP         |   0.000|
+dout<1>     |    7.327(R)|clk_BUFGP         |   0.000|
+dout<2>     |    8.213(R)|clk_BUFGP         |   0.000|
+dout<3>     |    7.300(R)|clk_BUFGP         |   0.000|
+dout<4>     |    7.290(R)|clk_BUFGP         |   0.000|
+dout<5>     |    7.290(R)|clk_BUFGP         |   0.000|
+dout<6>     |    7.944(R)|clk_BUFGP         |   0.000|
+dout<7>     |    7.300(R)|clk_BUFGP         |   0.000|
+dout<8>     |    7.298(R)|clk_BUFGP         |   0.000|
+dout<9>     |    7.291(R)|clk_BUFGP         |   0.000|
+dout<10>    |    7.291(R)|clk_BUFGP         |   0.000|
+dout<11>    |    7.291(R)|clk_BUFGP         |   0.000|
+dout<12>    |    7.290(R)|clk_BUFGP         |   0.000|
+dout<13>    |    7.290(R)|clk_BUFGP         |   0.000|
+dout<14>    |    7.290(R)|clk_BUFGP         |   0.000|
+dout<15>    |    7.290(R)|clk_BUFGP         |   0.000|
+dout<16>    |    7.291(R)|clk_BUFGP         |   0.000|
+dout<17>    |    7.981(R)|clk_BUFGP         |   0.000|
+dout<18>    |    7.290(R)|clk_BUFGP         |   0.000|
+dout<19>    |    7.940(R)|clk_BUFGP         |   0.000|
+dout<20>    |    8.362(R)|clk_BUFGP         |   0.000|
+dout<21>    |    7.895(R)|clk_BUFGP         |   0.000|
+dout<22>    |    8.626(R)|clk_BUFGP         |   0.000|
+dout<23>    |    9.146(R)|clk_BUFGP         |   0.000|
+dout<24>    |    8.955(R)|clk_BUFGP         |   0.000|
+dout<25>    |    8.790(R)|clk_BUFGP         |   0.000|
+dout<26>    |    8.751(R)|clk_BUFGP         |   0.000|
+dout<27>    |    8.641(R)|clk_BUFGP         |   0.000|
+dout<28>    |    7.291(R)|clk_BUFGP         |   0.000|
+dout<29>    |    7.327(R)|clk_BUFGP         |   0.000|
+dout<30>    |    7.291(R)|clk_BUFGP         |   0.000|
+dout<31>    |    7.291(R)|clk_BUFGP         |   0.000|
+maddr<0>    |    7.940(R)|clk_BUFGP         |   0.000|
+maddr<1>    |    8.338(R)|clk_BUFGP         |   0.000|
+maddr<2>    |    8.322(R)|clk_BUFGP         |   0.000|
+maddr<3>    |    8.278(R)|clk_BUFGP         |   0.000|
+maddr<4>    |    7.916(R)|clk_BUFGP         |   0.000|
+maddr<5>    |    9.610(R)|clk_BUFGP         |   0.000|
+maddr<6>    |    8.403(R)|clk_BUFGP         |   0.000|
+maddr<7>    |    8.680(R)|clk_BUFGP         |   0.000|
+maddr<8>    |    7.948(R)|clk_BUFGP         |   0.000|
+maddr<9>    |    8.310(R)|clk_BUFGP         |   0.000|
+maddr<10>   |    8.200(R)|clk_BUFGP         |   0.000|
+maddr<11>   |    8.273(R)|clk_BUFGP         |   0.000|
+maddr<12>   |    7.639(R)|clk_BUFGP         |   0.000|
+maddr<13>   |    8.202(R)|clk_BUFGP         |   0.000|
+maddr<14>   |    8.203(R)|clk_BUFGP         |   0.000|
+maddr<15>   |    8.303(R)|clk_BUFGP         |   0.000|
+maddr<16>   |    7.972(R)|clk_BUFGP         |   0.000|
+maddr<17>   |    9.734(R)|clk_BUFGP         |   0.000|
+maddr<18>   |    9.679(R)|clk_BUFGP         |   0.000|
+maddr<19>   |    9.350(R)|clk_BUFGP         |   0.000|
+maddr<20>   |    9.401(R)|clk_BUFGP         |   0.000|
+maddr<21>   |    9.466(R)|clk_BUFGP         |   0.000|
+maddr<22>   |    9.165(R)|clk_BUFGP         |   0.000|
+maddr<23>   |    9.368(R)|clk_BUFGP         |   0.000|
+maddr<24>   |    9.462(R)|clk_BUFGP         |   0.000|
+maddr<25>   |    9.366(R)|clk_BUFGP         |   0.000|
+maddr<26>   |    9.289(R)|clk_BUFGP         |   0.000|
+maddr<27>   |    9.267(R)|clk_BUFGP         |   0.000|
+maddr<28>   |    8.747(R)|clk_BUFGP         |   0.000|
+maddr<29>   |    8.998(R)|clk_BUFGP         |   0.000|
+maddr<30>   |    8.786(R)|clk_BUFGP         |   0.000|
+maddr<31>   |    9.079(R)|clk_BUFGP         |   0.000|
+------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |    6.941|         |         |         |
+---------------+---------+---------+---------+---------+
+
+TIMEGRP "input" OFFSET = IN 10 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+Worst Case Data Window 8.854; Ideal Clock Offset To Actual Clock -0.536; 
+------------------+------------+------------+---------+---------+-------------+
+                  |            |            |  Setup  |  Hold   |Source Offset|
+Source            |   Setup    |    Hold    |  Slack  |  Slack  |  To Center  |
+------------------+------------+------------+---------+---------+-------------+
+addr<0>           |    4.746(R)|   -0.671(R)|    5.254|    0.671|        2.291|
+addr<1>           |    5.973(R)|   -1.789(R)|    4.027|    1.789|        1.119|
+addr<2>           |    4.103(R)|   -0.239(R)|    5.897|    0.239|        2.829|
+addr<3>           |    4.146(R)|   -0.410(R)|    5.854|    0.410|        2.722|
+addr<4>           |    3.987(R)|   -0.230(R)|    6.013|    0.230|        2.891|
+addr<5>           |    4.529(R)|   -0.800(R)|    5.471|    0.800|        2.336|
+addr<6>           |    4.043(R)|   -0.358(R)|    5.957|    0.358|        2.800|
+addr<7>           |    4.172(R)|   -0.597(R)|    5.828|    0.597|        2.616|
+addr<8>           |    3.869(R)|   -0.302(R)|    6.131|    0.302|        2.915|
+addr<9>           |    4.015(R)|   -0.554(R)|    5.985|    0.554|        2.716|
+addr<10>          |    5.184(R)|   -1.437(R)|    4.816|    1.437|        1.689|
+addr<11>          |    3.312(R)|   -0.076(R)|    6.688|    0.076|        3.306|
+addr<12>          |    3.636(R)|   -0.282(R)|    6.364|    0.282|        3.041|
+addr<13>          |    3.716(R)|   -0.482(R)|    6.284|    0.482|        2.901|
+addr<14>          |    4.262(R)|   -0.866(R)|    5.738|    0.866|        2.436|
+addr<15>          |    4.043(R)|   -0.827(R)|    5.957|    0.827|        2.565|
+addr<16>          |    3.161(R)|   -0.069(R)|    6.839|    0.069|        3.385|
+addr<17>          |    2.951(R)|   -0.037(R)|    7.049|    0.037|        3.506|
+addr<18>          |    3.357(R)|   -0.308(R)|    6.643|    0.308|        3.168|
+addr<19>          |    3.818(R)|   -0.813(R)|    6.182|    0.813|        2.685|
+addr<20>          |    3.229(R)|   -0.290(R)|    6.771|    0.290|        3.241|
+addr<21>          |    3.236(R)|   -0.431(R)|    6.764|    0.431|        3.167|
+addr<22>          |    4.892(R)|   -1.703(R)|    5.108|    1.703|        1.702|
+addr<23>          |    4.169(R)|   -1.260(R)|    5.831|    1.260|        2.286|
+addr<24>          |    3.704(R)|   -0.835(R)|    6.296|    0.835|        2.731|
+addr<25>          |    5.149(R)|   -2.128(R)|    4.851|    2.128|        1.362|
+addr<26>          |    3.083(R)|   -0.422(R)|    6.917|    0.422|        3.248|
+addr<27>          |    3.486(R)|   -0.880(R)|    6.514|    0.880|        2.817|
+addr<28>          |    3.967(R)|   -1.212(R)|    6.033|    1.212|        2.411|
+addr<29>          |    2.556(R)|   -0.220(R)|    7.444|    0.220|        3.612|
+addr<30>          |    2.242(R)|   -0.073(R)|    7.758|    0.073|        3.843|
+addr<31>          |    2.299(R)|   -0.564(R)|    7.701|    0.564|        3.569|
+burst<0>          |    2.552(R)|   -0.765(R)|    7.448|    0.765|        3.342|
+burst<1>          |    6.409(R)|   -3.850(R)|    3.591|    3.850|       -0.129|
+burst<2>          |    1.973(R)|   -0.302(R)|    8.027|    0.302|        3.863|
+burst<3>          |    2.802(R)|   -0.966(R)|    7.198|    0.966|        3.116|
+din<0>            |    2.968(R)|   -1.099(R)|    7.032|    1.099|        2.967|
+din<1>            |    2.378(R)|   -0.627(R)|    7.622|    0.627|        3.498|
+din<2>            |    3.376(R)|   -1.425(R)|    6.624|    1.425|        2.600|
+din<3>            |    6.800(R)|   -4.165(R)|    3.200|    4.165|       -0.482|
+din<4>            |    8.891(R)|   -5.837(R)|    1.109|    5.837|       -2.364|
+din<5>            |    2.717(R)|   -0.898(R)|    7.283|    0.898|        3.193|
+din<6>            |    6.492(R)|   -3.918(R)|    3.508|    3.918|       -0.205|
+din<7>            |    5.008(R)|   -2.731(R)|    4.992|    2.731|        1.131|
+din<8>            |    2.843(R)|   -0.999(R)|    7.157|    0.999|        3.079|
+din<9>            |    5.477(R)|   -3.106(R)|    4.523|    3.106|        0.708|
+din<10>           |    3.124(R)|   -1.224(R)|    6.876|    1.224|        2.826|
+din<11>           |    1.854(R)|   -0.208(R)|    8.146|    0.208|        3.969|
+din<12>           |    2.835(R)|   -0.993(R)|    7.165|    0.993|        3.086|
+din<13>           |    5.457(R)|   -3.090(R)|    4.543|    3.090|        0.727|
+din<14>           |    3.126(R)|   -1.226(R)|    6.874|    1.226|        2.824|
+din<15>           |    4.439(R)|   -2.276(R)|    5.561|    2.276|        1.643|
+din<16>           |    5.570(R)|   -3.180(R)|    4.430|    3.180|        0.625|
+din<17>           |    3.056(R)|   -1.169(R)|    6.944|    1.169|        2.888|
+din<18>           |    4.070(R)|   -1.981(R)|    5.930|    1.981|        1.975|
+din<19>           |    2.353(R)|   -0.607(R)|    7.647|    0.607|        3.520|
+din<20>           |    2.423(R)|   -0.664(R)|    7.577|    0.664|        3.457|
+din<21>           |    2.334(R)|   -0.592(R)|    7.666|    0.592|        3.537|
+din<22>           |    4.787(R)|   -2.554(R)|    5.213|    2.554|        1.330|
+din<23>           |    1.807(R)|   -0.170(R)|    8.193|    0.170|        4.012|
+din<24>           |    1.896(R)|   -0.241(R)|    8.104|    0.241|        3.932|
+din<25>           |    1.929(R)|   -0.267(R)|    8.071|    0.267|        3.902|
+din<26>           |    1.882(R)|   -0.231(R)|    8.118|    0.231|        3.944|
+din<27>           |    1.923(R)|   -0.263(R)|    8.077|    0.263|        3.907|
+din<28>           |    2.536(R)|   -0.753(R)|    7.464|    0.753|        3.356|
+din<29>           |    3.019(R)|   -1.140(R)|    6.981|    1.140|        2.921|
+din<30>           |    2.731(R)|   -0.909(R)|    7.269|    0.909|        3.180|
+din<31>           |    3.189(R)|   -1.276(R)|    6.811|    1.276|        2.768|
+req               |    6.807(R)|   -1.849(R)|    3.193|    1.849|        0.672|
+reset             |    4.666(R)|   -2.425(R)|    5.334|    2.425|        1.454|
+------------------+------------+------------+---------+---------+-------------+
+Worst Case Summary|       8.891|      -0.037|    1.109|    0.037|             |
+------------------+------------+------------+---------+---------+-------------+
+
+TIMEGRP "output" OFFSET = OUT 10 ns AFTER COMP "clk";
+Bus Skew: 2.444 ns; 
+-----------------------------------------------+-------------+--------------+
+PAD                                            | Delay (ns)  |Edge Skew (ns)|
+-----------------------------------------------+-------------+--------------+
+dout<0>                                        |        8.979|         1.689|
+dout<1>                                        |        7.327|         0.037|
+dout<2>                                        |        8.213|         0.923|
+dout<3>                                        |        7.300|         0.010|
+dout<4>                                        |        7.290|         0.000|
+dout<5>                                        |        7.290|         0.000|
+dout<6>                                        |        7.944|         0.654|
+dout<7>                                        |        7.300|         0.010|
+dout<8>                                        |        7.298|         0.008|
+dout<9>                                        |        7.291|         0.001|
+dout<10>                                       |        7.291|         0.001|
+dout<11>                                       |        7.291|         0.001|
+dout<12>                                       |        7.290|         0.000|
+dout<13>                                       |        7.290|         0.000|
+dout<14>                                       |        7.290|         0.000|
+dout<15>                                       |        7.290|         0.000|
+dout<16>                                       |        7.291|         0.001|
+dout<17>                                       |        7.981|         0.691|
+dout<18>                                       |        7.290|         0.000|
+dout<19>                                       |        7.940|         0.650|
+dout<20>                                       |        8.362|         1.072|
+dout<21>                                       |        7.895|         0.605|
+dout<22>                                       |        8.626|         1.336|
+dout<23>                                       |        9.146|         1.856|
+dout<24>                                       |        8.955|         1.665|
+dout<25>                                       |        8.790|         1.500|
+dout<26>                                       |        8.751|         1.461|
+dout<27>                                       |        8.641|         1.351|
+dout<28>                                       |        7.291|         0.001|
+dout<29>                                       |        7.327|         0.037|
+dout<30>                                       |        7.291|         0.001|
+dout<31>                                       |        7.291|         0.001|
+maddr<0>                                       |        7.940|         0.650|
+maddr<1>                                       |        8.338|         1.048|
+maddr<2>                                       |        8.322|         1.032|
+maddr<3>                                       |        8.278|         0.988|
+maddr<4>                                       |        7.916|         0.626|
+maddr<5>                                       |        9.610|         2.320|
+maddr<6>                                       |        8.403|         1.113|
+maddr<7>                                       |        8.680|         1.390|
+maddr<8>                                       |        7.948|         0.658|
+maddr<9>                                       |        8.310|         1.020|
+maddr<10>                                      |        8.200|         0.910|
+maddr<11>                                      |        8.273|         0.983|
+maddr<12>                                      |        7.639|         0.349|
+maddr<13>                                      |        8.202|         0.912|
+maddr<14>                                      |        8.203|         0.913|
+maddr<15>                                      |        8.303|         1.013|
+maddr<16>                                      |        7.972|         0.682|
+maddr<17>                                      |        9.734|         2.444|
+maddr<18>                                      |        9.679|         2.389|
+maddr<19>                                      |        9.350|         2.060|
+maddr<20>                                      |        9.401|         2.111|
+maddr<21>                                      |        9.466|         2.176|
+maddr<22>                                      |        9.165|         1.875|
+maddr<23>                                      |        9.368|         2.078|
+maddr<24>                                      |        9.462|         2.172|
+maddr<25>                                      |        9.366|         2.076|
+maddr<26>                                      |        9.289|         1.999|
+maddr<27>                                      |        9.267|         1.977|
+maddr<28>                                      |        8.747|         1.457|
+maddr<29>                                      |        8.998|         1.708|
+maddr<30>                                      |        8.786|         1.496|
+maddr<31>                                      |        9.079|         1.789|
+-----------------------------------------------+-------------+--------------+
+
+
+Timing summary:
+---------------
+
+Timing errors: 0  Score: 0  (Setup/Max: 0, Hold: 0)
+
+Constraints cover 1991 paths, 0 nets, and 317 connections
+
+Design statistics:
+   Minimum period:   6.941ns{1}   (Maximum frequency: 144.071MHz)
+   Minimum input required time before clock:   8.891ns
+   Minimum output required time after clock:   9.734ns
+
+
+------------------------------------Footnotes-----------------------------------
+1)  The minimum period statistic assumes all single cycle delays.
+
+Analysis completed Tue May 13 16:38:43 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 328 MB
+
+
+

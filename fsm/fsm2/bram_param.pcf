@@ -1,0 +1,30 @@
+//! **************************************************************************
+// Written by: Map P.20131013 on Tue May 13 16:22:57 2014
+//! **************************************************************************
+
+SCHEMATIC START;
+NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
+TIMEGRP clk = BEL "Mram_ram_ir1.A" BEL "Mram_ram_ir2.A" BEL
+        "clk_BUFGP/BUFG.GCLKMUX" BEL "clk_BUFGP/BUFG";
+TIMEGRP input = BEL "WE" BEL "addr<0>" BEL "addr<1>" BEL "addr<2>" BEL
+        "addr<3>" BEL "addr<4>" BEL "addr<5>" BEL "addr<6>" BEL "addr<7>" BEL
+        "addr<8>" BEL "addr<9>" BEL "din<0>" BEL "din<10>" BEL "din<11>" BEL
+        "din<12>" BEL "din<13>" BEL "din<14>" BEL "din<15>" BEL "din<16>" BEL
+        "din<17>" BEL "din<18>" BEL "din<19>" BEL "din<1>" BEL "din<20>" BEL
+        "din<21>" BEL "din<22>" BEL "din<23>" BEL "din<24>" BEL "din<25>" BEL
+        "din<26>" BEL "din<27>" BEL "din<28>" BEL "din<29>" BEL "din<2>" BEL
+        "din<30>" BEL "din<31>" BEL "din<3>" BEL "din<4>" BEL "din<5>" BEL
+        "din<6>" BEL "din<7>" BEL "din<8>" BEL "din<9>";
+TIMEGRP output = BEL "dout<0>" BEL "dout<10>" BEL "dout<11>" BEL "dout<12>"
+        BEL "dout<13>" BEL "dout<14>" BEL "dout<15>" BEL "dout<16>" BEL
+        "dout<17>" BEL "dout<18>" BEL "dout<19>" BEL "dout<1>" BEL "dout<20>"
+        BEL "dout<21>" BEL "dout<22>" BEL "dout<23>" BEL "dout<24>" BEL
+        "dout<25>" BEL "dout<26>" BEL "dout<27>" BEL "dout<28>" BEL "dout<29>"
+        BEL "dout<2>" BEL "dout<30>" BEL "dout<31>" BEL "dout<3>" BEL
+        "dout<4>" BEL "dout<5>" BEL "dout<6>" BEL "dout<7>" BEL "dout<8>" BEL
+        "dout<9>";
+TS_clk = PERIOD TIMEGRP "clk" 10 ns HIGH 50%;
+TIMEGRP "input" OFFSET = IN 5 ns VALID 10 ns BEFORE COMP "clk" "RISING";
+TIMEGRP "output" OFFSET = OUT 8 ns AFTER COMP "clk";
+SCHEMATIC END;
+

@@ -1,0 +1,2 @@
+vhdl work "../rtl/log_package.vhd"
+vhdl work "../rtl/bram_param.vhd"
