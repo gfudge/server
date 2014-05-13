@@ -1,4 +1,5 @@
 library ieee;
+--library xgates;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -8,11 +9,11 @@ end tb_memctrl;
 architecture exercise of tb_memctrl is
 
 	component memctrl
-	generic (
-		width	:	integer := 32;
-		locations:	integer	:= 1024;
-		burstwidth:	integer	:= 4
-	);
+	--generic (
+	--	width	:	integer := 32;
+	--	locations:	integer	:= 1024;
+	--	burstwidth:	integer	:= 4
+	--);
 	port (
 		request	:	in std_logic;
 		dataout	:	out std_logic_vector(31 downto 0);
@@ -24,6 +25,8 @@ architecture exercise of tb_memctrl is
 	);
 	end component;
 	
+--for all:memctrl use entity xgates.memctrl;
+
 	signal tb_din	:	std_logic_vector(31 downto 0);
 	signal tb_dout	:	std_logic_vector(31 downto 0);
 	signal tb_addr	:	std_logic_vector(31 downto 0);
@@ -49,6 +52,8 @@ architecture exercise of tb_memctrl is
 		
 		apply_inputs : process
 		begin
+		-- Post layout sim delay
+			wait for 200 ns;
 		-- wait for reset to clear
 			wait for 20 ns;
 		-- Simulate 4 item cache line fill
@@ -74,6 +79,7 @@ architecture exercise of tb_memctrl is
 
 		reset	:	process
 		begin
+			wait for 200 ns;
 			tb_reset <= '1';
 			wait for 10 ns;
 			tb_reset <= '0';

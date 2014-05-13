@@ -5,6 +5,5 @@ vcom rtl/log_package.vhd
 vcom rtl/bram_package.vhd
 vcom rtl/bram_param.vhd
 vcom rtl/fsm.vhd
-vcom rtl/memctrl.vhd
-vcom rtl/tb_memctrl.vhd
+vcom rtl/tb_fsm.vhd
 quit
