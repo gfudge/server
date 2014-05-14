@@ -1,0 +1,147 @@
+m255
+K3
+13
+cModel Technology
+Z0 d/home/zel/elgf2/projects/fsm
+T_opt
+Z1 Vl24A9Qz9aaeZ;UbTJgRmb1
+Z2 04 6 8 work tb_fsm exercise 1
+Z3 =1-003048da5f7a-537233d4-66906-6d49
+Z4 o-quiet -auto_acc_if_foreign -work work
+Z5 OL;O;6.4a;39
+T_opt1
+Z6 V4[??;e?K^kI2Jd^797TK81
+R2
+Z7 =1-003048da5f7a-53724cb4-69665-757a
+Z8 o-quiet -auto_acc_if_foreign -work work -sdfmax /DUT=fsm2/netgen/par/fsm_timesim.sdf -suppress 1948
+R5
+Pbram_package
+Z9 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+Z10 w1398172435
+Z11 8rtl/bram_package.vhd
+Z12 Frtl/bram_package.vhd
+l0
+L4
+Z13 VMQO0[Vn=FOK8iN[Q?J5o@2
+Z14 OL;C;6.4a;39
+32
+Z15 Mx1 4 ieee 14 std_logic_1164
+Z16 tExplicit 1
+Z17 !s100 3YQcQYS879@KK?:8hJ=m72
+Ebram_param
+Z18 w1398267977
+Z19 DPx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+Z20 DPx4 ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+Z21 DPx4 ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z22 DPx4 ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+R9
+Z23 8rtl/bram_param.vhd
+Z24 Frtl/bram_param.vhd
+l0
+L7
+Z25 V__eMF`bFWG7HT1=l3Yzi10
+R14
+32
+R16
+Z26 !s100 SD]oD`VH4DIz]NX`=mz9I1
+Abehavioural
+R19
+R20
+R21
+R22
+R9
+Z27 DEx4 work 10 bram_param 0 22 __eMF`bFWG7HT1=l3Yzi10
+l25
+L21
+Z28 V_R?L@dfdeFha?38zd[Pj?2
+R14
+32
+Z29 Mx5 4 ieee 14 std_logic_1164
+Z30 Mx4 4 ieee 18 std_logic_unsigned
+Z31 Mx3 4 ieee 15 std_logic_arith
+Z32 Mx2 4 ieee 11 numeric_std
+Z33 Mx1 4 work 11 log_package
+R16
+Z34 !s100 PF>VYKYZH[@hASdig8>no3
+Efsm
+Z35 w1398261304
+Z36 DPx17 __model_tech/ieee 15 std_logic_arith 0 22 GJbAT?7@hRQU9IQ702DT]2
+Z37 DPx17 __model_tech/ieee 18 std_logic_unsigned 0 22 hEMVMlaNCR^<OOoVNV;m90
+Z38 DPx17 __model_tech/ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
+32
+Z39 8rtl/fsm.vhd
+Z40 Frtl/fsm.vhd
+l0
+L9
+Z41 V:d9fAB<lnVXOg<ka3ULZ;3
+R14
+R16
+Z42 !s100 _8Bda7=a:I@Jl9[?]z;[O1
+Artl
+R36
+R37
+R38
+Z43 DEx37 /home/zel/elgf2/projects/fsm/mti_work 3 fsm 0 22 :d9fAB<lnVXOg<ka3ULZ;3
+32
+Mx3 17 __model_tech/ieee 14 std_logic_1164
+Mx2 17 __model_tech/ieee 18 std_logic_unsigned
+Mx1 17 __model_tech/ieee 15 std_logic_arith
+l33
+L24
+Z44 V:P<>84a4D2aVTV1Al3M7I2
+R14
+R16
+Z45 !s100 6Ja4JkH3T1K?GS>LWAl0R0
+Plog_package
+R9
+Z46 w1398172461
+Z47 8rtl/log_package.vhd
+Z48 Frtl/log_package.vhd
+l0
+L4
+Z49 VWRFF;nW=REUA>=5>LTJZ;3
+R14
+32
+b1
+R15
+R16
+Z50 !s100 al<N;0cH?c?bGE?C2Gn>Y1
+Bbody
+Z51 DBx4 work 11 log_package 0 22 WRFF;nW=REUA>=5>LTJZ;3
+R9
+l0
+L9
+Z52 Vf[jdmJoRehT_lc3UQdzdk2
+R14
+32
+R15
+R16
+nbody
+Z53 !s100 P?RG7OmkYOK>:GcJ?6L1d3
+Etb_fsm
+Z54 w1399999591
+Z55 DPx17 __model_tech/ieee 11 numeric_std 0 22 =NSdli^?T5OD8;4F<blj<3
+R38
+32
+Z56 8rtl/tb_fsm.vhd
+Z57 Frtl/tb_fsm.vhd
+l0
+L5
+Z58 Ve6kU?3kD>gRi0dk8c@:i;3
+R14
+R16
+Z59 !s100 e`9V3b4CGa3L33U>MhYZT1
+Aexercise
+R43
+R55
+R38
+DEx37 /home/zel/elgf2/projects/fsm/mti_work 6 tb_fsm 0 22 e6kU?3kD>gRi0dk8c@:i;3
+32
+Mx2 17 __model_tech/ieee 14 std_logic_1164
+Mx1 17 __model_tech/ieee 11 numeric_std
+l35
+L8
+Z60 VSP<2?RgKQ^4;1VgBQSLk43
+R14
+R16
+Z61 !s100 BTbXMDg_OZKZj_g0HKCWf1

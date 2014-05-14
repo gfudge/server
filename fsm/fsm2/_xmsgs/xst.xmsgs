@@ -5,7 +5,13 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="Xst" num="1739" delta="old" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">/home/gfudge/fpga/server/fsm/rtl/fsm.vhd</arg>&quot; line <arg fmt="%d" index="2">19</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fsm</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/gfudge/fpga/server/fsm/rtl/fsm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/zel/elgf2/projects/fsm/rtl/fsm.vhd</arg>&quot;.
+</msg>
+
+<msg type="warning" file="HDLParsers" num="3607" delta="new" >Unit <arg fmt="%s" index="1">work/fsm/rtl</arg> is now defined in a different file.  It was defined in &quot;<arg fmt="%s" index="2">/home/gfudge/fpga/server/fsm/rtl/fsm.vhd</arg>&quot;, and is now defined in &quot;<arg fmt="%s" index="3">/home/zel/elgf2/projects/fsm/rtl/fsm.vhd</arg>&quot;.
+</msg>
+
+<msg type="info" file="Xst" num="1739" delta="new" >HDL ADVISOR - &quot;<arg fmt="%s" index="1">/home/zel/elgf2/projects/fsm/rtl/fsm.vhd</arg>&quot; line <arg fmt="%d" index="2">19</arg>: declaration of a buffer port will make it difficult for you to validate this design by simulation. It is preferable to declare it as output.
 </msg>
 
 </messages>

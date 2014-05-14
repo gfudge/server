@@ -22,3 +22,8 @@ par -w -intstyle ise -ol high -t 1 fsm_map.ncd fsm.ncd fsm.pcf
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml fsm.twx fsm.ncd -o fsm.twr fsm.pcf -ucf fsm.ucf 
 bitgen -intstyle ise -f fsm.ut fsm.ncd 
 netgen -intstyle ise -s 5  -pcf fsm.pcf -rpw 100 -tpw 0 -ar Structure -tm fsm -insert_pp_buffers true -w -dir netgen/par -ofmt vhdl -sim fsm.ncd fsm_timesim.vhd 
+xst -intstyle ise -ifn "/home/zel/elgf2/projects/fsm/fsm2/fsm.xst" -ofn "/home/zel/elgf2/projects/fsm/fsm2/fsm.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc fsm.ucf -p xc3s200-pq208-5 fsm.ngc fsm.ngd  
+map -intstyle ise -p xc3s200-pq208-5 -cm area -ir off -pr off -c 100 -o fsm_map.ncd fsm.ngd fsm.pcf 
+par -w -intstyle ise -ol high -t 1 fsm_map.ncd fsm.ncd fsm.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml fsm.twx fsm.ncd -o fsm.twr fsm.pcf -ucf fsm.ucf 

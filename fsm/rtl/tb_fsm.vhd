@@ -1,4 +1,5 @@
 library ieee;
+library xgates;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 
@@ -21,6 +22,8 @@ architecture exercise of tb_fsm is
 	);
 	end component;
 	
+	for all:fsm use entity xgates.fsm;
+
 	signal tb_din	:	std_logic_vector(31 downto 0);
 	signal tb_dout	:	std_logic_vector(31 downto 0);
 	signal tb_addr	:	std_logic_vector(31 downto 0);

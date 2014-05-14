@@ -3,20 +3,20 @@ K3
 13
 cModel Technology
 Z0 d/home/zel/elgf2/projects/fsm
-Ememctrl
-Z1 w1399832179
+Efsm
+Z1 w1399997947
 Z2 DPx3 std 6 textio 0 22 m2KQDRRhmF833<<DjYdL70
 Z3 DPx9 vital2000 16 vital_primitives 0 22 P<o@__YgakiANKimF[boN3
 Z4 DPx7 simprim 8 vpackage 0 22 fVEB9m=QlTCGHNLP]9fAA0
 Z5 DPx9 vital2000 12 vital_timing 0 22 S^n>oJ2GS[H5aTKMo9OkE0
 Z6 DPx7 simprim 11 vcomponents 0 22 ^<96U5?^7zWm`X7LOJ2Fh1
 Z7 DPx4 ieee 14 std_logic_1164 0 22 GH1=`jDDBJ=`LM;:Ak`kf2
-Z8 8fsm/netgen/par/memctrl_timesim.vhd
-Z9 Ffsm/netgen/par/memctrl_timesim.vhd
+Z8 8fsm2/netgen/par/fsm_timesim.vhd
+Z9 Ffsm2/netgen/par/fsm_timesim.vhd
 l0
 L41
-V4C12W=CHNkah?kQ@_?loH1
-!s100 YkbZ>PPB[m7TeXL159]al1
+Vg3Q_znGaGScTHe89akoTD2
+!s100 QA5?>lfkG6=35MEg40HjF1
 Z10 OL;C;6.4a;39
 32
 Z11 o-work xgates
@@ -28,11 +28,11 @@ R4
 R5
 R6
 R7
-Z13 DEx4 work 7 memctrl 0 22 4C12W=CHNkah?kQ@_?loH1
-l367
-L53
-Z14 VZhBnVG57TcJ2embVNTlR[2
-Z15 !s100 9d]SVE1Wm0;m_@V^7>NC]1
+Z13 DEx4 work 3 fsm 0 22 g3Q_znGaGScTHe89akoTD2
+l693
+L55
+Z14 VbG@1cQWOZgUOP4hRIaQzj3
+Z15 !s100 <S2Ca0a?K5e]3:1:EmH912
 R10
 32
 Z16 Mx6 4 ieee 14 std_logic_1164
@@ -43,3 +43,43 @@ Z20 Mx2 9 vital2000 16 vital_primitives
 Z21 Mx1 3 std 6 textio
 R11
 R12
+Ememctrl
+Z22 w1399832179
+R2
+R3
+R4
+R5
+R6
+R7
+Z23 8fsm/netgen/par/memctrl_timesim.vhd
+Z24 Ffsm/netgen/par/memctrl_timesim.vhd
+l0
+L41
+V4C12W=CHNkah?kQ@_?loH1
+R10
+32
+R11
+R12
+!s100 YkbZ>PPB[m7TeXL159]al1
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 7 memctrl 0 22 4C12W=CHNkah?kQ@_?loH1
+l367
+L53
+VZhBnVG57TcJ2embVNTlR[2
+R10
+32
+R16
+R17
+R18
+R19
+R20
+R21
+R11
+R12
+!s100 9d]SVE1Wm0;m_@V^7>NC]1

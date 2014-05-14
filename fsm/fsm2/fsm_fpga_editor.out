@@ -1,0 +1,138 @@
+#:C59    
+#Xilinx FPGA Editor Command Log File
+#Editor Version:
+#:V   SPARC M2.1 P.28xd
+#Current Working Directory:
+#:D   /home/zel/elgf2/projects/fsm/fsm2
+#Host Name:
+#:H   eng13
+#Date/Time:
+#:T   Wed May 14 14:43:15 2014
+#------------------------------
+	#Reading fsm.ncd...
+	#Loading device for application Rf_Device from file '3s200.nph' in environment /usr4/Xilinx/14.2/ISE_DS/ISE/.
+	#   "fsm" is an NCD, version 3.2, device xc3s200, package pq208, speed -5
+	#Design creation date: 2014.05.14.13.34.50
+	#Building chip graphics...
+	#Loading speed info...
+	#1
+setattr main edit-mode no-logic-changes
+	#2
+unselect -all
+	#3
+unselect -all
+	#4
+setattr main disable_draw on
+	#5
+setattr layer switch_boxes view on
+	#6
+setattr main disable_draw off
+	#Hint: change the visibility of more than one layer at a time by clicking on the apply button, clicking two or more layer buttons, and then clicking on the apply button again.
+	#7
+setattr main disable_draw on
+	#8
+setattr layer switch_boxes view off
+	#9
+setattr main disable_draw off
+	#10
+setattr main disable_draw on
+	#11
+setattr layer long_lines view on
+	#12
+setattr main disable_draw off
+	#13
+setattr main disable_draw on
+	#14
+setattr layer long_lines view off
+	#15
+setattr main disable_draw off
+	#16
+setattr main disable_draw on
+	#17
+setattr layer local_lines view on
+	#18
+setattr main disable_draw off
+	#19
+setattr main disable_draw on
+	#20
+setattr layer local_lines view off
+	#21
+setattr main disable_draw off
+	#22
+setattr main disable_draw on
+	#23
+setattr layer routes view on
+	#24
+setattr main disable_draw off
+	#25
+setattr main disable_draw on
+	#26
+setattr layer ratsnests view on
+	#27
+setattr main disable_draw off
+	#28
+setattr main disable_draw on
+	#29
+setattr layer ratsnests view off
+	#30
+setattr main disable_draw off
+	#31
+setattr main  disable_draw true
+	#32
+setattr layer * color GREY fill HOLLOW
+	#33
+setattr layer long_lines  color MAGENTA
+	#34
+setattr layer pinwires color DARK_GREEN
+	#35
+setattr layer clock_regions color BLACK fill SOLID
+	#36
+setattr layer components color BLUE fill SOLID
+	#37
+setattr layer ratsnests color GREEN fill SOLID
+	#38
+setattr layer routes color CYAN fill SOLID
+	#39
+setattr layer hilite color YELLOW
+	#40
+setattr layer select color RED
+	#41
+setattr layer text color BLACK
+	#42
+setattr layer block_prim color BLACK
+	#43
+setattr layer block_wire color MAGENTA
+	#44
+setattr layer block_config color CYAN
+	#45
+setattr layer block_name color GREEN
+	#46
+setattr layer hard_macros color GREY fill SOLID
+	#47
+setattr layer user_rpms color CYAN fill SOLID
+	#48
+setattr layer tool_rpms color MAGENTA fill SOLID
+	#49
+setattr main disable_draw false
+	#50
+setattr main  disable_draw true
+	#51
+setattr layer * color GREY fill HOLLOW
+	#52
+setattr layer long_lines  color MAGENTA
+	#53
+setattr layer pinwires color DARK_GREEN
+	#54
+setattr layer clock_regions color BLACK fill SOLID
+	#55
+setattr layer components color BLUE fill SOLID
+	#56
+setattr layer ratsnests color GREEN fill SOLID
+	#57
+setattr layer routes color CYAN fill SOLID
+	#58
+setattr layer hilite color YELLOW
+	#59
+setattr layer select color RED
+	#60
+setattr layer text color WHITE
